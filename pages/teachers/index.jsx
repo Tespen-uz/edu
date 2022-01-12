@@ -1,9 +1,10 @@
 import React from "react";
+import TechCartList from "../../components/Tech/TechCartList";
 
 const AboutPage = () => {
   return (
     <div>
-      <h1 className="font-bold text-2xl mb-4">About</h1>
+      <TechCartList />
     </div>
   );
 };
