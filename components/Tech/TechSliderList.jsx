@@ -1,0 +1,138 @@
+import React, {useState} from 'react'
+
+import { useKeenSlider } from "keen-slider/react"
+import "keen-slider/keen-slider.min.css"
+import TechCard from './TechCard'
+
+
+const TechInfo=[
+    {
+        id: 1,
+        name: 'Leo Stephan',
+        job: 'Academic',
+        subject: 'Math',
+        img: 'img',
+    },
+    {
+        id: 2,
+        name: 'John Doe',
+        job: 'Businessman',
+        subject: 'English',
+        img: 'img',
+    },
+    {
+        id: 3,
+        name: 'Samia Morgan',
+        job: 'Techer',
+        subject: 'Biology',
+        img: 'img',
+    },
+    {
+        id: 4,
+        name: 'Jesica Bell',
+        job: 'Developer',
+        subject: 'Frontend',
+        img: 'img',
+    },
+    {
+        id: 5,
+        name: 'Micael',
+        job: 'Backend Dev',
+        subject: 'Php Node.js',
+        img: 'img',
+    },
+    {
+        id: 6,
+        name: 'Tom Kruz',
+        job: 'Actor',
+        subject: 'main',
+        img: 'img',
+    }
+]
+
+
+const animation = { duration: 30000, easing: (t) => t }
+
+function TechSliderList() {
+
+    const [currentSlide, setCurrentSlide] = useState(0)
+    const [loaded, setLoaded] = useState(false)
+    
+
+    const [sliderRef] = useKeenSlider({
+        loop: true,
+        rtl: false,
+        renderMode: "performance",
+        drag: true,
+        created(s) {
+        s.moveToIdx(5, true, animation)
+        },
+        updated(s) {
+        s.moveToIdx(s.track.details.abs + 5, true, animation)
+        },
+        animationEnded(s) {
+        s.moveToIdx(s.track.details.abs + 5, true, animation)
+        },
+        breakpoints: {
+            '(min-width: 375px)': {
+                slides: {
+                    perView: 1,
+                    spacing: 15,
+                    
+                },
+            },
+            '(min-width: 425px)': {
+                slides: {
+                    perView: 1.2,
+                    spacing: 20,
+                    
+                },
+            },
+            '(min-width: 600px)': {
+                slides: {
+                    perView: 2,
+                    spacing: 20,
+                    
+                },
+            },
+            '(min-width: 1024px)': {
+                slides: {
+                    perView: 3,
+                    spacing: 60,
+                    
+                },
+            },
+            
+        },
+    })
+
+    return (
+        <div className='container mx-auto p-2'>
+            <div ref={sliderRef} className="keen-slider py-10 ">
+                    {
+                        TechInfo.map(tech=>{
+                            return(
+                                <div className="keen-slider__slide number-slide px-4 py-2">
+                                    <TechCard 
+                                       name={tech.name} 
+                                       img={tech.img} 
+                                       job={tech.job} 
+                                       subject={tech.subject} 
+                                    />
+                                </div>
+
+                            )
+                        })
+
+                    } 
+                    
+                    
+                
+            </div>
+            
+        </div>
+    )
+}
+
+export default TechSliderList
+

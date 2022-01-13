@@ -6,7 +6,7 @@ import Tech2 from '../../img/Tech2.jpg'
 function TechCard({img, name, job, subject}) {
     console.log(img);
     return (
-        <div class="w-full bg-white rounded-lg shadow-xl shadow-gray-200 mt-2 overflow-hidden flex flex-col justify-center items-center">
+        <div class="w-full bg-gray-100 rounded-lg shadow-md  shadow-gray-400 mt-2  overflow-hidden flex flex-col justify-center items-center">
             <div>
                 <Image 
                    class="object-center object-cover h-auto w-full" 
