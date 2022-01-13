@@ -1,9 +1,16 @@
 import React from "react";
+import StudentCardList from "../../components/Student/StudentCardList";
+import TechCartList from "../../components/Tech/TechCartList";
+import TechSliderList from "../../components/Tech/TechSliderList";
+import TechId from "../../components/TechId/TechId";
 
 const AboutPage = () => {
   return (
     <div>
-      <h1 className="font-bold text-2xl mb-4">About</h1>
+      {/* <TechCartList /> */}
+      {/* <TechSliderList /> */}
+      {/* <StudentCardList /> */}
+      <TechId />
     </div>
   );
 };
