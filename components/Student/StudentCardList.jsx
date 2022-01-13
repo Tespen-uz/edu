@@ -1,18 +1,17 @@
-import React, {useState} from 'react'
-
+import React from 'react'
+import StudentCard from './StudentCard'
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
-import TechCard from './TechCard'
-import TechSliderCard from './TechSliderCard'
 
 
-const TechInfo=[
+const StudentInfo=[
     {
         id: 1,
         name: 'Leo Stephan',
         job: 'Academic',
         subject: 'Math',
         img: 'img',
+        text: "Stenford MCHJ talabasi bir qator naminatsiyalarda g'olib deb topilgan talaba. Davlat olimpiyadasi qatnashchisi, 3-martta davlat miqyosida 1 o'rinni eganlagan talaba."
     },
     {
         id: 2,
@@ -20,6 +19,7 @@ const TechInfo=[
         job: 'Businessman',
         subject: 'English',
         img: 'img',
+        text: "Stenford MCHJ talabasi bir qator naminatsiyalarda g'olib deb topilgan talaba. Davlat olimpiyadasi qatnashchisi, 3-martta davlat miqyosida 1 o'rinni eganlagan talaba."
     },
     {
         id: 3,
@@ -27,6 +27,7 @@ const TechInfo=[
         job: 'Techer',
         subject: 'Biology',
         img: 'img',
+        text: "Stenford MCHJ talabasi bir qator naminatsiyalarda g'olib deb topilgan talaba. Davlat olimpiyadasi qatnashchisi, 3-martta davlat miqyosida 1 o'rinni eganlagan talaba."
     },
     {
         id: 4,
@@ -34,6 +35,7 @@ const TechInfo=[
         job: 'Developer',
         subject: 'Frontend',
         img: 'img',
+        text: "Stenford MCHJ talabasi bir qator naminatsiyalarda g'olib deb topilgan talaba. Davlat olimpiyadasi qatnashchisi, 3-martta davlat miqyosida 1 o'rinni eganlagan talaba."
     },
     {
         id: 5,
@@ -41,6 +43,7 @@ const TechInfo=[
         job: 'Backend Dev',
         subject: 'Php Node.js',
         img: 'img',
+        text: "Stenford MCHJ talabasi bir qator naminatsiyalarda g'olib deb topilgan talaba. Davlat olimpiyadasi qatnashchisi, 3-martta davlat miqyosida 1 o'rinni eganlagan talaba."
     },
     {
         id: 6,
@@ -48,15 +51,14 @@ const TechInfo=[
         job: 'Actor',
         subject: 'main',
         img: 'img',
+        text: "Stenford MCHJ talabasi bir qator naminatsiyalarda g'olib deb topilgan talaba. Davlat olimpiyadasi qatnashchisi, 3-martta davlat miqyosida 1 o'rinni eganlagan talaba."
     }
 ]
 
 
-const animation = { duration: 30000, easing: (t) => t }
+const animation = { duration: 50000, easing: (t) => t }
 
-function TechSliderList() {
-
-    
+function StudentCardList() {
 
     const [sliderRef] = useKeenSlider({
         loop: true,
@@ -89,14 +91,14 @@ function TechSliderList() {
             },
             '(min-width: 600px)': {
                 slides: {
-                    perView: 2,
+                    perView: 1.5,
                     spacing: 20,
                     
                 },
             },
             '(min-width: 1024px)': {
                 slides: {
-                    perView: 4,
+                    perView: 2,
                     spacing: 20,
                     
                 },
@@ -104,19 +106,19 @@ function TechSliderList() {
             
         },
     })
-
     return (
-        <div className='container mx-auto p-2 relative'>
+        <div className='container  mx-auto py-12'>
             <div ref={sliderRef} className="keen-slider py-10 z-10">
                     {
-                        TechInfo.map(tech=>{
+                        StudentInfo.map(item=>{
                             return(
-                                <div className="keen-slider__slide number-slide p-1 ">
-                                    <TechSliderCard
-                                       name={tech.name} 
-                                       img={tech.img} 
-                                       job={tech.job} 
-                                       subject={tech.subject} 
+                                <div className="keen-slider__slide number-slide p-1  ">
+                                    <StudentCard
+                                       name={item.name} 
+                                       img={item.img} 
+                                       job={item.job} 
+                                       subject={item.subject} 
+                                       text={item.text}
                                     />
                                 </div>
 
@@ -128,15 +130,8 @@ function TechSliderList() {
                     
                 
             </div>
-            {/* <div 
-              className='absolute left-[5%] right-[5%] rounded-2xl bottom-[5%] top-[5%] bg-gray-900 z-0'
-              
-            >
-            </div> */}
-            
         </div>
     )
 }
 
-export default TechSliderList
-
+export default StudentCardList

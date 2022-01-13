@@ -6,7 +6,7 @@ import Tech2 from '../../img/Tech2.jpg'
 function TechSliderCard({name, img, job, subject}) {
     return (
         <div>
-            <div class="w-full bg-white rounded-lg shadow-md shadow-gray-500 p-12 flex flex-col justify-center items-center">
+            <div class="w-full bg-white rounded-lg shadow-md shadow-gray-500 p-6 flex flex-col justify-center items-center">
                 <div class="mb-8 h-40 w-40 border-yellow-300 border-4 rounded-full" style={{backgroundImage: `url(${Tech2.src})`, backgroundSize: 'cover'}}>
                     
                 </div>
