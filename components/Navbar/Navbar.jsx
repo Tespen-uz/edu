@@ -36,20 +36,21 @@ export default function Head() {
               </div>
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex-shrink-0 flex items-center">
-                  <Link href="/">
+                  <p className="text-2xl font-bold text-white">StandFord</p>
+                  {/* <Link href="/">
                     <img
                       className="block lg:hidden h-8 w-auto"
                       src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
                       alt="Workflow"
                     />
-                  </Link>
-                  <Link href="/">
+                  </Link> */}
+                  {/* <Link href="/">
                     <img
                       className="hidden lg:block h-8 w-auto"
                       src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg"
                       alt="Workflow"
                     />
-                  </Link>
+                  </Link> */}
                 </div>
                 <div className="hidden sm:block sm:ml-6">
                   <div className="flex space-x-4">
@@ -77,20 +78,20 @@ export default function Head() {
                   className="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                 >
                   <span className="sr-only">View notifications</span>
-                  <BellIcon className="h-6 w-6" aria-hidden="true" />
+                  {/* <BellIcon className="h-6 w-6" aria-hidden="true" /> */}
                 </button>
 
                 {/* Profile dropdown */}
                 <Menu as="div" className="ml-3 relative">
                   <div>
-                    <Menu.Button className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                    {/* <Menu.Button className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                       <span className="sr-only">Open user menu</span>
                       <img
                         className="h-8 w-8 rounded-full"
                         src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                         alt=""
                       />
-                    </Menu.Button>
+                    </Menu.Button> */}
                   </div>
                   <Transition
                     as={Fragment}
@@ -166,13 +167,19 @@ export default function Head() {
                   {item.name}
                 </Disclosure.Button>
               ))}
-              <CtaButton className="w-full">Create Account</CtaButton>
-              <Link href="/sign-in">
+              <CtaButton className="w-full">Sign Up</CtaButton>
+              <p className="mt-6 text-center text-base font-medium text-gray-500">
+                Already have account?{" "}
+                <Link href="/login">
+                  <a className="text-indigo-600 hover:text-indigo-500">Login</a>
+                </Link>
+              </p>
+              {/* <Link href="/sign-in">
                 <a className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 text-center">
                   <span>Already have account?</span>{" "}
                   <span className="text-gray-500">Sign in</span>
                 </a>
-              </Link>
+              </Link> */}
             </div>
           </Disclosure.Panel>
         </>
