@@ -3,6 +3,7 @@ import React, {useState} from 'react'
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
 import TechCard from './TechCard'
+import TechSliderCard from './TechSliderCard'
 
 
 const TechInfo=[
@@ -55,8 +56,6 @@ const animation = { duration: 30000, easing: (t) => t }
 
 function TechSliderList() {
 
-    const [currentSlide, setCurrentSlide] = useState(0)
-    const [loaded, setLoaded] = useState(false)
     
 
     const [sliderRef] = useKeenSlider({
@@ -107,13 +106,13 @@ function TechSliderList() {
     })
 
     return (
-        <div className='container mx-auto p-2'>
-            <div ref={sliderRef} className="keen-slider py-10 ">
+        <div className='container mx-auto p-2 relative'>
+            <div ref={sliderRef} className="keen-slider py-10 z-10">
                     {
                         TechInfo.map(tech=>{
                             return(
                                 <div className="keen-slider__slide number-slide px-4 py-2">
-                                    <TechCard 
+                                    <TechSliderCard
                                        name={tech.name} 
                                        img={tech.img} 
                                        job={tech.job} 
@@ -128,6 +127,12 @@ function TechSliderList() {
                     
                     
                 
+            </div>
+            <div 
+              className='absolute left-[5%] right-[5%] rounded-2xl bottom-[5%] top-[5%] bg-gray-900 z-0'
+              
+            >
+
             </div>
             
         </div>
