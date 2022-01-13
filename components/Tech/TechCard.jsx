@@ -1,23 +1,24 @@
 import React from 'react'
 import Image from 'next/image'
-import Tech3 from '../../img/Tech2.jpg'
+import Tech2 from '../../img/Tech2.jpg'
 
 
 function TechCard({img, name, job, subject}) {
     console.log(img);
     return (
-           <div class="   w-full md:w-5/12 xl:w-[30%] flex flex-col items-center cursor-pointer bg-gray-200 rounded overflow-hidden p-8 mt-8 shadow-md shadow-gray-500 transition-all hover:scale-95">
-                <div class="w-[160px] h-[160px]  rounded-[50%] border-4 border-yellow-300   overflow-hidden bg-red-400" 
-                  style={{backgroundImage: `url(${Tech3.src})`, backgroundSize: 'cover'}}
-                >
-                    
-                </div>
-                <div class="text-center">
-                    <h3 class="text-3xl text-blue-500 font-bold mt-2 mb-2">{name}</h3>
-                    {/* <p class="text-lg text-gray-500 font-normal">{subject}</p> */}
-                    <p class="text-lg text-gray-500 font-normal">{job}</p>
-                </div>
+        <div class="w-full bg-white rounded-lg shadow-xl shadow-gray-200 mt-2 overflow-hidden flex flex-col justify-center items-center">
+            <div>
+                <Image 
+                   class="object-center object-cover h-auto w-full" 
+                   src={Tech2} 
+                   alt="photo"
+                />
             </div>
+            <div class="text-center py-8 sm:py-6">
+                <p class="text-2xl text-gray-700 font-bold mb-2">{name}</p>
+                <p class="text-md text-gray-400 font-normal">{job}</p>
+            </div>
+        </div>
     )
 }
 
