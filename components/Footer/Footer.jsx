@@ -4,10 +4,10 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <div className=" bg-gray-900  ">
-      <div className="mx-10 max-w-2x   text-white py-5">
+      <div className="container mx-auto  max-w-2x   text-white py-5">
         <div className=" flex flex-col justify-center  md:flex-row   md:justify-between  text-sm text-gray-400">
           <div className="flex flex-col sm:w-1/2 lg:w-1/5 md:w-1/5 w-full ">
-            <p className="text-sl font-bold text-white my-3">StandFord</p>
+            <p className="text-xl font-bold text-white mb-3">StandFord</p>
             <p className="text-left">
               Chortoq shahar,
               <br />
@@ -29,7 +29,7 @@ const Footer = () => {
           </div>
           <br />
           <div className="flex flex-col sm:w-1/2 lg:w-1/5 md:w-1/5 w-full ">
-            <p className="text-sl font-bold text-white ">Foydali Linklar</p>
+            <p className="text-xl font-bold text-white ">Foydali Linklar</p>
             <p className="py-1 ">
               <a href="#">Bosh Sahifa</a>
             </p>
@@ -48,7 +48,7 @@ const Footer = () => {
           </div>
           <br />
           <div className="flex flex-col sm:w-1/2 lg:w-1/5 md:w-1/5 w-full ">
-            <p className="text-sl font-bold text-white ">Bizning xizmatlar</p>
+            <p className="text-xl font-bold text-white ">Bizning xizmatlar</p>
             {/* text-left flex justify-center item-center */}
             <p className="py-1 ">
               <a href="#">Dasturlash Kursi</a>
@@ -72,7 +72,7 @@ const Footer = () => {
           <br />
 
           <div className="flex flex-col sm:w-1/2 lg:w-1/5 md:w-1/5 w-full ">
-            <p className="text-sl font-bold text-white">
+            <p className="text-xl mb-2 font-bold text-white">
               Yangiliklarga a'zo bo'ling
             </p>
             <p className="text-left">
