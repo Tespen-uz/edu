@@ -3,8 +3,8 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <div className=" bg-gray-900  ">
-      <div className="mx-10 max-w-2x   text-white py-5">
+    <div className=" bg-gray-900 lg:px-9 ">
+      <div className="mx-5 max-w-2x   text-white py-5">
         <div className=" flex flex-col justify-center  md:flex-row   md:justify-between  text-sm text-gray-400">
           <div className="flex flex-col sm:w-1/2 lg:w-1/5 md:w-1/5 w-full ">
             <p className="text-sl font-bold text-white my-3">StandFord</p>
@@ -87,11 +87,11 @@ const Footer = () => {
         <br />
         <div className="flex flex-col text-center w-full ">
           <p className="text-sm text-center">
-            CopyRight <span className="font-bold text-white">StandFord</span>{" "}
+            © CopyRight <span className="font-bold text-white">StandFord</span>{" "}
             Barcha huqulari himoyalangan.
             <br />
             Created by{" "}
-            <span className="text-yellow-500 font-bold">Jakhongir team</span>
+            <span className="text-green-500 font-bold">Jakhongir team</span>
             <br />
             2022
           </p>
