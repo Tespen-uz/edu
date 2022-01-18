@@ -1,9 +1,10 @@
 import React from "react";
+import TechId from "../../../components/TechId/TechId";
 
 const AboutPage = () => {
   return (
     <div>
-      <h1 className="font-bold text-2xl mb-4">Individual Teacher</h1>
+      <TechId />
     </div>
   );
 };
