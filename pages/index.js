@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Image from "next/image";
-import Page1 from "../components/Page1/page1";
 import Courses from "../components/Courses/Courses";
 import H1 from "../img/h-1.png";
 import InfoList from "../components/InfoBox/InfoList";
@@ -55,36 +54,24 @@ export default function Home(props) {
               </a>
             </div>
             <div className="w-full mt-8 md:w-6/12 md:mt-0 relative z-50">
-              <div className="w-full z-50">
+              <div className="w-full bg-[url(/HomeBlob.svg)]  ">
                 <Image src={H1} className="z-10" alt="standford course" />
               </div>
             </div>
           </div>
 
-          <div className=" absolute z-0 left-0 right-0 bottom-0">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-              <path
-                fill="#24a776"
-                fillOpacity="1"
-                d="M0,192L120,213.3C240,235,480,277,720,272C960,267,1200,213,1320,186.7L1440,160L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
-              ></path>
-            </svg>
-          </div>
-
-          <div
-            className="left-0 right-0 top-0 bottom-0  absolute -z-10 "
-            style={{
-              background: `url(${D1.src})`,
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-            }}
-          ></div>
-        </div>
-
         {/* index section end */}
 
+        </div>
         {/* coures info */}
-        <div className=" bg-[#24A776] py-14 relative">
+        <div
+        style={{background: `linear-gradient(143deg, rgba(0,245,255,0.6755077030812324) 0%, rgba(36,167,118,0.4766281512605042) 51%, rgba(32,166,92,0.5802696078431373) 100%)` }}
+         className="lg:pt-44 py-14 relative">
+<div className=" absolute left-0 right-0 top-0">
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <path fill="#fff" fill-opacity="1" d="M0,32L80,69.3C160,107,320,181,480,181.3C640,181,800,107,960,85.3C1120,64,1280,96,1360,112L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+</svg>
+          </div>
           <div className="container relative p-4 mx-auto flex flex-col items-center z-10">
             <div className="w-full   text-center  md:mt-0">
               <div>
@@ -145,8 +132,9 @@ export default function Home(props) {
         {/* course section end */}
 
         {/* info section  */}
-        <div className="bg-[#15c8ff] relative">
-          <div className="container p-2 mx-auto relative z-50 flex flex-col items-center sm:flex-row py-12">
+        <div 
+        style={{background: `linear-gradient(143deg, rgba(0,245,255,0.6755077030812324) 0%, rgba(36,167,118,0.4766281512605042) 51%, rgba(32,166,92,0.5802696078431373) 100%)` }}className="relative">
+          <div className="container p-2 mx-auto  relative z-50 flex flex-col items-center sm:flex-row py-12">
             <div className="w-full  sm:w-6/12">
               <Image
                 className="shadow-md"
@@ -157,14 +145,13 @@ export default function Home(props) {
               />
             </div>
             <div className="w-full my-6 text-center sm:w-6/12 sm:my-0 sm:text-left">
-              <h1 className="text-2xl font-bold text-gray-800 md:text-4xl">
+              <h1 className="text-2xl font-bold text-white md:text-4xl">
                 Develop with us in every field
               </h1>
-              <p className="text-xl mt-4 text-gray-600 md:text-2xl">
+              <p className="text-xl mt-4 text-white md:text-2xl">
                 -- Set your goals high.
               </p>
-              <p className="text-xl  text-gray-600 md:text-2xl">
-                {" "}
+              <p className="text-xl  text-white md:text-2xl">
                 -- Work on yourself and get results
               </p>
             </div>
@@ -194,13 +181,9 @@ export default function Home(props) {
         {/* teacher section */}
         <div
           className="py-12"
-          style={{
-            backgroundImage:
-              "linear-gradient(143deg, rgba(36,167,118,1) 2%, rgba(0,153,255,1) 48%, rgba(32,166,132,1) 87%)",
-          }}
         >
           <div className="container mx-auto pt-8">
-            <h1 className="text-3xl text-center border-b-2 p-4 md:text-4xl font-bold text-white">
+            <h1 className="text-3xl text-center border-b-2 p-4 border-black md:text-4xl font-bold text-black">
               Teacher Team
             </h1>
           </div>

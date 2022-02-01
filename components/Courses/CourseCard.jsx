@@ -14,7 +14,7 @@ function CourseCard({name, img, sum, tech, text }) {
                     <button className=' px-8 bg-cyan-500 rounded py-2 mt-4 text-white font-bold text-xl transition-all hover:scale-95'>Register</button>
 
                 </div>
-                <div className='w-full overflow-hidden p-2 mt-2 rounded-tl-full rounded-bl-full md:w-6/12' style={{background: 'linear-gradient(356deg, rgba(0,255,218,1) 29%, rgba(30,237,160,1) 63%)'}}>
+                <div className='w-full overflow-hidden p-2 mt-2 rounded-tl-full rounded-bl-full md:w-6/12'  style={{background: `linear-gradient(143deg, rgba(0,245,255,0.6755077030812324) 0%, rgba(36,167,118,0.4766281512605042) 51%, rgba(32,166,92,0.5802696078431373) 100%)` }}>
                     <Image src={CourseImg} width={400} height={400} className='object-cover rounded-full transition-all hover:rotate-45'/>
                     
 

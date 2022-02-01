@@ -36,7 +36,7 @@ export default function Head() {
             <ul className={open ? "flex text-center transition-all mt-10 mb-6 bg-[#000]  flex-col items-center justify-center md:flex-row md:mt-0 md:mb-0 md:justify-end" : "flex flex-col justify-end transition-all overflow-hidden h-0 md:flex-row md:h-[100%]"}>
               <li>
                 <Link href='/' >
-                  <a onClick={OpenMenu}  className="text-white ml-4 capitalize text-xl transition-all hover:text-[#24A776]">Home</a>
+                  <a onClick={OpenMenu}  className="sm:my-5 text-white ml-4 capitalize text-xl transition-all hover:text-[#24A776]">Home</a>
                 </Link>
               </li>
               <li>
