@@ -111,11 +111,6 @@ function TechSliderList() {
           );
         })}
       </div>
-      {/* <div 
-              className='absolute left-[5%] right-[5%] rounded-2xl bottom-[5%] top-[5%] bg-gray-900 z-0'
-              
-            >
-            </div> */}
     </div>
   );
 }

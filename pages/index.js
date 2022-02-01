@@ -7,9 +7,9 @@ import TechSliderList from "../components/Tech/TechSliderList";
 import A1 from "../img/a1.png";
 import CourseList from "../components/CourseBox/CourseList";
 import A2 from "../img/a2.png";
-import DisclosureC from "../components/Disclosure/Disclosure";
 import useConfetti from "../utils/hooks/useConfetti";
 import Faq from "../components/Faq/Faq";
+import Contact from "../layouts/contact";
 
 export default function Home(props) {
   const { startFirework, startSchoolPride } = useConfetti();
@@ -20,29 +20,29 @@ export default function Home(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main classNameName="relative">
-        <div classNameName="relative py-12 md:py-8 xl:py-20 ">
-          <div classNameName="container p-2 mx-auto min-h-[60vh] relative z-10  flex items-center flex-col md:flex-row">
-            <div classNameName=" w-full md:w-6/12 flex flex-col items-center z-50 md:items-center">
-              <p classNameName="text-3xl text-center capitalize font-bold mt-4 text-blue-400 md:text-4xl">
+      <main className="relative">
+        <div className="relative py-12 md:py-8 xl:py-20 ">
+          <div className="container p-2 mx-auto min-h-[60vh] relative z-10  flex items-center flex-col md:flex-row">
+            <div className=" w-full md:w-6/12 flex flex-col items-center z-50 md:items-center">
+              <p className="text-3xl text-center capitalize font-bold mt-4 text-blue-400 md:text-4xl">
                 Learn science from experts
               </p>
-              <p classNameName=" text-xl text-center mt-6">
+              <p className=" text-xl text-center mt-6">
                 Start listening to yourself. Pay attention to reading. Start
                 realizing your potential. Learn with us
               </p>
               <button
-                classNameName="rounded mt-6 font-bold text-xl block py-2 px-8  border border-[#24A776] text-[#24A776] transition-all hover:bg-[#24A776] hover:text-white"
+                className="rounded mt-6 font-bold text-xl block py-2 px-8  border border-[#24A776] text-[#24A776] transition-all hover:bg-[#24A776] hover:text-white"
                 onClick={startFirework}
               >
                 Start Now
               </button>
               <a
                 href="#"
-                classNameName="mt-8 text-[#24A776] flex items-center text-xl"
+                className="mt-8 text-[#24A776] flex items-center text-xl"
               >
                 <svg
-                  classNameName="mr-4"
+                  className="mr-4"
                   fill="#24A776"
                   xmlns="http://www.w3.org/2000/svg"
                   width="32"
@@ -54,14 +54,14 @@ export default function Home(props) {
                 See it in action
               </a>
             </div>
-            <div classNameName="w-full mt-8 md:w-8/12 md:mt-0 relative z-4">
-              <div classNameName="w-8/12 bg-[url(/HomeBlob.svg)] ml-auto mr-8 ">
-                <Image src={H1} classNameName="z-10" alt="standford course" />
+            <div className="w-full mt-8 md:w-8/12 md:mt-0 relative z-4">
+              <div className="w-8/12 bg-[url(/HomeBlob.svg)] ml-auto mr-8 ">
+                <Image src={H1} className="z-10" alt="standford course" />
               </div>
             </div>
           </div>
 
-          <div classNameName=" absolute z-0 left-0 right-0 bottom-0">
+          <div className=" absolute z-0 left-0 right-0 bottom-0">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
               <path
                 fill="#24a776"
@@ -72,29 +72,29 @@ export default function Home(props) {
           </div>
         </div>
 
-        <div classNameName=" bg-[#24A776] py-14 relative">
-          <div classNameName="container relative p-4 mx-auto flex flex-col items-center z-10">
-            <div classNameName="w-full   text-center  md:mt-0">
+        <div className=" bg-[#24A776] py-14 relative">
+          <div className="container relative p-4 mx-auto flex flex-col items-center z-10">
+            <div className="w-full   text-center  md:mt-0">
               <div>
-                <h1 classNameName="text-white text-3xl capitalize font-bold ">
+                <h1 className="text-white text-3xl capitalize font-bold ">
                   Get knwledge from teachers with 5 years experince with us
                 </h1>
-                <p classNameName="text-white text-xl mt-6">
+                <p className="text-white text-xl mt-6">
                   -- Every decision you make is important to us.
                 </p>
-                <p classNameName="text-white text-xl ">
+                <p className="text-white text-xl ">
                   -- With us you will achieve your goal.
                 </p>
-                <p classNameName="text-white text-xl">
+                <p className="text-white text-xl">
                   -- Never stop learning. Move forward towards the goal.
                 </p>
               </div>
             </div>
-            <div classNameName="w-full flex justify-center mt-8 ">
+            <div className="w-full flex justify-center mt-8 ">
               <Image src={A1} alt="standford course" width={900} height={500} />
             </div>
           </div>
-          <div classNameName="absolute left-0 right-0 bottom-0 z-0">
+          <div className="absolute left-0 right-0 bottom-0 z-0">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
               <path
                 fill="#fff"
@@ -104,18 +104,18 @@ export default function Home(props) {
             </svg>
           </div>
         </div>
-        <div classNameName="-mt-6">
+        <div className="-mt-6">
           <InfoList />
         </div>
-        <div classNameName="py-8">
-          <p classNameName="text-blue-400 text-center text-xl uppercase first-letter:text-2xl font-bold">
+        <div className="py-8">
+          <p className="text-blue-400 text-center text-xl uppercase first-letter:text-2xl font-bold">
             Courses
           </p>
-          <div classNameName="text-center mt-4 mb-8">
-            <h1 classNameName="text-3xl font-bold text-gray-800 capitalize">
+          <div className="text-center mt-4 mb-8">
+            <h1 className="text-3xl font-bold text-gray-800 capitalize">
               we offer the following corses
             </h1>
-            <p classNameName="text-xl container mx-auto w-8/12 text-gray-600 mt-4">
+            <p className="text-xl container mx-auto w-8/12 text-gray-600 mt-4">
               We will help you leverage our experince by breaking down the
               secret into small chunks that you can easily digest and apply to
               any digital strategy
@@ -128,32 +128,32 @@ export default function Home(props) {
           style={{
             background: `linear-gradient(143deg, rgba(0,245,255,0.6755077030812324) 0%, rgba(36,167,118,0.4766281512605042) 51%, rgba(32,166,92,0.5802696078431373) 100%)`,
           }}
-          classNameName="relative"
+          className="relative"
         >
-          <div classNameName="container p-2 mx-auto  relative z-50 flex flex-col items-center sm:flex-row py-12">
-            <div classNameName="w-full  sm:w-6/12">
+          <div className="container p-2 mx-auto  relative z-50 flex flex-col items-center sm:flex-row py-12">
+            <div className="w-full  sm:w-6/12">
               <Image
-                classNameName="shadow-md"
+                className="shadow-md"
                 src={A2}
                 width={700}
                 height={600}
                 alt=""
               />
             </div>
-            <div classNameName="w-full my-6 text-center sm:w-6/12 sm:my-0 sm:text-left">
-              <h1 classNameName="text-2xl font-bold text-white md:text-4xl">
+            <div className="w-full my-6 text-center sm:w-6/12 sm:my-0 sm:text-left">
+              <h1 className="text-2xl font-bold text-white md:text-4xl">
                 Develop with us in every field
               </h1>
-              <p classNameName="text-xl mt-4 text-white md:text-2xl">
+              <p className="text-xl mt-4 text-white md:text-2xl">
                 -- Set your goals high.
               </p>
-              <p classNameName="text-xl  text-white md:text-2xl">
+              <p className="text-xl  text-white md:text-2xl">
                 -- Work on yourself and get results
               </p>
             </div>
           </div>
 
-          <div classNameName="absolute left-0 right-0 z-0 bottom-0">
+          <div className="absolute left-0 right-0 z-0 bottom-0">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
               <path
                 fill="#fff"
@@ -162,7 +162,7 @@ export default function Home(props) {
               ></path>
             </svg>
           </div>
-          <div classNameName="absolute left-0 right-0 z-0 top-0">
+          <div className="absolute left-0 right-0 z-0 top-0">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
               <path
                 fill="#fff"
@@ -175,9 +175,9 @@ export default function Home(props) {
         {/* info section end */}
 
         {/* teacher section */}
-        <div classNameName="py-12">
-          <div classNameName="container mx-auto pt-8">
-            <h1 classNameName="text-3xl text-center border-b-2 p-4 border-black md:text-4xl font-bold text-black">
+        <div className="py-12">
+          <div className="container mx-auto pt-8">
+            <h1 className="text-3xl text-center border-b-2 p-4 border-black md:text-4xl font-bold text-black">
               Teacher Team
             </h1>
           </div>
@@ -185,6 +185,7 @@ export default function Home(props) {
         </div>
         <Faq />
       </main>
+      <Contact />
     </div>
   );
 }

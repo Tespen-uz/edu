@@ -13,13 +13,9 @@ const Faq = ({ faqs }) => {
         relative
         z-20
         overflow-hidden
-        px-2
-        sm:px-10
-        md:px-20
-        lg:px-40
       "
     >
-      <div className="">
+      <div className="container">
         <div className="flex flex-wrap -mx-4">
           <div className="w-full px-4">
             <div className="text-center mx-auto mb-[60px] lg:mb-20 max-w-[620px]">
