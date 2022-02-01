@@ -1,17 +1,15 @@
 import Head from "next/head";
 import Image from "next/image";
-import Page1 from "../components/Page1/page1";
-import Courses from "../components/Courses/Courses";
 import H1 from "../img/h-1.png";
 import InfoList from "../components/InfoBox/InfoList";
 import TechSliderList from "../components/Tech/TechSliderList";
-import StudentCardList from "../components/Student/StudentCardList";
-import Liner from "../img/liner1.png";
 import A1 from "../img/a1.png";
 import CourseList from "../components/CourseBox/CourseList";
 import A2 from "../img/a2.png";
 import D1 from "../img/d1.png";
 import DisclosureC from "../components/Disclosure/Disclosure";
+import Confetti from "../components/Confetti/Fireworks";
+import SchoolPride from "../components/Confetti/SchoolPride";
 
 export default function Home(props) {
   return (
@@ -22,6 +20,8 @@ export default function Home(props) {
       </Head>
 
       <main className="relative">
+        <Confetti />
+        <SchoolPride />
         {/* index section */}
         <div className="relative py-12 md:py-8 xl:py-0">
           <div className="container p-2 mx-auto min-h-[40vh] relative z-10  flex items-center flex-col md:flex-row">
