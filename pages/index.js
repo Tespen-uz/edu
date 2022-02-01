@@ -1,3 +1,4 @@
+import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import H1 from "../img/h-1.png";
@@ -8,10 +9,10 @@ import CourseList from "../components/CourseBox/CourseList";
 import A2 from "../img/a2.png";
 import D1 from "../img/d1.png";
 import DisclosureC from "../components/Disclosure/Disclosure";
-import Confetti from "../components/Confetti/Fireworks";
-import SchoolPride from "../components/Confetti/SchoolPride";
+import useConfetti from "../utils/hooks/useConfetti";
 
 export default function Home(props) {
+  const { startFirework, startSchoolPride } = useConfetti();
   return (
     <div>
       <Head>
@@ -20,9 +21,6 @@ export default function Home(props) {
       </Head>
 
       <main className="relative">
-        <Confetti />
-        <SchoolPride />
-        {/* index section */}
         <div className="relative py-12 md:py-8 xl:py-0">
           <div className="container p-2 mx-auto min-h-[40vh] relative z-10  flex items-center flex-col md:flex-row">
             <div className=" w-full md:w-6/12 flex flex-col items-center z-50 md:items-center">
@@ -33,8 +31,10 @@ export default function Home(props) {
                 Start listening to yourself. Pay attention to reading. Start
                 realizing your potential. Learn with us
               </p>
-
-              <button className="rounded mt-6 font-bold text-xl block py-2 px-8  border border-[#24A776] text-[#24A776] transition-all hover:bg-[#24A776] hover:text-white">
+              <button
+                className="rounded mt-6 font-bold text-xl block py-2 px-8  border border-[#24A776] text-[#24A776] transition-all hover:bg-[#24A776] hover:text-white"
+                onClick={startFirework}
+              >
                 Start Now
               </button>
               <a
@@ -81,9 +81,6 @@ export default function Home(props) {
           ></div>
         </div>
 
-        {/* index section end */}
-
-        {/* coures info */}
         <div className=" bg-[#24A776] py-14 relative">
           <div className="container relative p-4 mx-auto flex flex-col items-center z-10">
             <div className="w-full   text-center  md:mt-0">

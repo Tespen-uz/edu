@@ -28,7 +28,7 @@ function getAnimationSettings(originXA, originXB) {
   };
 }
 
-export default function Fireworks() {
+export default function Fireworks({ fireworkRef }) {
   const refAnimationInstance = useRef(null);
   const [intervalId, setIntervalId] = useState();
 
@@ -43,22 +43,15 @@ export default function Fireworks() {
     }
   }, []);
 
-  const startAnimation = useCallback(() => {
+  fireworkRef.current = useCallback(() => {
     if (!intervalId) {
       setIntervalId(setInterval(nextTickAnimation, 400));
+      setTimeout(() => {
+        clearInterval(intervalId);
+        setIntervalId(null);
+      }, 3000);
     }
   }, [intervalId, nextTickAnimation]);
-
-  const pauseAnimation = useCallback(() => {
-    clearInterval(intervalId);
-    setIntervalId(null);
-  }, [intervalId]);
-
-  const stopAnimation = useCallback(() => {
-    clearInterval(intervalId);
-    setIntervalId(null);
-    refAnimationInstance.current && refAnimationInstance.current.reset();
-  }, [intervalId]);
 
   useEffect(() => {
     return () => {
@@ -67,13 +60,8 @@ export default function Fireworks() {
   }, [intervalId]);
 
   return (
-    <>
-      <div>
-        <button onClick={startAnimation}>Start</button>
-        <button onClick={pauseAnimation}>Pause</button>
-        <button onClick={stopAnimation}>Stop</button>
-      </div>
+    <React.Fragment>
       <ReactCanvasConfetti refConfetti={getInstance} style={canvasStyles} />
-    </>
+    </React.Fragment>
   );
 }

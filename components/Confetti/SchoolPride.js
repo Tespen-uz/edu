@@ -20,7 +20,7 @@ function getAnimationSettings(angle, originX) {
   };
 }
 
-export default function SchoolPride() {
+export default function SchoolPride({ schoolPrideRef }) {
   const refAnimationInstance = useRef(null);
   const [intervalId, setIntervalId] = useState();
 
@@ -35,22 +35,16 @@ export default function SchoolPride() {
     }
   }, []);
 
-  const startAnimation = useCallback(() => {
+  schoolPrideRef.current = useCallback(() => {
     if (!intervalId) {
       setIntervalId(setInterval(nextTickAnimation, 16));
+
+      setTimeout(() => {
+        clearInterval(intervalId);
+        setIntervalId(null);
+      }, 3000);
     }
   }, [nextTickAnimation, intervalId]);
-
-  const pauseAnimation = useCallback(() => {
-    clearInterval(intervalId);
-    setIntervalId(null);
-  }, [intervalId]);
-
-  const stopAnimation = useCallback(() => {
-    clearInterval(intervalId);
-    setIntervalId(null);
-    refAnimationInstance.current && refAnimationInstance.current.reset();
-  }, [intervalId]);
 
   useEffect(() => {
     return () => {
@@ -59,13 +53,8 @@ export default function SchoolPride() {
   }, [intervalId]);
 
   return (
-    <>
-      <div>
-        <button onClick={startAnimation}>Start</button>
-        <button onClick={pauseAnimation}>Pause</button>
-        <button onClick={stopAnimation}>Stop</button>
-      </div>
+    <React.Fragment>
       <ReactCanvasConfetti refConfetti={getInstance} style={canvasStyles} />
-    </>
+    </React.Fragment>
   );
 }
