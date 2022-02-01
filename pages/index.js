@@ -1,9 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
-import Page1 from "../components/Page1/page1";
-import Courses from "../components/Courses/Courses";
-// import Subject from "../pages/subject/subject";
-import Clip from "../public/clip.png";
+import Subject from "./subject/index"
 
 export default function Home() {
   return (
@@ -13,49 +9,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="">
-        <div className="bg-gradient-to-r from-cyan-400 to-blue-300">
-          <div className=" container mx-auto">
-            <div className="bg-[url('/coursebackimage.jpg')] px-5  "></div>
-
-            <div className="py-10 bg-gradient-to-r from-cyan-400 to-blue-300 lg:flex">
-              <div className="sm:w-1/2 sm:block container mx-auto  px-5  text-white">
-                <p className="text-2xl font-bold ">English</p>
-                <br />
-                <p className="text-sm">
-                  Biz ingliz tilini o'rganish haqidagi fikringizni yaxshi
-                  tomonga o'zgartiramiz! Bizda faqat yuqori malakali,
-                  o'qituvchilar ishlashadi, ularning sharofati bilan minglab
-                  talabalarimiz IELTS kurslarini tugatib imtihonda 7dan yuqori
-                  ball olishgan. Bizning tashkil topgan kunimizdan beri biz
-                  ko'plab mukofotlarga sazovor bo'ldik va ingliz tilini o'qitish
-                  bo'yicha yetakchilardan biriga aylandik. Biz erishgan
-                  yutuqlarimizda to'xtab qolmaymiz! Biz har hafta yakshanba kuni
-                  tadbirlar o'tkazamiz. Shuningdek talabalarimizni ko'ngilochar
-                  tadbirlar va konkurslar bilan muntazam ravishda xursand qilib
-                  turamiz.
-                </p>
-              </div>
-              <div className="sm:w-1/2 sm:block px-5 sm:pr-10">
-                <p className="font-medium py-2 px-2 mt-5  text-white bg-gray-400 flex justify-between">
-                  <span>Teacher </span>
-                  <span>Falonchiyev Pistonchi</span>
-                </p>
-                <p className="font-medium py-2 px-2 mt-5  text-white bg-gray-400 flex justify-between">
-                  <span>To'lov </span>
-                  <span>200 000 so'm</span>
-                </p>
-                <p className="font-medium py-2 px-2 mt-5 text-white bg-gray-400 flex justify-between">
-                  <span>Joylar </span>
-                  <span>10 kishilik</span>
-                </p>
-                <p className="font-medium py-2 px-2 mt-5  text-white bg-gray-400 flex justify-between">
-                  <span>Dars davomiyligi </span>
-                  <span>2 Soat</span>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+<Subject/>
       </main>
     </div>
   );

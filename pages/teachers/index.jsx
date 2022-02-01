@@ -7,7 +7,7 @@ import TechId from "../../components/TechId/TechId";
 const AboutPage = () => {
   return (
     <div>
-      <TechCartList />
+      {/* <TechCartList /> */}
       <TechSliderList />
       <StudentCardList />
       {/* <TechId /> */}

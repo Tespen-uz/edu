@@ -22,7 +22,6 @@ const AboutPage = () => {
           }}
           className=" bg-cover  sm:block lg:mx-10 "
         >
-
           <p className="  text-blue-700 drop-shadow-2xl  text-center font-bold text-2xl mb-4">
             Biz haqimizda
           </p>
