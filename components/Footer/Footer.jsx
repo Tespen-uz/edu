@@ -18,7 +18,7 @@ const Footer = () => {
               <br />
               "Istiqlol xiyoboni" ko'chasi 12-uy
               <br />
-              Mo'lja:"Afsona" bolalar bogi yonida
+              Mo'ljal:"Afsona" bolalar bogi yonida
               <br />
               <span className=" text-bold">Tell :</span>
               <a href="#" className="">
@@ -27,7 +27,6 @@ const Footer = () => {
               <br />
               <span className=" text-bold">Email :</span>
               <a href="#" className="">
-                {" "}
                 braveme@gmai.com
               </a>
             </p>

@@ -1,18 +1,18 @@
+import React from "react";
 import Head from "next/head";
 import Image from "next/image";
-import Courses from "../components/Courses/Courses";
 import H1 from "../img/h-1.png";
 import InfoList from "../components/InfoBox/InfoList";
 import TechSliderList from "../components/Tech/TechSliderList";
-import StudentCardList from "../components/Student/StudentCardList";
-import Liner from "../img/liner1.png";
 import A1 from "../img/a1.png";
 import CourseList from "../components/CourseBox/CourseList";
 import A2 from "../img/a2.png";
 import D1 from "../img/d1.png";
 import DisclosureC from "../components/Disclosure/Disclosure";
+import useConfetti from "../utils/hooks/useConfetti";
 
 export default function Home(props) {
+  const { startFirework, startSchoolPride } = useConfetti();
   return (
     <div>
       <Head>
@@ -21,9 +21,8 @@ export default function Home(props) {
       </Head>
 
       <main className="relative">
-        {/* index section */}
-        <div className="relative py-12 md:py-8 xl:py-0">
-          <div className="container p-2 mx-auto min-h-[40vh] relative z-10  flex items-center flex-col md:flex-row">
+        <div className="relative py-12 md:py-8 xl:py-20 ">
+          <div className="container p-2 mx-auto min-h-[60vh] relative z-10  flex items-center flex-col md:flex-row">
             <div className=" w-full md:w-6/12 flex flex-col items-center z-50 md:items-center">
               <p className="text-3xl text-center capitalize font-bold mt-4 text-blue-400 md:text-4xl">
                 Learn science from experts
@@ -32,8 +31,10 @@ export default function Home(props) {
                 Start listening to yourself. Pay attention to reading. Start
                 realizing your potential. Learn with us
               </p>
-
-              <button className="rounded mt-6 font-bold text-xl block py-2 px-8  border border-[#24A776] text-[#24A776] transition-all hover:bg-[#24A776] hover:text-white">
+              <button
+                className="rounded mt-6 font-bold text-xl block py-2 px-8  border border-[#24A776] text-[#24A776] transition-all hover:bg-[#24A776] hover:text-white"
+                onClick={startFirework}
+              >
                 Start Now
               </button>
               <a
@@ -53,25 +54,25 @@ export default function Home(props) {
                 See it in action
               </a>
             </div>
-            <div className="w-full mt-8 md:w-6/12 md:mt-0 relative z-50">
-              <div className="w-full bg-[url(/HomeBlob.svg)]  ">
+            <div className="w-full mt-8 md:w-8/12 md:mt-0 relative z-4">
+              <div className="w-8/12 bg-[url(/HomeBlob.svg)] ml-auto mr-8 ">
                 <Image src={H1} className="z-10" alt="standford course" />
               </div>
             </div>
           </div>
 
-        {/* index section end */}
-
-        </div>
-        {/* coures info */}
-        <div
-        style={{background: `linear-gradient(143deg, rgba(0,245,255,0.6755077030812324) 0%, rgba(36,167,118,0.4766281512605042) 51%, rgba(32,166,92,0.5802696078431373) 100%)` }}
-         className="lg:pt-44 py-14 relative">
-<div className=" absolute left-0 right-0 top-0">
-           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-  <path fill="#fff" fill-opacity="1" d="M0,32L80,69.3C160,107,320,181,480,181.3C640,181,800,107,960,85.3C1120,64,1280,96,1360,112L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
-</svg>
+          <div className=" absolute z-0 left-0 right-0 bottom-0">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+              <path
+                fill="#24a776"
+                fillOpacity="1"
+                d="M0,192L120,213.3C240,235,480,277,720,272C960,267,1200,213,1320,186.7L1440,160L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+              ></path>
+            </svg>
           </div>
+        </div>
+
+        <div className=" bg-[#24A776] py-14 relative">
           <div className="container relative p-4 mx-auto flex flex-col items-center z-10">
             <div className="w-full   text-center  md:mt-0">
               <div>
@@ -132,8 +133,12 @@ export default function Home(props) {
         {/* course section end */}
 
         {/* info section  */}
-        <div 
-        style={{background: `linear-gradient(143deg, rgba(0,245,255,0.6755077030812324) 0%, rgba(36,167,118,0.4766281512605042) 51%, rgba(32,166,92,0.5802696078431373) 100%)` }}className="relative">
+        <div
+          style={{
+            background: `linear-gradient(143deg, rgba(0,245,255,0.6755077030812324) 0%, rgba(36,167,118,0.4766281512605042) 51%, rgba(32,166,92,0.5802696078431373) 100%)`,
+          }}
+          className="relative"
+        >
           <div className="container p-2 mx-auto  relative z-50 flex flex-col items-center sm:flex-row py-12">
             <div className="w-full  sm:w-6/12">
               <Image
@@ -179,9 +184,7 @@ export default function Home(props) {
         {/* info section end */}
 
         {/* teacher section */}
-        <div
-          className="py-12"
-        >
+        <div className="py-12">
           <div className="container mx-auto pt-8">
             <h1 className="text-3xl text-center border-b-2 p-4 border-black md:text-4xl font-bold text-black">
               Teacher Team
