@@ -52,24 +52,6 @@ const CoursePage = () => {
                 "
                 >
                   <div className="flex flex-wrap items-center p-4 sm:p-8 pb-4">
-                    <div className="flex items-center mb-4 mr-5 md:mr-10">
-                      <div className="w-10 h-10 rounded-full overflow-hidden mr-4 relative">
-                        <Image
-                          src={`https://source.unsplash.com/800x600/?avatar`}
-                          alt="Standford school course"
-                          layout="fill"
-                          objectFit="cover"
-                          objectPosition="50% 50%"
-                        />
-                      </div>
-                      <p className="text-base text-white font-medium">
-                        By
-                        <a className="text-white hover:opacity-70">
-                          {" "}
-                          Yulduzxon
-                        </a>
-                      </p>
-                    </div>
                     <div className="flex items-center mb-4">
                       <p
                         className="
@@ -101,46 +83,6 @@ const CoursePage = () => {
                           </svg>
                         </span>
                         26 Feb 2023
-                      </p>
-
-                      <p
-                        className="
-                        flex
-                        items-center
-                        text-sm
-                        font-medium
-                        text-white
-                        mr-5
-                        md:mr-8
-                      "
-                      >
-                        <span className="mr-3">
-                          <svg
-                            width="18"
-                            height="13"
-                            viewBox="0 0 18 13"
-                            className="fill-current"
-                          >
-                            <path d="M15.9754 0H2.02539C1.09727 0 0.337891 0.759375 0.337891 1.6875V10.6875C0.337891 11.3062 0.647266 11.8406 1.18164 12.15C1.43477 12.2906 1.74414 12.375 2.02539 12.375C2.30664 12.375 2.58789 12.2906 2.86914 12.15L5.34414 10.7156C5.45664 10.6594 5.56914 10.6312 5.68164 10.6312H15.9473C16.8754 10.6312 17.6348 9.87187 17.6348 8.94375V1.6875C17.6629 0.759375 16.9035 0 15.9754 0ZM16.6785 8.94375C16.6785 9.3375 16.3691 9.64687 15.9754 9.64687H5.70977C5.42852 9.64687 5.11914 9.73125 4.86602 9.87187L2.39102 11.3063C2.16602 11.4187 1.91289 11.4187 1.68789 11.3063C1.46289 11.1938 1.35039 10.9688 1.35039 10.7156V1.6875C1.35039 1.29375 1.65977 0.984375 2.05352 0.984375H16.0035C16.3973 0.984375 16.7066 1.29375 16.7066 1.6875V8.94375H16.6785Z" />
-                            <path d="M12.5721 3.375H5.03457C4.75332 3.375 4.52832 3.6 4.52832 3.88125C4.52832 4.1625 4.75332 4.3875 5.03457 4.3875H12.6002C12.8814 4.3875 13.1064 4.1625 13.1064 3.88125C13.1064 3.6 12.8533 3.375 12.5721 3.375Z" />
-                            <path d="M11.3908 6.55322H5.03457C4.75332 6.55322 4.52832 6.77822 4.52832 7.05947C4.52832 7.34072 4.75332 7.56572 5.03457 7.56572H11.4189C11.7002 7.56572 11.9252 7.34072 11.9252 7.05947C11.9252 6.77822 11.6721 6.55322 11.3908 6.55322Z" />
-                          </svg>
-                        </span>
-                        05
-                      </p>
-                      <p className="flex items-center text-sm font-medium text-white">
-                        <span className="mr-3">
-                          <svg
-                            width="20"
-                            height="12"
-                            viewBox="0 0 20 12"
-                            className="fill-current"
-                          >
-                            <path d="M10.2559 3.8125C9.03711 3.8125 8.06836 4.8125 8.06836 6C8.06836 7.1875 9.06836 8.1875 10.2559 8.1875C11.4434 8.1875 12.4434 7.1875 12.4434 6C12.4434 4.8125 11.4746 3.8125 10.2559 3.8125ZM10.2559 7.09375C9.66211 7.09375 9.16211 6.59375 9.16211 6C9.16211 5.40625 9.66211 4.90625 10.2559 4.90625C10.8496 4.90625 11.3496 5.40625 11.3496 6C11.3496 6.59375 10.8496 7.09375 10.2559 7.09375Z" />
-                            <path d="M19.7559 5.625C17.6934 2.375 14.1309 0.4375 10.2559 0.4375C6.38086 0.4375 2.81836 2.375 0.755859 5.625C0.630859 5.84375 0.630859 6.125 0.755859 6.34375C2.81836 9.59375 6.38086 11.5312 10.2559 11.5312C14.1309 11.5312 17.6934 9.59375 19.7559 6.34375C19.9121 6.125 19.9121 5.84375 19.7559 5.625ZM10.2559 10.4375C6.84961 10.4375 3.69336 8.78125 1.81836 5.96875C3.69336 3.1875 6.84961 1.53125 10.2559 1.53125C13.6621 1.53125 16.8184 3.1875 18.6934 5.96875C16.8184 8.78125 13.6621 10.4375 10.2559 10.4375Z" />
-                          </svg>
-                        </span>
-                        05
                       </p>
                     </div>
                   </div>
@@ -177,13 +119,13 @@ const CoursePage = () => {
                     "
                       data-wow-delay=".1s"
                     >
-                      There's a time and place for everything… including asking
-                      for reviews. For instance: you should not asking for a
-                      review on your checkout page. The sole purpose of this
-                      page is to guide your customer to complete their purchase,
-                      and this means that the page should be as minimalist and
-                      pared-down possible. You don't want to have any
-                      unnecessary elements or Call To Actions.
+                      There&apos;s a time and place for everything… including
+                      asking for reviews. For instance: you should not asking
+                      for a review on your checkout page. The sole purpose of
+                      this page is to guide your customer to complete their
+                      purchase, and this means that the page should be as
+                      minimalist and pared-down possible. You don&apos;t want to
+                      have any unnecessary elements or Call To Actions.
                     </p>
                     <p
                       className="
@@ -195,13 +137,13 @@ const CoursePage = () => {
                     "
                       data-wow-delay=".1s"
                     >
-                      There's a time and place for everything… including asking
-                      for reviews. For instance: you should not asking for a
-                      review on your checkout page. The sole purpose of this
-                      page is to guide your customer to complete their purchase,
-                      and this means that the page should be as minimalist and
-                      pared-down possible. You don't want to have any
-                      unnecessary elements or Call To Actions.
+                      There&apos;s a time and place for everything… including
+                      asking for reviews. For instance: you should not asking
+                      for a review on your checkout page. The sole purpose of
+                      this page is to guide your customer to complete their
+                      purchase, and this means that the page should be as
+                      minimalist and pared-down possible. You don&apos;t want to
+                      have any unnecessary elements or Call To Actions.
                     </p>
                     <h3
                       className="
