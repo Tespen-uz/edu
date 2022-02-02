@@ -119,6 +119,14 @@ export default function Contact() {
 }
 
 
+// export async function getStaticProps(){
+//   return {props:{
+//     raqamlar:[{}]
+//   }}
+// }
+
+
+
  
 // export  async function getStaticProps(){
 
