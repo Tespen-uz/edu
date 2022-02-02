@@ -11,7 +11,6 @@ const Contact = () => {
 
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Script src="assets/js/wow.min.js " />
       <div>
         <section
           id="contact"
@@ -131,7 +130,7 @@ const Contact = () => {
                       <input
                         type="text"
                         name="fullName"
-                        placeholder="Adam Gelius"
+                        placeholder="jakhongir abdukhamidov"
                         className="
                       w-full
                       border-0 border-b border-[#f1f1f1]
@@ -167,9 +166,9 @@ const Contact = () => {
                         Phone*
                       </label>
                       <input
-                        type="text"
+                        type="number"
                         name="phone"
-                        placeholder="+885 1254 5211 552"
+                        placeholder="+998 33 787 07 74"
                         className="
                       w-full
                       border-0 border-b border-[#f1f1f1]
