@@ -21,7 +21,7 @@ const AboutPage = () => {
               alt="about stanford school"
             />
           </div>
-          <div className="w-full my-10 z-50  md:w-6/12 md:my-0">
+          <div className="w-full my-10 z-10  md:w-6/12 md:my-0">
             <h1 className="text-white text-center font-bold text-3xl md:text-4xl md:text-left">
               A collection of our courses from all disciplines.
             </h1>
@@ -43,6 +43,10 @@ const AboutPage = () => {
             ></path>
           </svg>
         </div>
+      </div>
+
+      <div className="text-center flex justify-center font-bold text-2xl md:text-4xl text-gray-700">
+        <h1 className=" border-b-4 py-2 border-green-300 ">Our All courses</h1>
       </div>
 
       <CourseList />
