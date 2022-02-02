@@ -1,85 +1,9 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link"
 
 const Footer = () => {
-<<<<<<< HEAD
-  return (
-    <div className=" bg-gray-900  ">
-      <div className="pt-12 lg:pt-48   max-w-2x p-2 relative   text-white py-5">
-        <div className="absolute left-0 right-0 top-0">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path
-              fill="#fff"
-              fillOpacity="1"
-              d="M0,64L80,85.3C160,107,320,149,480,160C640,171,800,149,960,133.3C1120,117,1280,107,1360,101.3L1440,96L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
-            ></path>
-          </svg>
-        </div>
-        <div className="container mx-auto flex flex-col justify-center  md:flex-row   md:justify-between  text-sm text-gray-400">
-          <div className="flex flex-col sm:w-1/2 lg:w-1/5 md:w-1/5 w-full ">
-            <p className="text-xl font-bold text-white mb-3">StandFord</p>
-            <p className="text-left">
-              Chortoq shahar,
-              <br />
-              "Istiqlol xiyoboni" ko'chasi 12-uy
-              <br />
-              Mo'ljal:"Afsona" bolalar bogi yonida
-              <br />
-              <span className=" text-bold">Tell :</span>
-              <a href="#" className="">
-                +998990031148
-              </a>
-              <br />
-              <span className=" text-bold">Email :</span>
-              <a href="#" className="">
-                braveme@gmai.com
-              </a>
-            </p>
-          </div>
-          <br />
-          <div className="flex flex-col sm:w-1/2 lg:w-1/5 md:w-1/5 w-full ">
-            <p className="text-xl font-bold text-white ">Foydali Linklar</p>
-            <p className="py-1 ">
-              <a href="#">Bosh Sahifa</a>
-            </p>
-            <p className="py-1 ">
-              <a href="#">Biz Haqimizda</a>
-            </p>
-            <p className="py-1 ">
-              <a href="#">Hamma Kurslar</a>
-            </p>
-            <p className="py-1 ">
-              <a href="#">Imtihon Natijalari</a>
-            </p>
-            <p className="py-1 ">
-              <a href="#">Yangiliklar</a>
-            </p>
-          </div>
-          <br />
-          <div className="flex flex-col sm:w-1/2 lg:w-1/5 md:w-1/5 w-full ">
-            <p className="text-xl font-bold text-white ">Bizning xizmatlar</p>
-            {/* text-left flex justify-center item-center */}
-            <p className="py-1 ">
-              <a href="#">Dasturlash Kursi</a>
-            </p>
-            <p className="py-1">
-              <a href="#">Ingliz Tili</a>
-            </p>
-            <p className="py-1 ">
-              <a href="#">Kimyo</a>
-            </p>
-            <p className="py-1 ">
-              <a href="#">Fizika</a>
-            </p>
-            <p className="py-1">
-              <a href="#">Matematika</a>
-            </p>
-            <p className="py-1 ">
-              <a href="#">Biologiya</a>
-            </p>
-          </div>
-          <br />
-=======
+
   return (<footer className= " bg-gray-100 pt-20 lg:pt-[120px] pb-10 lg:pb-20 relative z-10">
    <div className="container mx-auto ">
       <div className="flex flex-wrap ">
@@ -92,8 +16,8 @@ const Footer = () => {
                <p className="text-gray-600 font-bold text-3xl">StandFord</p>
                </a>
                <p className="text-base text-body-color text-gray-600 mb-7">
-                  Sed ut perspiciatis undmnis is iste natus error sit amet
-                  voluptatem totam rem aperiam.
+                 Chortoq shahar <br/>"Istiqlol" ko'chasi 12-uy<br/>
+                 Mo'njal:"Bog'cha" ro'parasida
                </p>
                <p className="flex items-center text-sm                         text-gray-600
  font-medium">
@@ -115,13 +39,13 @@ const Footer = () => {
                            />
                      </svg>
                   </span>
-                  <span className="text-gray-600">+012 (345) 678 99</span>
+                <a href="tel:+998609088789">  <span className="text-gray-600">+998609088798</span></a>
                </p>
             </div>
          </div>
-         <div className="w-full sm:w-1/2 lg:w-2/12 px-4">
+         <div className="w-full sm:w-1/2 lg:w-3/12 px-4">
             <div className="w-full mb-10">
-               <h4 className="text-gray-600 text-lg font-semibold mb-9">Resources</h4>
+               <h4 className="text-gray-600 text-lg font-semibold mb-9">Usful Links</h4>
                <ul>
                   <li>
                      <a
@@ -135,7 +59,7 @@ const Footer = () => {
                         mb-2
                         "
                         >
-                     SaaS Development
+                     Home Page
                      </a>
                   </li>
                   <li>
@@ -150,7 +74,7 @@ const Footer = () => {
                         mb-2
                         "
                         >
-                     Our Products
+                           About Us
                      </a>
                   </li>
                   <li>
@@ -165,7 +89,7 @@ const Footer = () => {
                         mb-2
                         "
                         >
-                     User Flow
+                     Teachers
                      </a>
                   </li>
                   <li>
@@ -179,17 +103,17 @@ const Footer = () => {
                         mb-2
                         "
                         >
-                     User Strategy
+                     Courses
                      </a>
                   </li>
                </ul>
             </div>
          </div>
-         <div className="w-full sm:w-1/2 lg:w-2/12 px-4">
+         <div className="w-full sm:w-1/2 lg:w-3/12 px-4">
             <div className="w-full mb-10">
                <h4 className="
                         text-gray-600
-               text-lg font-semibold mb-9">Company</h4>
+               text-lg font-semibold mb-9">Our Services</h4>
                <ul>
                   <li>
                      <a
@@ -203,7 +127,7 @@ const Footer = () => {
                         mb-2
                         "
                         >
-                     About TailGrids
+                     English 
                      </a>
                   </li>
                   <li>
@@ -212,31 +136,13 @@ const Footer = () => {
                         className="
                         inline-block
                         text-gray-600
->>>>>>> navbar
-
                         text-base text-body-color
                         hover:text-primary
                         leading-loose
                         mb-2
                         "
                         >
-                     Contact & Support
-                     </a>
-                  </li>
-                  <li>
-                     <a
-                        href="javascript:void(0)"
-                        className="
-                        inline-block
-                        text-gray-600
-
-                        text-base text-body-color
-                        hover:text-primary
-                        leading-loose
-                        mb-2
-                        "
-                        >
-                     Success History
+                           Mathematics
                      </a>
                   </li>
                   <li>
@@ -252,29 +158,7 @@ const Footer = () => {
                         mb-2
                         "
                         >
-                     Setting & Privacy
-                     </a>
-                  </li>
-               </ul>
-            </div>
-         </div>
-         <div className="w-full sm:w-1/2 lg:w-2/12 px-4">
-            <div className="w-full mb-10">
-               <h4 className="text-gray-600 text-lg font-semibold mb-9">Quick Links</h4>
-               <ul>
-                  <li>
-                     <a
-                        href="javascript:void(0)"
-                        className="
-                        inline-block
-                        text-gray-600
-                        text-base text-body-color
-                        hover:text-primary
-                        leading-loose
-                        mb-2
-                        "
-                        >
-                     Premium Support
+                     Chemistry
                      </a>
                   </li>
                   <li>
@@ -283,43 +167,15 @@ const Footer = () => {
                         className="
                         inline-block
                         text-gray-600
+
                         text-base text-body-color
                         hover:text-primary
                         leading-loose
                         mb-2
                         "
                         >
-                     Our Services
-                     </a>
-                  </li>
-                  <li>
-                     <a
-                        href="javascript:void(0)"
-                        className="
-                        inline-block
-                        text-gray-600
-                        text-base text-body-color
-                        hover:text-primary
-                        leading-loose
-                        mb-2
-                        "
-                        >
-                     Know Our Team
-                     </a>
-                  </li>
-                  <li>
-                     <a
-                        href="javascript:void(0)"
-                        className="
-                        inline-block
-                        text-gray-600
-                        text-base text-body-color
-                        hover:text-primary
-                        leading-loose
-                        mb-2
-                        "
-                        >
-                     Download App
+                     
+Mother Tongue
                      </a>
                   </li>
                </ul>
@@ -330,128 +186,24 @@ const Footer = () => {
                <h4 className="                        text-gray-600
  text-lg font-semibold mb-9">Follow Us On</h4>
                <div className="flex items-center mb-6">
-                  <a
-                     href="javascript:void(0)"
-                     className="
-                     w-8
-                     h-8
-                     flex
-                     items-center
-                     justify-center
-                     rounded-full
-                     border border-[#E5E5E5]
-                                             text-gray-600
-
-                     hover:text-white hover:bg-primary hover:border-primary
-                     mr-3
-                     sm:mr-4
-                     lg:mr-3
-                     xl:mr-4
-                     "
-                     >
-                     <svg
-                        width="8"
-                        height="16"
-                        viewBox="0 0 8 16"
-                        className="fill-current"
-                        >
-                        <path
-                           d="M7.43902 6.4H6.19918H5.75639V5.88387V4.28387V3.76774H6.19918H7.12906C7.3726 3.76774 7.57186 3.56129 7.57186 3.25161V0.516129C7.57186 0.232258 7.39474 0 7.12906 0H5.51285C3.76379 0 2.54609 1.44516 2.54609 3.5871V5.83226V6.34839H2.10329H0.597778C0.287819 6.34839 0 6.63226 0 7.04516V8.90323C0 9.26452 0.243539 9.6 0.597778 9.6H2.05902H2.50181V10.1161V15.3032C2.50181 15.6645 2.74535 16 3.09959 16H5.18075C5.31359 16 5.42429 15.9226 5.51285 15.8194C5.60141 15.7161 5.66783 15.5355 5.66783 15.3806V10.1419V9.62581H6.13276H7.12906C7.41688 9.62581 7.63828 9.41935 7.68256 9.10968V9.08387V9.05806L7.99252 7.27742C8.01466 7.09677 7.99252 6.89032 7.85968 6.68387C7.8154 6.55484 7.61614 6.42581 7.43902 6.4Z"
-                           />
-                     </svg>
-                  </a>
-                  <a
-                     href="javascript:void(0)"
-                     className="
-                     w-8
-                     h-8
-                     flex
-                     items-center
-                     justify-center
-                     rounded-full
-                     border border-[#E5E5E5]
-                                             text-gray-600
-
-                     hover:text-white hover:bg-primary hover:border-primary
-                     mr-3
-                     sm:mr-4
-                     lg:mr-3
-                     xl:mr-4
-                     "
-                     >
-                     <svg
-                        width="16"
-                        height="12"
-                        viewBox="0 0 16 12"
-                        className="fill-current"
-                        >
-                        <path
-                           d="M14.2194 2.06654L15.2 0.939335C15.4839 0.634051 15.5613 0.399217 15.5871 0.2818C14.8129 0.704501 14.0903 0.845401 13.6258 0.845401H13.4452L13.3419 0.751468C12.7226 0.258317 11.9484 0 11.1226 0C9.31613 0 7.89677 1.36204 7.89677 2.93542C7.89677 3.02935 7.89677 3.17025 7.92258 3.26419L8 3.73386L7.45806 3.71037C4.15484 3.61644 1.44516 1.03327 1.00645 0.587084C0.283871 1.76125 0.696774 2.88845 1.13548 3.59296L2.0129 4.90802L0.619355 4.20352C0.645161 5.18982 1.05806 5.96477 1.85806 6.52838L2.55484 6.99804L1.85806 7.25636C2.29677 8.45401 3.27742 8.94716 4 9.13503L4.95484 9.36986L4.05161 9.93346C2.60645 10.8728 0.8 10.8024 0 10.7319C1.62581 11.7652 3.56129 12 4.90323 12C5.90968 12 6.65806 11.9061 6.83871 11.8356C14.0645 10.2857 14.4 4.41487 14.4 3.2407V3.07632L14.5548 2.98239C15.4323 2.23092 15.7935 1.8317 16 1.59687C15.9226 1.62035 15.8194 1.66732 15.7161 1.6908L14.2194 2.06654Z"
-                           />
-                     </svg>
-                  </a>
-                  <a
-                     href="javascript:void(0)"
-                     className="
-                     w-8
-                     h-8
-                     flex
-                     items-center
-                     justify-center
-                     rounded-full
-                     border border-[#E5E5E5]
-                                             text-gray-600
-
-                     hover:text-white hover:bg-primary hover:border-primary
-                     mr-3
-                     sm:mr-4
-                     lg:mr-3
-                     xl:mr-4
-                     "
-                     >
-                     <svg
-                        width="16"
-                        height="12"
-                        viewBox="0 0 16 12"
-                        className="fill-current"
-                        >
-                        <path
-                           d="M15.6645 1.88018C15.4839 1.13364 14.9419 0.552995 14.2452 0.359447C13.0065 6.59222e-08 8 0 8 0C8 0 2.99355 6.59222e-08 1.75484 0.359447C1.05806 0.552995 0.516129 1.13364 0.335484 1.88018C0 3.23502 0 6 0 6C0 6 0 8.79263 0.335484 10.1198C0.516129 10.8664 1.05806 11.447 1.75484 11.6406C2.99355 12 8 12 8 12C8 12 13.0065 12 14.2452 11.6406C14.9419 11.447 15.4839 10.8664 15.6645 10.1198C16 8.79263 16 6 16 6C16 6 16 3.23502 15.6645 1.88018ZM6.4 8.57143V3.42857L10.5548 6L6.4 8.57143Z"
-                           />
-                     </svg>
-                  </a>
-                  <a
-                     href="javascript:void(0)"
-                     className="
-                     w-8
-                     h-8
-                     flex
-                     items-center
-                     justify-center
-                     rounded-full
-                     border border-[#E5E5E5]
-                                             text-gray-600
-
-                     hover:text-white hover:bg-primary hover:border-primary
-                     mr-3
-                     sm:mr-4
-                     lg:mr-3
-                     xl:mr-4
-                     "
-                     >
-                     <svg
-                        width="14"
-                        height="14"
-                        viewBox="0 0 14 14"
-                        className="fill-current"
-                        >
-                        <path
-                           d="M13.0214 0H1.02084C0.453707 0 0 0.451613 0 1.01613V12.9839C0 13.5258 0.453707 14 1.02084 14H12.976C13.5432 14 13.9969 13.5484 13.9969 12.9839V0.993548C14.0422 0.451613 13.5885 0 13.0214 0ZM4.15142 11.9H2.08705V5.23871H4.15142V11.9ZM3.10789 4.3129C2.42733 4.3129 1.90557 3.77097 1.90557 3.11613C1.90557 2.46129 2.45002 1.91935 3.10789 1.91935C3.76577 1.91935 4.31022 2.46129 4.31022 3.11613C4.31022 3.77097 3.81114 4.3129 3.10789 4.3129ZM11.9779 11.9H9.9135V8.67097C9.9135 7.90323 9.89082 6.8871 8.82461 6.8871C7.73571 6.8871 7.57691 7.74516 7.57691 8.60323V11.9H5.51254V5.23871H7.53154V6.16452H7.55423C7.84914 5.62258 8.50701 5.08065 9.52785 5.08065C11.6376 5.08065 12.0232 6.43548 12.0232 8.2871V11.9H11.9779Z"
-                           />
-                     </svg>
-                  </a>
+                  
+<Link href="">
+   <a>
+<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+width="45" height="45"
+viewBox="0 0 48 48"
+><path fill="#29b6f6" d="M24,4C13,4,4,13,4,24s9,20,20,20s20-9,20-20S35,4,24,4z"></path><path fill="#fff" d="M34,15l-3.7,19.1c0,0-0.2,0.9-1.2,0.9c-0.6,0-0.9-0.3-0.9-0.3L20,28l-4-2l-5.1-1.4c0,0-0.9-0.3-0.9-1	c0-0.6,0.9-0.9,0.9-0.9l21.3-8.5c0,0,0.7-0.2,1.1-0.2c0.3,0,0.6,0.1,0.6,0.5C34,14.8,34,15,34,15z"></path><path fill="#b0bec5" d="M23,30.5l-3.4,3.4c0,0-0.1,0.1-0.3,0.1c-0.1,0-0.1,0-0.2,0l1-6L23,30.5z"></path><path fill="#cfd8dc" d="M29.9,18.2c-0.2-0.2-0.5-0.3-0.7-0.1L16,26c0,0,2.1,5.9,2.4,6.9c0.3,1,0.6,1,0.6,1l1-6l9.8-9.1	C30,18.7,30.1,18.4,29.9,18.2z"></path></svg>
+   </a>
+   </Link>
+   &nbsp; &nbsp; &nbsp;
+<Link href="">
+   <a>
+<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+width="45" height="45"
+viewBox="0 0 48 48"><linearGradient id="Ld6sqrtcxMyckEl6xeDdMa_uLWV5A9vXIPu_gr1" x1="9.993" x2="40.615" y1="9.993" y2="40.615" gradientUnits="userSpaceOnUse"><stop offset="0" stopColor="#2aa4f4"></stop><stop offset="1" stopColor="#007ad9"></stop></linearGradient><path fill="url(#Ld6sqrtcxMyckEl6xeDdMa_uLWV5A9vXIPu_gr1)" d="M24,4C12.954,4,4,12.954,4,24s8.954,20,20,20s20-8.954,20-20S35.046,4,24,4z"></path><path fill="#fff" d="M26.707,29.301h5.176l0.813-5.258h-5.989v-2.874c0-2.184,0.714-4.121,2.757-4.121h3.283V12.46 c-0.577-0.078-1.797-0.248-4.102-0.248c-4.814,0-7.636,2.542-7.636,8.334v3.498H16.06v5.258h4.948v14.452 C21.988,43.9,22.981,44,24,44c0.921,0,1.82-0.084,2.707-0.204V29.301z"></path></svg>
+   </a>
+</Link>
                </div>
-               <p className="text-base text-body-color">&copy; 2025 TailGrids</p>
             </div>
          </div>
       </div>
@@ -478,8 +230,8 @@ const Footer = () => {
                   y2="1.22829e-05"
                   gradientUnits="userSpaceOnUse"
                   >
-                  <stop stop-color="#3056D3" stop-opacity="0.08" />
-                  <stop offset="1" stop-color="#C4C4C4" stop-opacity="0" />
+                  <stop stopColor="#3056D3" stop-opacity="0.08" />
+                  <stop offset="1" stopColor="#C4C4C4" stop-opacity="0" />
                </linearGradient>
             </defs>
          </svg>
@@ -505,20 +257,20 @@ const Footer = () => {
                   y2="37.5"
                   gradientUnits="userSpaceOnUse"
                   >
-                  <stop stop-color="#13C296" stop-opacity="0.31" />
-                  <stop offset="1" stop-color="#C4C4C4" stop-opacity="0" />
+                  <stop stopColor="#13C296" stop-opacity="0.31" />
+                  <stop offset="1" stopColor="#C4C4C4" stop-opacity="0" />
                </linearGradient>
             </defs>
          </svg>
       </span>
    </div>
-   <div className="flex flex-col text-center w-full ">
+   <div className=" px-5 flex flex-col text-center w-full ">
          <p className="text-sm text-gray-600 text-center">
            © CopyRight <span className="font-bold text-gray-600">StandFord</span>{" "}
            Barcha huqulari himoyalangan.
            <br />
            Created by{" "}
-           <span className="text-green-500 font-bold">Jakhongir team</span>
+           <span className="text-gray-600 font-bold">Jakhongir team</span>
            <br />
            2022
          </p>
