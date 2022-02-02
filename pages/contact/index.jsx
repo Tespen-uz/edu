@@ -57,6 +57,19 @@ export default function ContactPage() {
   );
 }
 
+<<<<<<< HEAD
+=======
+
+// export async function getStaticProps(){
+//   return {props:{
+//     raqamlar:[{}]
+//   }}
+// }
+
+
+
+ 
+>>>>>>> navbar
 // export  async function getStaticProps(){
 
 //   const response = await fetch('thsp');

@@ -20,7 +20,7 @@ export default function Home(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="relative">
+      <main className="overflow-hidden relative z-0">
         <div className="relative py-12 md:py-8 xl:py-20 ">
           <div className="container p-2 mx-auto min-h-[60vh] relative z-10  flex items-center flex-col md:flex-row">
             <div className=" w-full md:w-6/12 flex flex-col items-center z-50 md:items-center">

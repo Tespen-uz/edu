@@ -1,98 +1,109 @@
-import React, { useState } from "react";
-import { MenuIcon, XIcon } from "@heroicons/react/outline";
-import CtaButton from "../../layouts/Buttons/CtaButton";
-import Link from "next/link";
+import { Fragment } from 'react'
+import { Popover, Transition } from '@headlessui/react'
+import {
+  MenuIcon,
+  XIcon,
+} from '@heroicons/react/outline'
+import Link from "next/link"
 
-export default function Head() {
-  const [open, setOpen] = useState(false);
-  const OpenMenu = () => setOpen(!open);
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ')
+}
+
+export default function Example() {
   return (
-    <React.Fragment>
-      <div className="bg-[#000] z-50 py-3">
-        <div className="container mx-auto flex items-center px-2 flex-col md:flex-row md:px-12">
-          <div className="w-full flex items-center justify-between md:w-6/12">
-            <Link href="/">
-              <a className="text-white uppercase text-2xl font-bold first-letter:text-3xl first-letter:text-[#24A776]">
-                StanFord
-              </a>
-            </Link>
-            <div className="text-white md:hidden" onClick={OpenMenu}>
-              {open ? (
-                <XIcon className="block h-6 w-6" aria-hidden="true" />
-              ) : (
-                <MenuIcon className="block h-6 w-6" aria-hidden="true" />
-              )}
-            </div>
+    <Popover className="relative bg-gray-100">
+      <div className="px-5 lg:px-4 container mx-auto   w-full ">
+        <div className="flex justify-between items-center py-4 md:justify-start md:space-x-10">
+          <div className="flex justify-start lg:w-0 lg:flex-1">
+            <a href="#">
+              <p className=" text-3xl text-gray-600 font-bold" >StandFord</p>
+            </a>
           </div>
-          <div className="w-full relative   md:w-6/12">
-            <ul
-              className={
-                open
-                  ? "flex text-center transition-all mt-10 mb-6 bg-[#000]  flex-col items-center justify-center md:flex-row md:mt-0 md:mb-0 md:justify-end"
-                  : "flex flex-col justify-end transition-all overflow-hidden h-0 md:flex-row md:h-[100%]"
-              }
-            >
-              <li>
-                <Link href="/">
-                  <a
-                    onClick={OpenMenu}
-                    className="sm:my-5 text-white ml-4 capitalize text-xl transition-all hover:text-[#24A776]"
-                  >
-                    Home
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/courses">
-                  <a
-                    onClick={OpenMenu}
-                    className="text-white ml-4 capitalize text-xl transition-all hover:text-[#24A776]"
-                  >
-                    Courses
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/teachers">
-                  <a
-                    onClick={OpenMenu}
-                    className="text-white ml-4 capitalize text-xl transition-all hover:text-[#24A776]"
-                  >
-                    Teachers
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/about">
-                  <a
-                    onClick={OpenMenu}
-                    className="text-white ml-4 capitalize text-xl transition-all hover:text-[#24A776]"
-                  >
-                    About
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact">
-                  <a
-                    onClick={OpenMenu}
-                    className="text-white ml-4 capitalize text-xl transition-all hover:text-[#24A776]"
-                  >
-                    Contact
-                  </a>
-                </Link>
-              </li>
-              <li className="ml-4">
-                <Link href={"/register"}>
-                  <a>
-                    <CtaButton>Register</CtaButton>
-                  </a>
-                </Link>
-              </li>
-            </ul>
+          <div className="-mr-2 -my-2 md:hidden">
+            <Popover.Button className="bg-gray-100 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+              <span className="sr-only">Open menu</span>
+              <MenuIcon className="h-6 w-6" aria-hidden="true" />
+            </Popover.Button>
+          </div>
+          <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+          <Popover.Group as="nav" className="hidden md:flex space-x-10">
+            <Link  href="/about" >
+            <a className="text-base font-medium text-gray-600 hover:text-gray-900">
+              About
+            </a>
+            </Link>
+            <Link  href="/teachers" >
+            <a className="text-base font-medium text-gray-600 hover:text-gray-900">
+              Teacher
+            </a>
+            </Link>
+            <Link  href="/courses" >
+            <a className="text-base font-medium text-gray-600 hover:text-gray-900">
+            Courses
+            </a>
+            </Link>
+            <Link  href="/contact" >
+            <a className="text-base font-medium text-gray-600 hover:text-gray-900">
+            Contact
+            </a>
+            </Link>
+           
+          </Popover.Group>
           </div>
         </div>
       </div>
-    </React.Fragment>
-  );
+
+      <Transition
+        as={Fragment}
+        enter="duration-200 ease-out"
+        enterFrom="opacity-0 scale-95"
+        enterTo="opacity-100 scale-100"
+        leave="duration-100 ease-in"
+        leaveFrom="opacity-100 scale-100"
+        leaveTo="opacity-0 scale-95"
+      >
+        <Popover.Panel className=" absolute absolute z-10  top-0 right-0 inset-x-0 md:hidden">
+          <div className="bg-gray-100 z-10 mx-auto rounded-lg shadow-lg ">
+            <div className="pt-3 pb-1 px-5">
+              <div className="flex items-center justify-between">
+                <p className="text-gray-600 text-3xl font-bold ">StandFord</p>
+                <div className="">
+                  <Popover.Button className="bg-gray-100 rounded-md relative left-3  p-2 inline-flex items-center justify-center text-gray-600 hover:text-gray-600 hover:bg-gray-100  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                    <span className="sr-only">Close menu</span>
+                    <XIcon className="h-6 w-6" aria-hidden="true" />
+                  </Popover.Button>
+                </div>
+              </div>
+            </div>
+            <div className="py-5 px-5 ">
+              <div className="mx-auto grid grid-cols-1 text-center">
+                 <Link  href="/about" >
+            <a className="my-3 text-base font-medium text-gray-600 hover:text-gray-900">
+              About
+            </a>
+            </Link>
+            <Link  href="/teachers" >
+            <a className="my-3 text-base font-medium text-gray-600 hover:text-gray-900">
+              Teacher
+            </a>
+            </Link>
+            <Link  href="/courses" >
+            <a className="my-3 text-base font-medium text-gray-600 hover:text-gray-900">
+            Courses
+            </a>
+            </Link>
+            <Link  href="/contact" >
+            <a className="my-3 text-base font-medium text-gray-600 hover:text-gray-900">
+            Contact
+            </a>
+            </Link>
+              </div>
+           
+            </div>
+          </div>
+        </Popover.Panel>
+      </Transition>
+    </Popover>
+  )
 }
