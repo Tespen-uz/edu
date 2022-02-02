@@ -3,7 +3,7 @@ import dataSlice from "./features/dataSlice";
 
 const store = configureStore({
   reducer: {
-    data: dataSlice.reducer,
+    data: dataSlice,
   },
 });
 

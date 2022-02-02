@@ -15,7 +15,6 @@ import Modal from "../components/Modal/Modal";
 import TechBg from "../img/techBg.jpg";
 import Link from "next/link";
 
-
 export default function Home(props) {
   const { startFirework, startSchoolPride } = useConfetti();
 
@@ -24,6 +23,10 @@ export default function Home(props) {
   const toggleModal = () => {
     setOpen((state) => !state);
   };
+
+  React.useEffect(() => {
+    startSchoolPride();
+  }, []);
 
   return (
     <React.Fragment>
@@ -223,7 +226,7 @@ export async function getServerSideProps(context) {
     requests.get("/api/teachers"),
   ]);
 
-  let data = res.map((res) => res.value.data);
+  let data = res.map((res) => res.value?.data);
 
   return {
     props: {

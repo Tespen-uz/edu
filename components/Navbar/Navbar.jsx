@@ -3,7 +3,7 @@ import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import Link from "next/link";
 
-export default function Example() {
+export default function Navbar() {
   return (
     <Popover className="sticky top-0 z-50 bg-gray-100 ">
       <div className="px-5 lg:px-4 container mx-auto   w-full ">
@@ -22,7 +22,10 @@ export default function Example() {
             </Popover.Button>
           </div>
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-            <Popover.Group as="nav" className="hidden md:flex space-x-10">
+            <Popover.Group
+              as="nav"
+              className="hidden md:flex space-x-10 md:items-center"
+            >
               <Link href="/about">
                 <a className="text-base font-medium text-gray-600 hover:text-gray-900">
                   About
@@ -41,6 +44,11 @@ export default function Example() {
               <Link href="/contact">
                 <a className="text-base font-medium text-gray-600 hover:text-gray-900">
                   Contact
+                </a>
+              </Link>
+              <Link href="/register">
+                <a className="text-base bg-primary font-medium text-white hover:text-gray-200 px-4 py-2 rounded-sm">
+                  Register
                 </a>
               </Link>
             </Popover.Group>
@@ -90,6 +98,11 @@ export default function Example() {
                 <Link href="/contact">
                   <a className="my-3 text-base font-medium text-gray-600 hover:text-gray-900">
                     Contact
+                  </a>
+                </Link>
+                <Link href="/register">
+                  <a className="text-base bg-primary font-medium text-white hover:text-gray-200 px-4 py-2">
+                    Register
                   </a>
                 </Link>
               </div>
