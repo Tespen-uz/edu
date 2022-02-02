@@ -33,4 +33,4 @@ function CourseCard({name, img, sum, tech, text }) {
     );
 }
 
-export default CourseCard
+export default CourseCard;

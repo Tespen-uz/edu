@@ -11,7 +11,7 @@ import requests from "../../utils/requests";
 const AboutPage = ({ statistics }) => {
   return (
     <div className="w-full overflow-x-hidden">
-      <div className="mb-8 container mx-auto h-96  lg:flex px-5  ">
+      <div className="mb-8 container mx-auto h-96  lg:flex px-5">
         <div className="bg-[url('/blob.svg')] bg-cover ">
           <Image alt="normal" src={Busy} />x
         </div>
@@ -22,7 +22,7 @@ const AboutPage = ({ statistics }) => {
             alignItems: "center",
             justifyContent: "center",
           }}
-          className=" bg-cover  sm:block lg:mx-10 "
+          className=" bg-cover sm:block lg:mx-10 "
         >
           <p className="  text-blue-700 drop-shadow-2xl  text-center font-bold text-2xl mb-4">
             Biz haqimizda
@@ -31,9 +31,9 @@ const AboutPage = ({ statistics }) => {
             <span className="text-blue-700 font-bold drop-shadow-2xl  ">
               StandFord
             </span>{" "}
-            markazimiz 2019-yilda Chortoq shahrida o&apso;z faoliyatini
+            markazimiz 2019-yilda Chortoq shahrida o&apos;z faoliyatini
             boshlagan. Shundan beri har yili 1000 ga yaqin abituriyentlarimiz
-            Oliygoh talabasi bo&apso;lib kelmoqda. Yillik natija esa 90% ni
+            Oliygoh talabasi bo&apos;lib kelmoqda. Yillik natija esa 90% ni
             tashkil qiladi.
           </p>
         </div>
@@ -68,20 +68,20 @@ const AboutPage = ({ statistics }) => {
                   alignItems: "center",
                   justifyContent: "center",
                 }}
-                className=" sm:block lg:mx-10 sm:w-1/2 sm:px-10  "
+                className="sm:block lg:mx-10 sm:w-1/2 sm:px-10  "
               >
                 <p className=" text-white text-center drop-shadow-2xl mx-4">
                   <br />
                   <span className="text-white-500 text-xl font-bold">
                     StandFord
                   </span>
-                  <br /> Markazimiz 2019-yilda Chortoq shahrida o&apso;z
+                  <br /> Markazimiz 2019-yilda Chortoq shahrida o&apos;z
                   faoliyatini boshlagan. Shundan beri har yili 1000 ga yaqin
-                  abituriyentlarimiz Oliygoh talabasi bo&apso;lib kelmoqda.
+                  abituriyentlarimiz Oliygoh talabasi bo&apos;lib kelmoqda.
                   Yillik natija esa 90% ni tashkil qiladi. StandFord markazimiz
-                  2019-yilda Chortoq shahrida o&apso;z faoliyatini boshlagan.
+                  2019-yilda Chortoq shahrida o&apos;z faoliyatini boshlagan.
                   Shundan beri har yili 1000 ga yaqin abituriyentlarimiz Oliygoh
-                  talabasi bo&apso;lib kelmoqda. Yillik natija esa 90% ni
+                  talabasi bo&apos;lib kelmoqda. Yillik natija esa 90% ni
                   tashkil qiladi.
                   <br />
                   <br />
@@ -102,20 +102,20 @@ const AboutPage = ({ statistics }) => {
                   alignItems: "center",
                   justifyContent: "center",
                 }}
-                className=" container mx-auto  sm:block lg:mx-10 sm:w-1/2 sm:px-10  "
+                className=" container mx-auto  sm:block lg:mx-10 sm:w-1/2 sm:px-10"
               >
                 <p className=" text-white text-center drop-shadow-2xl mx-4">
                   <br />
                   <span className="text-white-500 font-bold text-xl">
                     StandFord
                   </span>
-                  <br /> Markazimiz 2019-yilda Chortoq shahrida o&apso;z
+                  <br /> Markazimiz 2019-yilda Chortoq shahrida o&apos;z
                   faoliyatini boshlagan. Shundan beri har yili 1000 ga yaqin
-                  abituriyentlarimiz Oliygoh talabasi bo&apso;lib kelmoqda.
+                  abituriyentlarimiz Oliygoh talabasi bo&apos;lib kelmoqda.
                   Yillik natija esa 90% ni tashkil qiladi. StandFord markazimiz
-                  2019-yilda Chortoq shahrida o&apso;z faoliyatini boshlagan.
+                  2019-yilda Chortoq shahrida o&apos;z faoliyatini boshlagan.
                   Shundan beri har yili 1000 ga yaqin abituriyentlarimiz Oliygoh
-                  talabasi bo&apso;lib kelmoqda. Yillik natija esa 90% ni
+                  talabasi bo&apos;lib kelmoqda. Yillik natija esa 90% ni
                   tashkil qiladi.
                   <br />
                   <br />
@@ -123,7 +123,7 @@ const AboutPage = ({ statistics }) => {
                     className=" border-2 border-white-500 rounded-lg font-bold text-white-500 px-4 py-1 transition duration-300 ease-in-out  mr-6"
                     href="#"
                   >
-                    Bog&apso;lanish
+                    Bog&apos;lanish
                   </button>
                 </p>
               </div>

@@ -15,7 +15,6 @@ import Modal from "../components/Modal/Modal";
 import TechBg from "../img/techBg.jpg";
 import Link from "next/link";
 
-
 export default function Home(props) {
   const { startFirework, startSchoolPride } = useConfetti();
 
@@ -25,6 +24,10 @@ export default function Home(props) {
     setOpen((state) => !state);
   };
 
+  React.useEffect(() => {
+    startSchoolPride();
+  }, []);
+
   return (
     <React.Fragment>
       <Head>
@@ -33,7 +36,7 @@ export default function Home(props) {
         <title>StanfordSchool</title>
       </Head>
 
-      <main className="relative overflow-x-hidden">
+      <main className="relative overflow-hidden">
         <div>
           <Modal toggleModal={toggleModal} open={open} />
         </div>
@@ -44,10 +47,10 @@ export default function Home(props) {
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
-          }}
+          }}  
         >
-          <div className="container mx-auto py-8 min-h-[70vh] flex flex-col items-center justify-center  px-2 md:px-0 z-10">
-            <div className="z-20 text-center flex flex-col items-center">
+          <div className="container mx-auto py-8 min-h-[70vh] flex flex-col items-center justify-center  px-2 md:px-0 z-0">
+            <div className="z-0 text-center flex flex-col items-center">
               <h1 className="text-2xl w-full md:w-8/12  md:text-4xl font-extrabold text-white z-50">
                 Learn from the masters of science. Start with us and achieve
                 your goals
@@ -223,7 +226,7 @@ export async function getServerSideProps(context) {
     requests.get("/api/teachers"),
   ]);
 
-  let data = res.map((res) => res.value.data);
+  let data = res.map((res) => res.value?.data);
 
   return {
     props: {

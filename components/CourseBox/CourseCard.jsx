@@ -4,7 +4,7 @@ import Link from "next/link";
 
 function CourseCard({ name, img, description, id }) {
   return (
-    <Link href={`/courses/${name}`}>
+    <Link href={`/courses/${id}`}>
       <a className="w-full  bg-white rounded-lg shadow-lg mx-auto ">
         <div className="w-full h-48 relative">
           <Image

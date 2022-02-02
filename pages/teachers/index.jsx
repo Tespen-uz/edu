@@ -8,10 +8,10 @@ import TechBg from '../../img/techBg.jpg'
 const AboutPage = () => {
   return (
     <>
-      <div className="flex py-6 items-center justify-center  min-h-[90vh] relative" style={{background: `linear-gradient(143deg, rgba(0,245,255,0.6755077030812324) 0%, rgba(36,167,118,0.4766281512605042) 51%, rgba(32,166,92,0.5802696078431373) 100%), url(${TechBg.src})`, backgroundSize: 'cover', backgroundRpeat: 'no-repeat', backgroundPosition: 'center'}}>
+      <div className="flex py-6  items-center justify-center  min-h-[90vh] relative" style={{background: `linear-gradient(143deg, rgba(0,245,255,0.6755077030812324) 0%, rgba(36,167,118,0.4766281512605042) 51%, rgba(32,166,92,0.5802696078431373) 100%), url(${TechBg.src})`, backgroundSize: 'cover', backgroundRpeat: 'no-repeat', backgroundPosition: 'center'}}>
         <div className="text-center ">
           <h1 className="text-4xl capitalize font-bold text-white md:text-6xl">We are a team of teachers</h1>
-          <p className="w-10/12 mx-auto md:w-8/12 text-2xl mt-4 text-white">Be among the people who follow science. Start with us. Zaftet great milestones with us</p>
+          <p className=" w-10/12 mx-auto md:w-8/12 text-2xl mt-4 text-white">Be among the people who follow science. Start with us. Zaftet great milestones with us</p>
         </div>
         
         
