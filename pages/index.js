@@ -15,6 +15,7 @@ import Modal from "../components/Modal/Modal";
 import TechBg from "../img/techBg.jpg";
 import Link from "next/link";
 
+
 export default function Home(props) {
   const { startFirework, startSchoolPride } = useConfetti();
 
