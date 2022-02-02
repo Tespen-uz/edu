@@ -54,7 +54,7 @@ const Fan=[
 
 function CourseList() {
     return (
-        <>
+        <div>
             {
                 Fan.map(item=>{
                     return(
@@ -70,7 +70,7 @@ function CourseList() {
                 })
             }
             
-        </>
+        </div>
     )
 }
 

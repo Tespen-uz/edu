@@ -1,20 +1,15 @@
 import Image from "next/image";
 import ContactImage from "../../public/contactImage.png";
-import Facebook from "../../public/facebook.png";
-import Telegram from "../../public/telegram.png";
-import Instagram from "../../public/instagram.png";
-import ContactWave from "../../public/contactWave.svg";
-import Phone from "../../public/phone.png";
 import Contact from "../../layouts/Contact";
 
 export default function ContactPage() {
   return (
-    <div className="w-full">
+    <div className="w-full ">
       <div
         style={{
           background: `linear-gradient(143deg, rgba(0,245,255,0.6755077030812324) 0%, rgba(36,167,118,0.4766281512605042) 51%, rgba(32,166,92,0.5802696078431373) 100%)`,
         }}
-        className="pb-28 relative lg:flex pt-8"
+        className="pb-28 relative lg:flex pt-8 "
       >
         <div className="sm:px-10  sm:block px-4 lg:flex justify-center items-center flex-col">
           <p className="sm:text-5xl   text-center text-white font-bold text-4xl">
@@ -57,19 +52,6 @@ export default function ContactPage() {
   );
 }
 
-<<<<<<< HEAD
-=======
-
-// export async function getStaticProps(){
-//   return {props:{
-//     raqamlar:[{}]
-//   }}
-// }
-
-
-
- 
->>>>>>> navbar
 // export  async function getStaticProps(){
 
 //   const response = await fetch('thsp');

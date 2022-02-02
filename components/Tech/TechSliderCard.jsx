@@ -60,7 +60,7 @@ function TechSliderCard({ name, img, job, subject }) {
             </li>
           </ul>
           <div className="py-4 border-t mx-8 mt-2">
-            <button className="w-1/2 block ml-auto rounded-full underline hover:shadow-lg font-semibold hover:text-white hover:bg-green-400 hover:no-underline px-6 py-2">
+            <button className=" block ml-auto rounded-full underline hover:shadow-lg font-semibold hover:text-white hover:bg-green-400 hover:no-underline px-6 py-2">
               More Info
             </button>
           </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import H1 from "../img/h-1.png";
@@ -10,9 +10,18 @@ import A2 from "../img/a2.png";
 import useConfetti from "../utils/hooks/useConfetti";
 import Faq from "../components/Faq/Faq";
 import Contact from "../layouts/contact";
+import Heading from "../layouts/ui/Heading";
+import requests from "../utils/requests";
+import Modal from "../components/Modal/Modal";
+import TechBg from "../img/techBg.jpg";
+import Link from "next/link";
 
 export default function Home(props) {
   const { startFirework, startSchoolPride } = useConfetti();
+
+  const [open, setOpen] = useState(false);
+  const openModal = () => setOpen(!open);
+
   return (
     <div>
       <Head>
@@ -20,43 +29,43 @@ export default function Home(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="overflow-hidden relative z-0">
-        <div className="relative py-12 md:py-8 xl:py-20 ">
-          <div className="container p-2 mx-auto min-h-[60vh] relative z-10  flex items-center flex-col md:flex-row">
-            <div className=" w-full md:w-6/12 flex flex-col items-center z-50 md:items-center">
-              <p className="text-3xl text-center capitalize font-bold mt-4 text-blue-400 md:text-4xl">
-                Learn science from experts
+      <main className="relative overflow-hidden">
+        <div>
+          <Modal OpenModal={openModal} />
+        </div>
+        <div
+          className="relative py-12 md:py-8 xl:py-24 "
+          style={{
+            background: `linear-gradient(4deg, rgba(36,167,118,1) 0%, rgba(3,9,9,0.6474964985994398) 26%, rgba(0,0,0,0.5270483193277311) 74%),url(${TechBg.src})`,
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className="container mx-auto py-8 min-h-[70vh] flex flex-col items-center justify-center  px-2 md:px-0 z-0">
+            <div className="z-0 text-center flex flex-col items-center">
+              <h1 className="text-2xl w-full md:w-8/12  md:text-4xl font-extrabold text-white z-50">
+                Learn from the masters of science. Start with us and achieve
+                your goals
+              </h1>
+              <p className="text-gray-300 text-center mt-4 text-base md:text-xl md:w-8/12">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio
+                iste quibusdam, vero delectus nemo fugit facere blanditiis, eius
+                possimus mollitia molestiae quod error praesentium pariatur modi
+                omnis laboriosam officia magni.
               </p>
-              <p className=" text-xl text-center mt-6">
-                Start listening to yourself. Pay attention to reading. Start
-                realizing your potential. Learn with us
-              </p>
-              <button
-                className="rounded mt-6 font-bold text-xl block py-2 px-8  border border-[#24A776] text-[#24A776] transition-all hover:bg-[#24A776] hover:text-white"
-                onClick={startFirework}
-              >
-                Start Now
-              </button>
-              <a
-                href="#"
-                className="mt-8 text-[#24A776] flex items-center text-xl"
-              >
-                <svg
-                  className="mr-4"
-                  fill="#24A776"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
-                  viewBox="0 0 24 24"
+              <div className="flex flex-col items-center  sm:flex-row mt-6 border-b-2 py-4 ">
+                <Link href="#">
+                  <a className=" capitalize text-xl font-bold text-white rounded-full block bg-gradient-to-tr from-sky-400 to-green-400 transition-all hover:from-green-400 hover:to-sky-400 hover:scale-95  px-10 py-2">
+                    Start now
+                  </a>
+                </Link>
+                <button
+                  onClick={openModal}
+                  className="capitalize sm:ml-4 mt-4 sm:mt-0 py-2 px-8 text-xl font-bold rounded-full bg-white text-gray-700 transition-all hover:scale-95"
                 >
-                  <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3 17v-10l9 5.146-9 4.854z" />
-                </svg>
-                See it in action
-              </a>
-            </div>
-            <div className="w-full mt-8 md:w-8/12 md:mt-0 relative z-4">
-              <div className="w-8/12 bg-[url(/HomeBlob.svg)] ml-auto mr-8 ">
-                <Image src={H1} className="z-10" alt="standford course" />
+                  Demo Video
+                </button>
               </div>
             </div>
           </div>
@@ -64,64 +73,123 @@ export default function Home(props) {
           <div className=" absolute z-0 left-0 right-0 bottom-0">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
               <path
-                fill="#24a776"
+                fill="#24A776"
                 fillOpacity="1"
-                d="M0,192L120,213.3C240,235,480,277,720,272C960,267,1200,213,1320,186.7L1440,160L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+                d="M0,288L60,282.7C120,277,240,267,360,256C480,245,600,235,720,240C840,245,960,267,1080,272C1200,277,1320,267,1380,261.3L1440,256L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
               ></path>
             </svg>
           </div>
         </div>
 
-        <div className=" bg-[#24A776] py-14 relative">
-          <div className="container relative p-4 mx-auto flex flex-col items-center z-10">
-            <div className="w-full   text-center  md:mt-0">
-              <div>
-                <h1 className="text-white text-3xl capitalize font-bold ">
-                  Get knwledge from teachers with 5 years experince with us
-                </h1>
-                <p className="text-white text-xl mt-6">
-                  -- Every decision you make is important to us.
-                </p>
-                <p className="text-white text-xl ">
-                  -- With us you will achieve your goal.
-                </p>
-                <p className="text-white text-xl">
-                  -- Never stop learning. Move forward towards the goal.
-                </p>
+        {/* header end */}
+
+        <div className="bg-[#24A776] relative pb-16">
+          <div className="container mx-auto">
+            <div className="flex flex-wrap items-center">
+              <div className="w-full lg:w-1/2">
+                <div className="mb-5  lg:mb-0">
+                  <h2 className="mb-12 text-3xl md:text-4xl text-center md:text-left font-bold text-gray-100">
+                    Learn More About Us
+                  </h2>
+                  <div className="flex flex-wrap">
+                    <div className="w-full sm:w-1/2 lg:w-1/2">
+                      <div className="m-3">
+                        <div className=" text-4xl"></div>
+                        <div>
+                          <h4 className="text-xl mb-2 font-bold text-gray-200">
+                            We have all the conditions you want.
+                          </h4>
+
+                          <p className=" text-gray-300">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Veniam tempora quidem vel sint.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="w-full sm:w-1/2 lg:w-1/2">
+                      <div className="m-3">
+                        <div className="icon text-4xl">
+                          <i className="lni lni-gift"></i>
+                        </div>
+                        <div>
+                          <h4 className="text-xl mb-2 font-bold text-gray-200">
+                            We have all the conditions you want.
+                          </h4>
+
+                          <p className=" text-gray-300">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Veniam tempora quidem vel sint.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="w-full sm:w-1/2 lg:w-1/2">
+                      <div className="m-3">
+                        <div className="icon text-4xl">
+                          <i className="lni lni-laptop-phone"></i>
+                        </div>
+                        <div>
+                          <h4 className="text-xl mb-2 font-bold text-gray-200">
+                            We have all the conditions you want.
+                          </h4>
+
+                          <p className=" text-gray-300">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Veniam tempora quidem vel sint.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="w-full sm:w-1/2 lg:w-1/2">
+                      <div className="m-3">
+                        <div className="icon text-4xl"></div>
+                        <div>
+                          <h4 className="text-xl mb-2 font-bold text-gray-200">
+                            We have all the conditions you want.
+                          </h4>
+
+                          <p className=" text-gray-300">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Veniam tempora quidem vel sint.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="w-full lg:w-1/2">
+                <div className="mx-3 lg:mr-0 lg:ml-3 flex justify-end">
+                  <Image src={H1} width={550} height={550} alt="stanford" />
+                </div>
               </div>
             </div>
-            <div className="w-full flex justify-center mt-8 ">
-              <Image src={A1} alt="standford course" width={900} height={500} />
-            </div>
           </div>
-          <div className="absolute left-0 right-0 bottom-0 z-0">
+
+          <div className=" absolute z-0 left-0 right-0 bottom-0">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
               <path
                 fill="#fff"
                 fillOpacity="1"
-                d="M0,192L60,213.3C120,235,240,277,360,293.3C480,309,600,299,720,277.3C840,256,960,224,1080,202.7C1200,181,1320,171,1380,165.3L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+                d="M0,288L60,282.7C120,277,240,267,360,256C480,245,600,235,720,240C840,245,960,267,1080,272C1200,277,1320,267,1380,261.3L1440,256L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
               ></path>
             </svg>
           </div>
         </div>
+
+        {/* info section  */}
         <div className="-mt-6">
-          <InfoList />
+          <InfoList stats={props.statistics} />
         </div>
         <div className="py-8">
-          <p className="text-blue-400 text-center text-xl uppercase first-letter:text-2xl font-bold">
-            Courses
-          </p>
-          <div className="text-center mt-4 mb-8">
-            <h1 className="text-3xl font-bold text-gray-800 capitalize">
-              we offer the following corses
-            </h1>
-            <p className="text-xl container mx-auto w-8/12 text-gray-600 mt-4">
-              We will help you leverage our experince by breaking down the
-              secret into small chunks that you can easily digest and apply to
-              any digital strategy
-            </p>
-          </div>
-
+          <Heading
+            name="Courses"
+            title="The courses we offer"
+            excerpt={
+              "We will help you leverage our experince by breaking down the secret into small chunks that you can easily digest and apply to any digital strategy"
+            }
+          />
           <CourseList />
         </div>
         <div
@@ -172,20 +240,40 @@ export default function Home(props) {
             </svg>
           </div>
         </div>
-        {/* info section end */}
-
-        {/* teacher section */}
-        <div className="py-12">
-          <div className="container mx-auto pt-8">
-            <h1 className="text-3xl text-center border-b-2 p-4 border-black md:text-4xl font-bold text-black">
-              Teacher Team
-            </h1>
+        <div className="pb-6">
+          <Heading
+            name="Our Teachers"
+            title="Meet our teachers"
+            excerpt={
+              "We are a team of experienced teachers who are passionate about teaching and helping students achieve their goals."
+            }
+          />
+          <div className="-mt-16">
+            <TechSliderList />
           </div>
-          <TechSliderList />
         </div>
         <Faq />
       </main>
       <Contact />
     </div>
   );
+}
+
+export async function getServerSideProps(context) {
+  const res = await Promise.allSettled([
+    requests.get("/api/statistics"),
+    requests.get("/api/courses"),
+    requests.get("/api/teachers"),
+  ]);
+
+  let data = res.map((res) => res.value.data);
+
+  console.log(data);
+  return {
+    props: {
+      statistics: data[0],
+      courses: data[1],
+      teachers: data[2],
+    },
+  };
 }
