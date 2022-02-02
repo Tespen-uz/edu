@@ -10,6 +10,7 @@ import A2 from "../img/a2.png";
 import useConfetti from "../utils/hooks/useConfetti";
 import Faq from "../components/Faq/Faq";
 import Contact from "../layouts/contact";
+import Heading from "../layouts/ui/Heading";
 
 export default function Home(props) {
   const { startFirework, startSchoolPride } = useConfetti();
@@ -108,20 +109,13 @@ export default function Home(props) {
           <InfoList />
         </div>
         <div className="py-8">
-          <p className="text-blue-400 text-center text-xl uppercase first-letter:text-2xl font-bold">
-            Courses
-          </p>
-          <div className="text-center mt-4 mb-8">
-            <h1 className="text-3xl font-bold text-gray-800 capitalize">
-              we offer the following corses
-            </h1>
-            <p className="text-xl container mx-auto w-8/12 text-gray-600 mt-4">
-              We will help you leverage our experince by breaking down the
-              secret into small chunks that you can easily digest and apply to
-              any digital strategy
-            </p>
-          </div>
-
+          <Heading
+            name="Courses"
+            title="The courses we offer"
+            excerpt={
+              "We will help you leverage our experince by breaking down the secret into small chunks that you can easily digest and apply to any digital strategy"
+            }
+          />
           <CourseList />
         </div>
         <div
@@ -175,13 +169,17 @@ export default function Home(props) {
         {/* info section end */}
 
         {/* teacher section */}
-        <div className="py-12">
-          <div className="container mx-auto pt-8">
-            <h1 className="text-3xl text-center border-b-2 p-4 border-black md:text-4xl font-bold text-black">
-              Teacher Team
-            </h1>
+        <div className="pb-6">
+          <Heading
+            name="Our Teachers"
+            title="Meet our teachers"
+            excerpt={
+              "We are a team of experienced teachers who are passionate about teaching and helping students achieve their goals."
+            }
+          />
+          <div className="-mt-16">
+            <TechSliderList />
           </div>
-          <TechSliderList />
         </div>
         <Faq />
       </main>

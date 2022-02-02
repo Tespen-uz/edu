@@ -97,7 +97,7 @@ function TechSliderList() {
 
   return (
     <div className="container mx-auto p-2 relative">
-      <div ref={sliderRef} className="keen-slider py-10 z-10">
+      <div ref={sliderRef} className="keen-slider py-4 z-5">
         {TechInfo.map((tech, i) => {
           return (
             <div key={i} className="keen-slider__slide number-slide p-1 ">
