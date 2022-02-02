@@ -46,13 +46,8 @@ export default function Home(props) {
             backgroundPosition: "center",
           }}  
         >
-<<<<<<< HEAD
           <div className="container mx-auto py-8 min-h-[70vh] flex flex-col items-center justify-center  px-2 md:px-0 z-0">
             <div className="z-0 text-center flex flex-col items-center">
-=======
-          <div className="container mx-auto py-8 min-h-[70vh] flex flex-col items-center justify-center  px-2 md:px-0 z-10">
-            <div className="z-20 text-center flex flex-col items-center">
->>>>>>> 30e80e2b175a9ff807c8780b6fadbc38d917e4ff
               <h1 className="text-2xl w-full md:w-8/12  md:text-4xl font-extrabold text-white z-50">
                 Learn from the masters of science. Start with us and achieve
                 your goals
