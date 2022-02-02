@@ -18,9 +18,9 @@ export default function ContactPage() {
           <br />
           <p className="sm:text-lg sm:px-10 text-center text-white sm:mx-10 ">
             Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s. We provide you the web applications according
-            to your work
+            industry. Lorem Ipsum has been the industry&apos;s standard dummy
+            text ever since the 1500s. We provide you the web applications
+            according to your work
           </p>
         </div>
         <div className="lg:pr-12 sm:block bg-[url('/blobContact.svg')] ">

@@ -12,8 +12,8 @@ const AboutPage = () => {
           background: `linear-gradient(143deg, rgba(0,245,255,0.6755077030812324) 0%, rgba(36,167,118,0.4766281512605042) 51%, rgba(32,166,92,0.5802696078431373) 100%)`,
         }}
       >
-        <div className="container mx-auto z-50 flex flex-col items-center md:flex-row">
-          <div className="w-full z-50 md:w-6/12">
+        <div className="container mx-auto z-5 flex flex-col items-center md:flex-row">
+          <div className="w-full z-2 md:w-6/12">
             <Image
               src={CourseBg}
               width={450}

@@ -3,13 +3,9 @@ import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import Link from "next/link";
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
-
 export default function Example() {
   return (
-    <Popover className="relative bg-gray-100">
+    <Popover className="sticky top-0 z-50 bg-gray-100 ">
       <div className="px-5 lg:px-4 container mx-auto   w-full ">
         <div className="flex justify-between items-center py-4 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">

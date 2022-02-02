@@ -56,7 +56,7 @@ const Kurs = [
 
 const animation = { duration: 50000, easing: (t) => t };
 
-function CourseList() {
+function CourseList({ courses }) {
   const [sliderRef] = useKeenSlider({
     loop: true,
     rtl: false,
@@ -114,17 +114,17 @@ function CourseList() {
   return (
     <div className="container p-2 mx-auto flex flex-wrap justify-around">
       <div ref={sliderRef} className="keen-slider py-10 z-10">
-        {Kurs.map((item) => {
+        {courses.map((item) => {
           return (
             <div
               key={item.id}
-              className="keen-slider__slide number-slide p-1  "
+              className="keen-slider__slide number-slide p-1  shadow-md hover:shadow-lg"
             >
               <CourseCard
                 name={item.name}
-                narh={item.narh}
-                img={item.img}
-                title={item.title}
+                description={item.description}
+                img={item.picture}
+                id={item.id}
               />
             </div>
           );

@@ -52,7 +52,7 @@ const TechInfo = [
 
 const animation = { duration: 30000, easing: (t) => t };
 
-function TechSliderList() {
+function TechSliderList({ teachers }) {
   const [sliderRef] = useKeenSlider({
     loop: true,
     rtl: false,
@@ -98,14 +98,17 @@ function TechSliderList() {
   return (
     <div className="container mx-auto p-2 relative">
       <div ref={sliderRef} className="keen-slider py-4 z-5">
-        {TechInfo.map((tech, i) => {
+        {teachers.map((teacher) => {
           return (
-            <div key={i} className="keen-slider__slide number-slide p-1 ">
+            <div
+              key={teacher.id}
+              className="keen-slider__slide number-slide p-1 "
+            >
               <TechSliderCard
-                name={tech.name}
-                img={tech.img}
-                job={tech.job}
-                subject={tech.subject}
+                name={teacher.name}
+                img={teacher.image}
+                job={teacher.job}
+                subject={teacher.subject}
               />
             </div>
           );

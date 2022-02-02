@@ -5,10 +5,12 @@ import School2 from "../../public/cyborg.png";
 import Image from "next/image";
 import InfoList from "../../components/InfoBox/InfoList";
 import Faq from "./../../components/Faq/Faq";
+import Testimonials from "../../layouts/ui/Testimonials";
+import requests from "../../utils/requests";
 
-const AboutPage = () => {
+const AboutPage = ({ statistics }) => {
   return (
-    <div className="w-full ">
+    <div className="w-full overflow-x-hidden">
       <div className="mb-8 container mx-auto h-96  lg:flex px-5  ">
         <div className="bg-[url('/blob.svg')] bg-cover ">
           <Image alt="normal" src={Busy} />x
@@ -29,9 +31,10 @@ const AboutPage = () => {
             <span className="text-blue-700 font-bold drop-shadow-2xl  ">
               StandFord
             </span>{" "}
-            markazimiz 2019-yilda Chortoq shahrida o'z faoliyatini boshlagan.
-            Shundan beri har yili 1000 ga yaqin abituriyentlarimiz Oliygoh
-            talabasi bo'lib kelmoqda. Yillik natija esa 90% ni tashkil qiladi.
+            markazimiz 2019-yilda Chortoq shahrida o&apso;z faoliyatini
+            boshlagan. Shundan beri har yili 1000 ga yaqin abituriyentlarimiz
+            Oliygoh talabasi bo&apso;lib kelmoqda. Yillik natija esa 90% ni
+            tashkil qiladi.
           </p>
         </div>
       </div>
@@ -72,20 +75,17 @@ const AboutPage = () => {
                   <span className="text-white-500 text-xl font-bold">
                     StandFord
                   </span>
-                  <br /> Markazimiz 2019-yilda Chortoq shahrida o'z faoliyatini
-                  boshlagan. Shundan beri har yili 1000 ga yaqin
-                  abituriyentlarimiz Oliygoh talabasi bo'lib kelmoqda. Yillik
-                  natija esa 90% ni tashkil qiladi. StandFord markazimiz
-                  2019-yilda Chortoq shahrida o'z faoliyatini boshlagan. Shundan
-                  beri har yili 1000 ga yaqin abituriyentlarimiz Oliygoh
-                  talabasi bo'lib kelmoqda. Yillik natija esa 90% ni tashkil
-                  qiladi.
+                  <br /> Markazimiz 2019-yilda Chortoq shahrida o&apso;z
+                  faoliyatini boshlagan. Shundan beri har yili 1000 ga yaqin
+                  abituriyentlarimiz Oliygoh talabasi bo&apso;lib kelmoqda.
+                  Yillik natija esa 90% ni tashkil qiladi. StandFord markazimiz
+                  2019-yilda Chortoq shahrida o&apso;z faoliyatini boshlagan.
+                  Shundan beri har yili 1000 ga yaqin abituriyentlarimiz Oliygoh
+                  talabasi bo&apso;lib kelmoqda. Yillik natija esa 90% ni
+                  tashkil qiladi.
                   <br />
                   <br />
-                  <button
-                    className=" border-2 border-white-500 rounded-lg font-bold text-white-500 px-4 py-1 transition duration-300 ease-in-out mr-6"
-                    href="#"
-                  >
+                  <button className=" border-2 border-white-500 rounded-lg font-bold text-white-500 px-4 py-1 transition duration-300 ease-in-out mr-6">
                     Natijalar
                   </button>
                 </p>
@@ -109,21 +109,21 @@ const AboutPage = () => {
                   <span className="text-white-500 font-bold text-xl">
                     StandFord
                   </span>
-                  <br /> Markazimiz 2019-yilda Chortoq shahrida o'z faoliyatini
-                  boshlagan. Shundan beri har yili 1000 ga yaqin
-                  abituriyentlarimiz Oliygoh talabasi bo'lib kelmoqda. Yillik
-                  natija esa 90% ni tashkil qiladi. StandFord markazimiz
-                  2019-yilda Chortoq shahrida o'z faoliyatini boshlagan. Shundan
-                  beri har yili 1000 ga yaqin abituriyentlarimiz Oliygoh
-                  talabasi bo'lib kelmoqda. Yillik natija esa 90% ni tashkil
-                  qiladi.
+                  <br /> Markazimiz 2019-yilda Chortoq shahrida o&apso;z
+                  faoliyatini boshlagan. Shundan beri har yili 1000 ga yaqin
+                  abituriyentlarimiz Oliygoh talabasi bo&apso;lib kelmoqda.
+                  Yillik natija esa 90% ni tashkil qiladi. StandFord markazimiz
+                  2019-yilda Chortoq shahrida o&apso;z faoliyatini boshlagan.
+                  Shundan beri har yili 1000 ga yaqin abituriyentlarimiz Oliygoh
+                  talabasi bo&apso;lib kelmoqda. Yillik natija esa 90% ni
+                  tashkil qiladi.
                   <br />
                   <br />
                   <button
                     className=" border-2 border-white-500 rounded-lg font-bold text-white-500 px-4 py-1 transition duration-300 ease-in-out  mr-6"
                     href="#"
                   >
-                    Bog'lanish
+                    Bog&apso;lanish
                   </button>
                 </p>
               </div>
@@ -143,10 +143,20 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
-      <InfoList />
+      <InfoList stats={statistics} />
+      <Testimonials />
       <Faq />
     </div>
   );
 };
 
 export default AboutPage;
+
+export async function getServerSideProps(context) {
+  const res = await requests.get("/api/statistics");
+  return {
+    props: {
+      statistics: res.data,
+    },
+  };
+}
