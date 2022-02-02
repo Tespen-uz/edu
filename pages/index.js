@@ -11,6 +11,7 @@ import useConfetti from "../utils/hooks/useConfetti";
 import Faq from "../components/Faq/Faq";
 import Contact from "../layouts/contact";
 import Heading from "../layouts/ui/Heading";
+import requests from "../utils/requests";
 
 export default function Home(props) {
   const { startFirework, startSchoolPride } = useConfetti();
@@ -41,6 +42,7 @@ export default function Home(props) {
               <a
                 href="#"
                 className="mt-8 text-[#24A776] flex items-center text-xl"
+                onClick={startSchoolPride}
               >
                 <svg
                   className="mr-4"
@@ -106,7 +108,7 @@ export default function Home(props) {
           </div>
         </div>
         <div className="-mt-6">
-          <InfoList />
+          <InfoList stats={props.statistics} />
         </div>
         <div className="py-8">
           <Heading
@@ -166,9 +168,6 @@ export default function Home(props) {
             </svg>
           </div>
         </div>
-        {/* info section end */}
-
-        {/* teacher section */}
         <div className="pb-6">
           <Heading
             name="Our Teachers"
@@ -186,4 +185,23 @@ export default function Home(props) {
       <Contact />
     </div>
   );
+}
+
+export async function getServerSideProps(context) {
+  const res = await Promise.allSettled([
+    requests.get("/api/statistics"),
+    requests.get("/api/courses"),
+    requests.get("/api/teachers"),
+  ]);
+
+  let data = res.map((res) => res.value.data);
+
+  console.log(data);
+  return {
+    props: {
+      statistics: data[0],
+      courses: data[1],
+      teachers: data[2],
+    },
+  };
 }

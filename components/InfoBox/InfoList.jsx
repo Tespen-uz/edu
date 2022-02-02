@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
-function InfoList() {
+function InfoList({ stats }) {
   return (
     <div className=" py-8">
       <div className="p-4 w-full container mx-auto">
@@ -20,8 +20,10 @@ function InfoList() {
                 </svg>
               </div>
               <div className="flex flex-col flex-grow ml-4">
-                <div className="text-sm text-gray-500">Student</div>
-                <div className="font-bold text-lg">1259</div>
+                <div className="text-sm text-gray-500">Students</div>
+                <div className="font-bold text-lg">
+                  {stats?.students ? stats.students : 4500}
+                </div>
               </div>
             </div>
           </div>
@@ -39,8 +41,10 @@ function InfoList() {
                 </svg>
               </div>
               <div className="flex flex-col flex-grow ml-4">
-                <div className="text-sm text-gray-500">Course</div>
-                <div className="font-bold text-lg">30</div>
+                <div className="text-sm text-gray-500">Courses</div>
+                <div className="font-bold text-lg">
+                  {stats?.courses ? stats.courses : 30}
+                </div>
               </div>
             </div>
           </div>
@@ -58,8 +62,10 @@ function InfoList() {
                 </svg>
               </div>
               <div className="flex flex-col flex-grow ml-4">
-                <div className="text-sm text-gray-500">Teacher</div>
-                <div className="font-bold text-lg">20</div>
+                <div className="text-sm text-gray-500">Teachers</div>
+                <div className="font-bold text-lg">
+                  {stats?.teachers ? stats.teachers : 2500}
+                </div>
               </div>
             </div>
           </div>
@@ -83,7 +89,10 @@ function InfoList() {
               </div>
               <div className="flex flex-col flex-grow ml-4">
                 <div className="text-sm text-gray-500">Results</div>
-                <div className="font-bold text-lg"> 80 %</div>
+                <div className="font-bold text-lg">
+                  {" "}
+                  {stats?.results ? stats.results : 96} %
+                </div>
               </div>
             </div>
           </div>
