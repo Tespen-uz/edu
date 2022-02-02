@@ -40,7 +40,7 @@ export default function Home(props) {
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
-          }}
+          }}  
         >
           <div className="container mx-auto py-8 min-h-[70vh] flex flex-col items-center justify-center  px-2 md:px-0 z-0">
             <div className="z-0 text-center flex flex-col items-center">

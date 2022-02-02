@@ -92,19 +92,19 @@ const Footer = () => {
                   </a>
                </Link></li>
                   <li className=" my-4 text-gray-600">
-                  <Link href="/"  >
+                  <Link href="/about"  >
                   <a>
                Mathematics                  </a>
                </Link></li>
                  <li className=" my-4 text-gray-600">
-                 <Link href="/"  >
+                 <Link href="/teachers"  >
                   <a>
                   Chemistry
                   </a>
                </Link>
                  </li>
                  <li className=" my-4 text-gray-600">
-                  <Link href="/"  >
+                  <Link href="/courses"  >
                   <a>
                   Mother Tounge
                   </a>
@@ -121,18 +121,20 @@ const Footer = () => {
                   
 <Link href="">
    <a>
-   <Image src={Telegram} />
+<Image src={Telegram}/>
+
    </a>
    </Link>
+   &nbsp; 
 <Link href="">
    <a>
-   <Image src={Instagram} />
+<Image src={Instagram}/>
    </a>
 </Link>
- &nbsp;
+&nbsp;
 <Link href="">
-   <a>
-   <Image src={Facebook} />
+   <a>   
+<Image src={Facebook}/>
    </a>
 </Link>
                </div>
