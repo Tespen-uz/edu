@@ -5,7 +5,6 @@ import H1 from "../img/h-1.png";
 import InfoList from "../components/InfoBox/InfoList";
 import TechSliderList from "../components/Tech/TechSliderList";
 import CourseList from "../components/CourseBox/CourseList";
-import A2 from "../img/a2.png";
 import useConfetti from "../utils/hooks/useConfetti";
 import Faq from "../components/Faq/Faq";
 import Contact from "../layouts/contact";
@@ -47,10 +46,10 @@ export default function Home(props) {
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
-          }}  
+          }}
         >
           <div className="container mx-auto py-8 min-h-[70vh] flex flex-col items-center justify-center  px-2 md:px-0 z-0">
-            <div className="z-0 text-center flex flex-col items-center">
+            <div className="z-40 text-center flex flex-col items-center ">
               <h1 className="text-2xl w-full md:w-8/12  md:text-4xl font-extrabold text-white z-50">
                 Learn from the masters of science. Start with us and achieve
                 your goals

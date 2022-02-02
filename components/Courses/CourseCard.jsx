@@ -1,17 +1,19 @@
-import React from 'react'
-import Image from 'next/image'
-import Book1 from '../../img/book1.jpg'
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 
-function CourseCard({name, img, sum, tech, text }) {
-    return (
-      <div className=" relative w-full sm:w-8/12 md:w-[49%] lg:w-[40%] xl:w-[30%]  overflow-hidden rounded-2xl my-4 shadow-xl shadow-green-300 transition-all ">
+function CourseCard({ name, img, sum, tech, text, id }) {
+  return (
+    <Link href={`/courses/${id}`}>
+      <a className="blcok relative w-full sm:w-8/12 md:w-[49%] lg:w-[40%] xl:w-[30%]  overflow-hidden rounded-2xl my-4 shadow-xl shadow-green-300 transition-all ">
         <div className="h-[260px] z-10 overflow-hidden rounded-t-2xl rounded-br-full rounded-bl-full border-4 border-t-2 border-green-300 object-cover">
           <Image
-            src={Book1}
-            title={name}
+            src={`https://cp.stanfordschool.uz/storage/${img}`}
+            alt={name}
             width={1000}
             height={1000}
-            className=" z-10 object-cover "
+            objectFit="cover"
+            objectPosition={`center`}
           />
         </div>
         <div className=" p-4 z-10">
@@ -29,8 +31,9 @@ function CourseCard({name, img, sum, tech, text }) {
         </div>
 
         <div className=" absolute bottom-0 -left-10 rotate-45 w-[200px] h-[280px] bg-green-300 rounded-t-full  -z-10 opacity-[0.5]"></div>
-      </div>
-    );
+      </a>
+    </Link>
+  );
 }
 
 export default CourseCard;

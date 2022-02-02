@@ -109,6 +109,7 @@ function TechSliderList({ teachers }) {
                 img={teacher.image}
                 job={teacher.job}
                 subject={teacher.subject}
+                id={teacher.id}
               />
             </div>
           );

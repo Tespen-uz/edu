@@ -2,10 +2,11 @@ import React from "react";
 import CourseBg from "../../img/courseBg.png";
 import Image from "next/image";
 import CourseList from "../../components/Courses/CourseList";
+import requests from "../../utils/requests";
 
-const AboutPage = () => {
+const CoursePage = (props) => {
   return (
-    <>
+    <React.Fragment>
       <div
         className="min-h-[90vh] relative  flex items-center py-12"
         style={{
@@ -49,9 +50,18 @@ const AboutPage = () => {
         <h1 className=" border-b-4 py-2 border-green-300 ">Our All courses</h1>
       </div>
 
-      <CourseList />
-    </>
+      <CourseList courses={props.courses} />
+    </React.Fragment>
   );
 };
 
-export default AboutPage;
+export default CoursePage;
+
+export async function getServerSideProps(context) {
+  const res = await requests.get("/api/courses");
+  return {
+    props: {
+      courses: res.data,
+    },
+  };
+}
