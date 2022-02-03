@@ -11,9 +11,9 @@ import requests from "../../utils/requests";
 const AboutPage = ({ statistics }) => {
   return (
     <div className="w-full overflow-x-hidden">
-      <div className="mb-8 container mx-auto h-96  lg:flex px-5">
+      <div className="mb-20 lg:mb-0 container mx-auto h-96  lg:flex px-5">
         <div className="bg-[url('/blob.svg')] bg-cover ">
-          <Image alt="normal" src={Busy} />x
+          <Image alt="normal" src={Busy} />
         </div>
         <div
           style={{
@@ -42,7 +42,7 @@ const AboutPage = ({ statistics }) => {
       <div>
         <div
           style={{
-            margiTop: "10px",
+            marginTop: "10px",
             background: `linear-gradient(143deg, rgba(0,245,255,0.6755077030812324) 0%, rgba(36,167,118,0.4766281512605042) 51%, rgba(32,166,92,0.5802696078431373) 100%)`,
           }}
           className=""
