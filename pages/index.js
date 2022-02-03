@@ -111,7 +111,7 @@ export default function Home(props) {
                           <p className=" text-gray-300">
                             Lorem ipsum dolor sit amet, consectetur adipisicing
                             elit. Veniam tempora quidem vel sint.
-                          </p>
+                          </p>  
                         </div>
                       </div>
                     </div>

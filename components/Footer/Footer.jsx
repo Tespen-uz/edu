@@ -7,29 +7,25 @@ import Link from "next/link"
 
 const Footer = () => {
 
-  return (<footer className= " bg-gray-100 pt-20 lg:pt-[120px] pb-10 lg:pb-20 relative z-10">
-   <div className="container mx-auto ">
-      <div className="flex flex-wrap ">
-         <div className="w-full sm:w-2/3 lg:w-3/12 px-4">
-            <div className="w-full mb-10">
-               <a
-                  href="javascript:void(0)"
-                  className="inline-block max-w-[160px] mb-6"
-                  >
-               <p className="text-gray-600 font-bold text-3xl">StandFord</p>
-               </a>
-               <p className="text-base text-body-color text-gray-600 mb-7">
-                 Chortoq shahar <br/>"Istiqlol" ko'chasi 12-uy<br/>
-                 Mo'njal:"Bog'cha" ro'parasida
+  return (
+<footer class="bg-white pt-20 lg:pt-[120px] pb-10 lg:pb-20 relative z-10">
+   <div class="container mx-auto">
+      <div class="flex flex-wrap -mx-4">
+         <div class="w-full sm:w-2/3 lg:w-3/12 px-4">
+            <div class="w-full mb-10">
+               <p className="text-3xl text-dark font-bold mb-3 ">StanfordSchool</p>
+               <br/>
+               <p class="text-base text-body-color mb-7">
+                  Sed ut perspiciatis undmnis is iste natus error sit amet
+                  voluptatem totam rem aperiam.
                </p>
-               <p className="flex items-center text-sm                         text-gray-600
- font-medium">
-                  <span className="text-primary text-gray-600 mr-3">
+               <p class="flex items-center text-sm text-dark font-medium">
+                  <span class="text-primary mr-3">
                      <svg
                         width="19"
                         height="21"
                         viewBox="0 0 19 21"
-                        className="fill-current"
+                        class="fill-current"
                         >
                         <path
                            d="M17.8076 11.8129C17.741 11.0475 17.1088 10.5151 16.3434 10.5151H2.16795C1.40261 10.5151 0.803643 11.0808 0.703816 11.8129L0.00502514 18.8008C-0.0282506 19.2001 0.104853 19.6327 0.371059 19.9322C0.637265 20.2317 1.03657 20.398 1.46916 20.398H17.0755C17.4748 20.398 17.8741 20.2317 18.1736 19.9322C18.4398 19.6327 18.5729 19.2334 18.5396 18.8008L17.8076 11.8129ZM17.2751 19.1668C17.2419 19.2001 17.1753 19.2667 17.0422 19.2667H1.46916C1.36933 19.2667 1.2695 19.2001 1.23623 19.1668C1.20295 19.1336 1.1364 19.067 1.16968 18.9339L1.86847 11.9127C1.86847 11.7463 2.00157 11.6465 2.16795 11.6465H16.3767C16.5431 11.6465 16.6429 11.7463 16.6762 11.9127L17.375 18.9339C17.3417 19.0337 17.3084 19.1336 17.2751 19.1668Z"
@@ -42,108 +38,190 @@ const Footer = () => {
                            />
                      </svg>
                   </span>
-                <a href="tel:+998609088789">  <span className="text-gray-600">+998609088798</span></a>
+                  <a className="text-blue-900" href="tel:+998609008998">+998609008998</a>
                </p>
             </div>
          </div>
-         <div className="w-full sm:w-1/2 lg:w-3/12 px-4">
-            <div className="w-full mb-10">
-               <h4 className="text-gray-600 text-lg font-semibold mb-9">Usful Links</h4>
+         <div class="w-full sm:w-1/2 lg:w-3/12 px-4">
+            <div class="w-full mb-10">
+               <h4 class="text-dark text-lg font-semibold mb-9">Useful Links</h4>
                <ul>
-                  <li className=" my-4 text-gray-600" >
-                  <Link href="/"  >
-                  <a>
+                  <li>
+                     <Link href="/">
+                     <a
+                        class="
+                        inline-block
+                        text-base text-body-color
+                        hover:text-primary
+                        leading-loose
+                        mb-2
+                        "
+                        >
                   Home Page
-                  </a>
-               </Link></li>
-                  <li className=" my-4 text-gray-600">
-                  <Link href="/about"  >
-                  <a>
-                  About Us
-                  </a>
-               </Link></li>
-                 <li className=" my-4 text-gray-600">
-                 <Link href="/teachers"  >
-                  <a>
+                     </a>
+                     </Link>
+                  </li>
+                  <li>
+                     <Link href="/about">
+                     <a
+                        class="
+                        inline-block
+                        text-base text-body-color
+                        hover:text-primary
+                        leading-loose
+                        mb-2
+                        "
+                        >
+                  About
+                     </a>
+                     </Link>
+                  </li>
+                  <li>
+                    <Link href="/teachers">
+                     <a
+                        class="
+                        inline-block
+                        text-base text-body-color
+                        hover:text-primary
+                        leading-loose
+                        mb-2
+                        "
+                        >
                   Teachers
-                  </a>
-               </Link>
-                 </li>
-                 <li className=" my-4 text-gray-600">
-                  <Link href="/courses"  >
-                  <a>
+                     </a>
+                     </Link>
+                  </li>
+                  <li>
+                     <Link href="/courses">
+                     <a
+                        class="
+                        inline-block
+                        text-base text-body-color
+                        hover:text-primary
+                        leading-loose
+                        mb-2
+                        "
+                        >
                   Courses
-                  </a>
-               </Link>
-                 </li>
+                     </a>
+                     </Link>
+                  </li>
                </ul>
             </div>
          </div>
-         <div className="w-full sm:w-1/2 lg:w-3/12 px-4">
-            <div className="w-full mb-10">
-               <h4 className="
-                        text-gray-600
-               text-lg font-semibold mb-9">Our Services</h4>
-              <ul>
-                  <li className=" my-4 text-gray-600" >
-                  <Link href="/"  >
-                  <a>
+         <div class="w-full sm:w-1/2 lg:w-3/12 px-4">
+            <div class="w-full mb-10">
+               <h4 class="text-dark text-lg font-semibold mb-9">Our Services</h4>
+               <ul>
+                  <li>
+                     <Link href="/courses">
+                     <a
+                        class="
+                        inline-block
+                        text-base text-body-color
+                        hover:text-primary
+                        leading-loose
+                        mb-2
+                        "
+                        >
                   English
-                  </a>
-               </Link></li>
-                  <li className=" my-4 text-gray-600">
-                  <Link href="/about"  >
-                  <a>
-               Mathematics                  </a>
-               </Link></li>
-                 <li className=" my-4 text-gray-600">
-                 <Link href="/teachers"  >
-                  <a>
+                     </a>
+                     </Link>
+                  </li>
+                  <li>
+                     <Link href="/courses">
+                     <a
+                        class="
+                        inline-block
+                        text-base text-body-color
+                        hover:text-primary
+                        leading-loose
+                        mb-2
+                        "
+                        >
+                  Mathematics
+                     </a>
+                     </Link>
+                  </li>
+                  <li>
+                    <Link href="/courses">
+                     <a
+                        class="
+                        inline-block
+                        text-base text-body-color
+                        hover:text-primary
+                        leading-loose
+                        mb-2
+                        "
+                        >
                   Chemistry
-                  </a>
-               </Link>
-                 </li>
-                 <li className=" my-4 text-gray-600">
-                  <Link href="/courses"  >
-                  <a>
+                     </a>
+                     </Link>
+                  </li>
+                  <li>
+                    <Link href="/courses">
+                     <a
+                        class="
+                        inline-block
+                        text-base text-body-color
+                        hover:text-primary
+                        leading-loose
+                        mb-2
+                        "
+                        >
                   Mother Tounge
-                  </a>
-               </Link>
-                 </li>
+                     </a>
+                     </Link>
+                  </li>
                </ul>
             </div>
          </div>
-         <div className="w-full sm:w-1/2 lg:w-3/12 px-4">
-            <div className="w-full mb-10">
-               <h4 className="                        text-gray-600
- text-lg font-semibold mb-9">Follow Us On</h4>
-               <div className="flex items-center mb-6">
-                  
-<Link href="">
-   <a>
-<Image src={Telegram}/>
-
-   </a>
-   </Link>
-   &nbsp; 
-<Link href="">
-   <a>
-<Image src={Instagram}/>
-   </a>
-</Link>
-&nbsp;
-<Link href="">
-   <a>   
-<Image src={Facebook}/>
-   </a>
-</Link>
-               </div>
+         
+         <div class="w-full sm:w-1/2 lg:w-3/12 px-4">
+            <div class="w-full mb-10">
+               <h4 class="text-dark text-lg font-semibold mb-9">Follow Us On</h4>
+               <a href="" className="p-2" >
+               <Image src={Telegram}/>
+               </a>
+               <a href="" className="p-2">
+               <Image src={Instagram}/>
+               </a>
+               <a href="" className="p-2">
+               <Image src={Facebook}/>
+               </a>
             </div>
          </div>
       </div>
    </div>
    <div>
-      <span className="absolute top-10 right-10 z-[-1]">
+      <span class="absolute left-0 bottom-0 z-[-1]">
+         <svg
+            width="217"
+            height="229"
+            viewBox="0 0 217 229"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            >
+            <path
+               d="M-64 140.5C-64 62.904 -1.096 1.90666e-05 76.5 1.22829e-05C154.096 5.49924e-06 217 62.904 217 140.5C217 218.096 154.096 281 76.5 281C-1.09598 281 -64 218.096 -64 140.5Z"
+               fill="url(#paint0_linear_1179_5)"
+               />
+            <defs>
+               <linearGradient
+                  id="paint0_linear_1179_5"
+                  x1="76.5"
+                  y1="281"
+                  x2="76.5"
+                  y2="1.22829e-05"
+                  gradientUnits="userSpaceOnUse"
+                  >
+                  <stop stop-color="#3056D3" stop-opacity="0.08" />
+                  <stop offset="1" stop-color="#C4C4C4" stop-opacity="0" />
+               </linearGradient>
+            </defs>
+         </svg>
+      </span>
+      <span class="absolute top-10 right-10 z-[-1]">
          <svg
             width="75"
             height="75"
@@ -156,24 +234,26 @@ const Footer = () => {
                fill="url(#paint0_linear_1179_4)"
                />
             <defs>
-               
+               <linearGradient
+                  id="paint0_linear_1179_4"
+                  x1="-1.63917e-06"
+                  y1="37.5"
+                  x2="75"
+                  y2="37.5"
+                  gradientUnits="userSpaceOnUse"
+                  >
+                  <stop stop-color="#13C296" stop-opacity="0.31" />
+                  <stop offset="1" stop-color="#C4C4C4" stop-opacity="0" />
+               </linearGradient>
             </defs>
          </svg>
       </span>
    </div>
-   <div className=" px-5 flex flex-col text-center w-full ">
-         <p className="text-sm text-gray-600 text-center">
-           © CopyRight <span className="font-bold text-gray-600">StandFord</span>{" "}
-           Barcha huqulari himoyalangan.
-           <br />
-           Created by{" "}
-           <span className="text-gray-600 font-bold">Tespen team</span>
-           <br />
-           2022
-         </p>
-       </div>
+   <div className="text-center">
+      <p className="text-sm " >&copy;CopyRight <span className="font-bold">StanfordSchool </span>Barcha huqular himoyalangan</p>
+      <p className="text-sm " >Created by <span className="font-bold">Tespen </span> team 2022</p><br/>
+   </div>
 </footer>
-
   );
 };
 export default Footer;
