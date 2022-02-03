@@ -5,8 +5,8 @@ import Link from "next/link";
 function CourseCard({ name, img, description, id }) {
   return (
     <Link href={`/courses/${id}`}>
-      <a className="w-full  bg-white rounded-lg shadow-lg mx-auto ">
-        <div className="w-full h-48 relative">
+      <a className="w-full flex flex-col justify-between rounded-2xl shadow-md mx-auto ">
+        <div className="w-full overflow-hidden rounded-2xl h-48 relative">
           <Image
             src={`https://cp.stanfordschool.uz/storage/${img}`}
             alt={name}
@@ -34,7 +34,7 @@ function CourseCard({ name, img, description, id }) {
               </h4>
             </span>
 
-            <span className="px-3 py-2 rounded-lg  hover:shadow-lg text-xs underline  hover:bg-green-400 hover:no-underline hover:text-white transition-all duration-500 text-primary ml-auto">
+            <span className="px-3 py-2 rounded-lg    text-xs text-white  bg-green-400  hover:bg-green-300 transition-all duration-500  ml-auto">
               LEARN MORE
             </span>
           </div>

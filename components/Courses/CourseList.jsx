@@ -3,7 +3,7 @@ import CourseCard from "./CourseCard";
 
 function CourseList({ courses }) {
   return (
-    <div className="container mx-auto flex flex-wrap justify-around xl:justify-between py-12">
+    <div className="container mx-auto flex flex-wrap justify-evenly  py-12">
       {courses.map((course) => {
         return (
           <CourseCard
