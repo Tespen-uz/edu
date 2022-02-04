@@ -9,30 +9,35 @@ export default function ContactPage() {
         style={{
           background: `linear-gradient(143deg, rgba(0,245,255,0.6755077030812324) 0%, rgba(36,167,118,0.4766281512605042) 51%, rgba(32,166,92,0.5802696078431373) 100%)`,
         }}
-        className="pb-28 relative lg:flex pt-8 "
+        className="relative pb-8"
       >
-        <div className="sm:px-10  sm:block px-4 lg:flex justify-center items-center flex-col">
-          <p className="sm:text-5xl   text-center text-white font-bold text-4xl">
-            Contact with us
-          </p>
-          <br />
-          <p className="sm:text-lg sm:px-10 text-center text-white sm:mx-10 ">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry&apos;s standard dummy
-            text ever since the 1500s. We provide you the web applications
-            according to your work
-          </p>
+        <div className="container mx-auto flex flex-col items-center md:flex-row pt-4 pb-8 ">
+          <div className="w-full md:w-6/12">
+            <p className="text-3xl lg:text-4xl text-gray-700 text-center font-bold">
+              Contact with us
+            </p>
+            <br />
+            <p className="text-gray-500 z-10 sm:text-xl text-center sm:text-left ">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry&apos;s standard dummy
+              text ever since the 1500s. We provide you the web applications
+              according to your work
+            </p>
+          </div>
+          <div
+            className="w-full z-10 md:w-6/12 bg-[url('/blobContact.svg')]  "
+            
+          >
+            <Image src={ContactImage} alt="contact standfordschool" />
+          </div>
         </div>
-        <div className="lg:pr-12 sm:block bg-[url('/blobContact.svg')] ">
-          <Image src={ContactImage} alt="contact standfordschool" />
-        </div>
-        {/* <Image src={ContactWave} className="relative b-10" /> */}
-        <div className="absolute bottom-0 left-0 right-0">
+
+        <div className="absolute bottom-0 left-0 z-0 right-0">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path
-              fill="#fff"
+              fill="#f3f4fe"
               fillOpacity="1"
-              d="M0,320L48,304C96,288,192,256,288,229.3C384,203,480,181,576,181.3C672,181,768,203,864,213.3C960,224,1056,224,1152,213.3C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+              d="M0,224L60,218.7C120,213,240,203,360,218.7C480,235,600,277,720,266.7C840,256,960,192,1080,181.3C1200,171,1320,213,1380,234.7L1440,256L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
             ></path>
           </svg>
         </div>
