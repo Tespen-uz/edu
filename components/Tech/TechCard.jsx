@@ -13,6 +13,7 @@ function TechCard({ img, name, subject, id }) {
               src={`https://cp.stanfordschool.uz/storage/${img}`}
               alt={`stanfordschool ${name}`}
               layout="fill"
+              className=" object-cover"
             />
           </div>
 

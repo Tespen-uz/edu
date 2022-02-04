@@ -24,10 +24,7 @@ export default function ContactPage() {
               according to your work
             </p>
           </div>
-          <div
-            className="w-full z-10 md:w-6/12 bg-[url('/blobContact.svg')]  "
-            
-          >
+          <div className="w-full z-10 md:w-6/12 bg-[url('/blobContact.svg')]  ">
             <Image src={ContactImage} alt="contact standfordschool" />
           </div>
         </div>
@@ -57,14 +54,13 @@ export default function ContactPage() {
   );
 }
 
-// export  async function getStaticProps(){
-
-//   const response = await fetch('thsp');
-//   const data = await response.json()
+// export async function getStaticProps() {
+//   const response = await fetch("thsp");
+//   const data = await response.json();
 
 //   return {
 //     props: {
-//       teachers: data.teachers
-//     }
-//   }
+//       teachers: data.teachers,
+//     },
+//   };
 // }
