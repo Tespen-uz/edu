@@ -67,7 +67,7 @@ function CourseList({ courses }) {
           return (
             <div
               key={item.id}
-              className="keen-slider__slide number-slide my-2"
+              className="keen-slider__slide number-slide my-2 mx-2 md:mx-0 "
             >
               <CourseCard
                 name={item.name}
