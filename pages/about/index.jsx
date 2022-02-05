@@ -7,15 +7,12 @@ import InfoList from "../../components/InfoBox/InfoList";
 import Faq from "./../../components/Faq/Faq";
 import Testimonials from "../../layouts/ui/Testimonials";
 import requests from "../../utils/requests";
+import Link from "next/link";
 
 const AboutPage = ({ statistics }) => {
   return (
     <div className="w-full overflow-x-hidden">
-
-      
- 
       <div className=" container mx-auto py-12 flex flex-col items-center md:flex-row">
-
         <div className="bg-[url('/blob.svg')] bg-cover ">
           <Image alt="normal" src={Busy} />
         </div>
@@ -31,6 +28,12 @@ const AboutPage = ({ statistics }) => {
             Since then, we have about 300 applicants each year He is a
             university student. The annual result is 90% forms.
           </p>
+
+          <div className="flex justify-center mt-8">
+            <Link href="/certificate">
+              <a className=" px-8 py-2 animate-bounce bg-green-300 rounded text-xl font-bold text-white">Certificate</a>
+            </Link>
+          </div>
         </div>
       </div>
 
@@ -99,7 +102,6 @@ const AboutPage = ({ statistics }) => {
                 <Image alt="test" src={School2} />
               </div>
             </div>
-            
           </div>
         </div>
       </div>
@@ -107,7 +109,6 @@ const AboutPage = ({ statistics }) => {
       <Testimonials />
       <Faq />
     </div>
-    
   );
 };
 
