@@ -104,6 +104,8 @@ const Footer = () => {
                       Courses
                     </a>
                   </Link>
+                </li>
+                <li>
                   <Link href="/news">
                     <a
                       className="
