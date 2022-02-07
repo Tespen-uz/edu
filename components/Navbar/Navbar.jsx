@@ -43,10 +43,15 @@ export default function Navbar() {
                   Courses
                 </a>
               </Link>
-             
+
               <Link href="/contact">
                 <a className="text-base font-medium text-gray-600 hover:text-gray-900">
                   Contact
+                </a>
+              </Link>
+              <Link href="/news">
+                <a className="text-base font-medium text-gray-600 hover:text-gray-900">
+                  News
                 </a>
               </Link>
               <Link href="/register">
@@ -103,6 +108,11 @@ export default function Navbar() {
                 <Link href="/contact">
                   <a className="my-3 text-base font-medium text-gray-600 hover:text-gray-900">
                     Contact
+                  </a>
+                </Link>
+                <Link href="/news">
+                  <a className="my-3 text-base font-medium text-gray-600 hover:text-gray-900">
+                    News
                   </a>
                 </Link>
                 <Link href="/register">

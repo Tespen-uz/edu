@@ -104,6 +104,19 @@ const Footer = () => {
                       Courses
                     </a>
                   </Link>
+                  <Link href="/news">
+                    <a
+                      className="
+                        inline-block
+                        text-base text-body-color
+                        hover:text-primary
+                        leading-loose
+                        mb-2
+                        "
+                    >
+                      News
+                    </a>
+                  </Link>
                 </li>
               </ul>
             </div>
