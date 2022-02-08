@@ -10,11 +10,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center py-4 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link href="/">
-              <a>
-                <p className=" text-3xl text-gray-600 font-bold">
-                  StanfordSchool
-                </p>
-              </a>
+              <a className="text-3xl text-gray-600 font-bold">StanfordSchool</a>
             </Link>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
@@ -52,11 +48,6 @@ export default function Navbar() {
               <Link href="/news">
                 <a className="text-base font-medium text-gray-600 hover:text-gray-900">
                   News
-                </a>
-              </Link>
-              <Link href="/register">
-                <a className="text-base bg-primary font-medium text-white hover:text-gray-200 px-4 py-2 rounded-md">
-                  Register
                 </a>
               </Link>
             </Popover.Group>
@@ -113,11 +104,6 @@ export default function Navbar() {
                 <Link href="/news">
                   <a className="my-3 text-base font-medium text-gray-600 hover:text-gray-900">
                     News
-                  </a>
-                </Link>
-                <Link href="/register">
-                  <a className="text-base bg-primary font-medium text-white hover:text-gray-200 px-4 py-2">
-                    Register
                   </a>
                 </Link>
               </div>

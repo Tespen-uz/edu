@@ -1,16 +1,13 @@
-import React from 'react';
-import CertCard from './CertCard';
+import React from "react";
+import CertCard from "./CertCard";
 
-function CertCardList() {
+function CertCardList({ certificates }) {
   return (
     <>
-      <div className="container flex flex-wrap justify-around lg:justify-between py-8 pb-16 ">
-        <CertCard />
-        <CertCard />
-        <CertCard />
-        <CertCard />
-        <CertCard />
-        <CertCard />
+      <div className="container grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-8 pb-16 ">
+        {certificates.map((certificate) => (
+          <CertCard key={certificate.id} certificate={certificate} />
+        ))}
       </div>
     </>
   );

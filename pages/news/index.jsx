@@ -1,31 +1,27 @@
-import React from "react"
-import NewEvents from "./News";
+import React from "react";
+import NewEvents from "../../layouts/News";
 import Image from "next/image";
 import NewsImage from "../../public/news.png";
-import NewsIndex from "./[newsId]"
 
-export default function news() {
+export default function NewsPage({ news }) {
+  console.log(news);
   return (
-    // <div>
-    //   <NewsIndex />
-    // </div>
-     <React.Fragment>
-    <div className="">
-      <div className="relative pb-16 bg-gradient-to-r from-cyan-500 to-blue-500">
+    <React.Fragment>
+      <div className="relative pb-32 bg-gradient-to-r from-cyan-500 to-blue-500">
         <div className="container mx-auto lg:flex">
-          <div className=" flex items-center justify-center lg:px-16">
-            <p className="text-center text-white text-4xl font-bold">
+          <div className=" flex flex-col items-center justify-center lg:px-16">
+            <h2 className="text-center text-white text-4xl font-bold my-6">
               Find out our news and events in our course
-              <p className="text-center text-white text-sm">
-                Governmental and non-governmental organizations use text
-                messaging for communication between colleagues. In the 2010s,
-                the sending of short informal messages became an accepted part
-                of many cultures, as happened earlier with emailing.
-              </p>
+            </h2>
+            <p className="text-center text-white text-sm">
+              Governmental and non-governmental organizations use text messaging
+              for communication between colleagues. In the 2010s, the sending of
+              short informal messages became an accepted part of many cultures,
+              as happened earlier with emailing.
             </p>
           </div>
-          <div className="">
-            <Image src={NewsImage} />
+          <div className="relative">
+            <Image src={NewsImage} alt="stanfordschool" />
           </div>
           <div className="absolute right-0 left-0 bottom-0">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -38,19 +34,21 @@ export default function news() {
           </div>
         </div>
       </div>
-      <br />
-      <div className="container mx-auto lg:flex">
-        <NewEvents />
-        <NewEvents />
-        <NewEvents />
+      <div className="container mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-4 my-20 ">
+        {news.map((n) => (
+          <NewEvents key={n.id} news={n} />
+        ))}
       </div>
-      <br />
-      <div className="container mx-auto lg:flex">
-        <NewEvents />
-        <NewEvents />
-        <NewEvents />
-      </div>
-    </div>
-     </React.Fragment>
+    </React.Fragment>
   );
+}
+
+export async function getServerSideProps(context) {
+  const res = await fetch(`https://cp.stanfordschool.uz/api/news`);
+  const data = await res.json();
+  return {
+    props: {
+      news: data,
+    },
+  };
 }

@@ -1,16 +1,20 @@
 import React from "react";
 import Image from "next/image";
 import Diploma from "../../img/diploma.png";
-import Cert from "../../img/cert.jpg";
 import CertCardList from "../../components/Cert/CertCardList";
 
-function index() {
+function CertificatePage({ certificates }) {
   return (
     <>
       <div className=" relative bg-gradient-to-t from-green-300 to-sky-200 pt-6 pb-12">
         <div className="container flex flex-col md:flex-row items-center ">
           <div className="w-full md:w-6/12 ">
-            <Image src={Diploma} className=" object-cover z-10" />
+            <Image
+              src={Diploma}
+              className=" z-10"
+              alt="stanfordschool"
+              objectFit="cover"
+            />
           </div>
           <div className="w-full z-10 md:w-6/12">
             <p className="text-2xl lg:text-4xl text-white font-bold text-center lg:text-left">
@@ -22,7 +26,6 @@ function index() {
               dicta velit doloribus deserunt, magni possimus nostrum iste
               consectetur aut officia.
             </p>
-           
           </div>
         </div>
         <div className=" absolute z-0 left-0 right-0 bottom-0">
@@ -37,10 +40,21 @@ function index() {
       </div>
 
       <div>
-        <CertCardList />
+        <CertCardList certificates={certificates} />
       </div>
     </>
   );
 }
 
-export default index;
+export default CertificatePage;
+
+export async function getServerSideProps(context) {
+  const res = await fetch("https://cp.stanfordschool.uz/api/sertificates");
+  const data = await res.json();
+
+  return {
+    props: {
+      certificates: data,
+    },
+  };
+}

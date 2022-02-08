@@ -199,7 +199,7 @@ const Footer = () => {
                 Follow Us On
               </h4>
               <a href="" className="p-2">
-                <Image src={Telegram} />
+                <Image src={Telegram} alt="stanfordschool" />
               </a>
               <a href="" className="p-2">
                 <Image src={Instagram} />

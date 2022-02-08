@@ -7,7 +7,7 @@ const AboutPage = (props) => {
   return (
     <>
       <div
-        className="flex py-6  items-center justify-center  min-h-[90vh] relative"
+        className="flex py-6 items-center justify-center  min-h-[90vh] relative"
         style={{
           background: `linear-gradient(143deg, rgba(0,245,255,0.6755077030812324) 0%, rgba(36,167,118,0.4766281512605042) 51%, rgba(32,166,92,0.5802696078431373) 100%), url(${TechBg.src})`,
           backgroundSize: "cover",

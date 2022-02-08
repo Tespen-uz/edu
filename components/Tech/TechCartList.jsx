@@ -2,19 +2,18 @@ import React from "react";
 import TechCard from "./TechCard";
 
 function TechCartList({ teachers }) {
+  console.log(teachers);
   return (
-    <div className="container mx-auto flex flex-wrap justify-around md:justify-between py-8">
-      {teachers.map((teacher) => {
-        return (
-          <TechCard
-            key={teacher.id}
-            img={teacher.image}
-            name={teacher.name}
-            subject={"English"}
-            id={teacher.id}
-          />
-        );
-      })}
+    <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-8 gap-6">
+      {teachers.map((teacher) => (
+        <TechCard
+          key={teacher.id}
+          img={teacher.image}
+          name={teacher.name}
+          subject={teacher.subject}
+          id={teacher.id}
+        />
+      ))}
     </div>
   );
 }
