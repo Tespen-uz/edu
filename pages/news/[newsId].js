@@ -4,7 +4,6 @@ import NewEvents from "../../layouts/News";
 import NewsIndex from "../../public/newsImage.png";
 
 export default function NewsPage({ news }) {
-  console.log(news);
   return (
     <div className="">
       <div className="relative pb-16 bg-gradient-to-r from-cyan-500 to-blue-500">
