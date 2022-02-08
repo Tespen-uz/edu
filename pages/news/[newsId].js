@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import NewEvents from "../../layouts/News";
 import NewsIndex from "../../public/newsImage.png";
 
 export default function NewsPage({ news }) {
@@ -51,7 +50,7 @@ export default function NewsPage({ news }) {
 
 export async function getServerSideProps(context) {
   const res = await fetch(
-    `https://cp.stanfordschool.uz/api/news/${context.query.newsID}`
+    `https://cp.stanfordschool.uz/api/news/${context.query.newsId}`
   );
   const data = await res.json();
   return {
