@@ -1,12 +1,26 @@
 import React, { useState } from "react";
-import ExamList from "../../layouts/ExamPage/ExamList";
-import questions from "../../layouts/examdata.json";
+import { useRouter } from "next/router";
 
-function index() {
+const TestExam = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedOptions, setSelectedOptions] = useState([]);
+  const [questions, setQuestions] = useState([]);
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
+
+  const router = useRouter();
+  console.log(router.query.assessmentId);
+
+  React.useEffect(() => {
+    if (router.query.assessmentId) {
+      fetch(`https://cp.stanfordschool.uz/api/test/${router.query.assessmentId}`)
+      .then(res => res.json())
+      .then(data => {
+        setQuestions(data);
+      })
+      .catch(err => console.log(err));
+    }
+  }, [router.query.assessmentId]);
 
   const handleAnswerOption = (answer) => {
     setSelectedOptions([
@@ -38,6 +52,14 @@ function index() {
     setScore(newScore);
     setShowScore(true);
   };
+
+  if(questions.length === 0) {
+    return (
+      <div className="bg-black">
+        Loading...
+      </div>
+    )
+  }
 
   return (
     <div className="bg-black">
@@ -96,9 +118,10 @@ function index() {
             </button>
           </div>
         </div>
-      )}
+      )} 
+     
     </div>
   );
-}
+};
 
-export default index;
+export default TestExam;
