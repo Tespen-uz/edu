@@ -7,7 +7,7 @@ import TechSliderList from "../components/Tech/TechSliderList";
 import CourseList from "../components/CourseBox/CourseList";
 import useConfetti from "../utils/hooks/useConfetti";
 import Faq from "../components/Faq/Faq";
-import Contact from "../layouts/Contact";
+import Contact from "../layouts/contact";
 import Heading from "../layouts/ui/Heading";
 import requests from "../utils/requests";
 import Modal from "../components/Modal/Modal";
@@ -25,7 +25,7 @@ export default function Home(props) {
 
   React.useEffect(() => {
     startSchoolPride();
-  }, [startSchoolPride]);
+  }, []);
 
   return (
     <React.Fragment>
@@ -110,7 +110,7 @@ export default function Home(props) {
                           <p className=" text-gray-300">
                             Lorem ipsum dolor sit amet, consectetur adipisicing
                             elit. Veniam tempora quidem vel sint.
-                          </p>
+                          </p>  
                         </div>
                       </div>
                     </div>

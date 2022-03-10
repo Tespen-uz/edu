@@ -199,13 +199,13 @@ const Footer = () => {
                 Follow Us On
               </h4>
               <a href="" className="p-2">
-                <Image src={Telegram} alt="stanfordschool icon" />
+                <Image src={Telegram} alt="stanfordschool" />
               </a>
               <a href="" className="p-2">
-                <Image src={Instagram} alt="stanfordschool icon" />
+                <Image src={Instagram} />
               </a>
               <a href="" className="p-2">
-                <Image src={Facebook} alt="stanfordschool icon" />
+                <Image src={Facebook} />
               </a>
             </div>
           </div>

@@ -103,10 +103,7 @@ function StudentCardList() {
       <div ref={sliderRef} className="keen-slider py-10 z-10">
         {StudentInfo.map((item) => {
           return (
-            <div
-              className="keen-slider__slide number-slide p-1  "
-              key={item.id}
-            >
+            <div className="keen-slider__slide number-slide p-1  ">
               <StudentCard
                 name={item.name}
                 img={item.img}
