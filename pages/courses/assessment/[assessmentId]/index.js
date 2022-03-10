@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const TestExam = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -9,16 +10,17 @@ const TestExam = () => {
   const [showScore, setShowScore] = useState(false);
 
   const router = useRouter();
-  console.log(router.query.assessmentId);
 
   React.useEffect(() => {
     if (router.query.assessmentId) {
-      fetch(`https://cp.stanfordschool.uz/api/test/${router.query.assessmentId}`)
-      .then(res => res.json())
-      .then(data => {
-        setQuestions(data);
-      })
-      .catch(err => console.log(err));
+      fetch(
+        `https://cp.stanfordschool.uz/api/test/${router.query.assessmentId}`
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          setQuestions(data);
+        })
+        .catch((err) => console.log(err));
     }
   }, [router.query.assessmentId]);
 
@@ -53,20 +55,22 @@ const TestExam = () => {
     setShowScore(true);
   };
 
-  if(questions.length === 0) {
-    return (
-      <div className="bg-black">
-        Loading...
-      </div>
-    )
+  if (questions.length === 0) {
+    return <div className="bg-black">Loading...</div>;
   }
 
   return (
     <div className="bg-black">
       {showScore ? (
-        <h1 className="text-3xl font-semibold text-center text-white py-10">
-          You scored {score} out of {questions.length}
-        </h1>
+        <div className="py-8">
+          <h1 className="text-3xl font-semibold text-center text-green-300 my-4">
+            You scored {score} out of {questions.length}
+          </h1>
+          <br />
+          <Link href={"/"}>
+            <a className="text-center text-xl text-white block mb-4 cursor-pointer underline">Go back to home page</a>
+          </Link>
+        </div>
       ) : (
         <div className="container  py-12">
           <div className="flex  flex-col items-start w-full">
@@ -102,7 +106,8 @@ const TestExam = () => {
           <div className="flex justify-between w-full mt-4 text-white">
             <button
               onClick={handlePrevious}
-              className="w-[49%] py-3 bg-indigo-600 rounded-lg"
+              className="w-[49%] py-3 bg-indigo-600 rounded-lg disabled:bg-gray-400 disabled:cursor-not-allowed"
+              disabled={currentQuestion === 0}
             >
               Previous
             </button>
@@ -118,8 +123,7 @@ const TestExam = () => {
             </button>
           </div>
         </div>
-      )} 
-     
+      )}
     </div>
   );
 };
