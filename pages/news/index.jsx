@@ -4,7 +4,6 @@ import Image from "next/image";
 import NewsImage from "../../public/news.png";
 
 export default function NewsPage({ news }) {
-  console.log(news);
   return (
     <React.Fragment>
       <div className="relative pb-32 bg-gradient-to-r from-cyan-500 to-blue-500">
