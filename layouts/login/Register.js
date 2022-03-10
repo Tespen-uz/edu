@@ -17,10 +17,7 @@ const Register = () => {
 
   const onSubmit = (data) => {
     startSchoolPride();
-    const timeout = setTimeout(() => {
-      router.push("/");
-      clearTimeout(timeout);
-    }, 3500);
+    router.push(`/courses/assessment/${router.query.registerCourseId}`);
   };
 
   console.log(errors);
@@ -102,7 +99,7 @@ const Register = () => {
           <div className="flex items-center border-2 py-2 px-3 rounded-lg mt-4">
             <PhoneIcon className="h-5 w-5 text-gray-400" />
             <Input
-              type="number"
+              type="tel"
               placeholder="Phone number"
               register={{
                 ...register("phoneNumber", {
@@ -116,8 +113,8 @@ const Register = () => {
                     message: "Phone number must be at least 9 characters",
                   },
                   maxLength: {
-                    value: 13,
-                    message: "Phone number must be at most 13 characters",
+                    value: 18,
+                    message: "Phone number must be at most 18 characters",
                   },
                 }),
               }}
