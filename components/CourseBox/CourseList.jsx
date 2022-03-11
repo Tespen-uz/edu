@@ -70,6 +70,7 @@ function CourseList({ courses }) {
               className="keen-slider__slide number-slide my-2 mx-2 md:mx-0 "
             >
               <CourseCard
+                key={item.id}
                 name={item.name}
                 description={item.description}
                 img={item.picture}
