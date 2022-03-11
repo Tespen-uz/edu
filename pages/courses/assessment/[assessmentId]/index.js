@@ -25,6 +25,7 @@ const TestExam = () => {
   }, [router.query.assessmentId]);
 
   const handleAnswerOption = (answer) => {
+    console.log(bgcolor);
     setSelectedOptions([
       (selectedOptions[currentQuestion] = { answerByUser: answer }),
     ]);
@@ -62,7 +63,7 @@ const TestExam = () => {
   return (
     <div className="bg-white">
       {showScore ? (
-        <h1 className="text-3xl font-semibold text-center text-black py-10">
+        <h1 className="text-3xl font-semibold text-center text-green-300 py-10">
           You scored {score} out of {questions.length}
         </h1>
       ) : (
