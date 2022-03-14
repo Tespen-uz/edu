@@ -9,20 +9,23 @@ const TestExam = () => {
   const [showScore, setShowScore] = useState(false);
 
   const router = useRouter();
-  console.log(router.query.assessmentId);
+  console.log(questions);
 
   React.useEffect(() => {
     if (router.query.assessmentId) {
-      fetch(`https://cp.stanfordschool.uz/api/test/${router.query.assessmentId}`)
-      .then(res => res.json())
-      .then(data => {
-        setQuestions(data);
-      })
-      .catch(err => console.log(err));
+      fetch(
+        `https://cp.stanfordschool.uz/api/test/${router.query.assessmentId}`
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          setQuestions(data);
+        })
+        .catch((err) => console.log(err));
     }
   }, [router.query.assessmentId]);
 
   const handleAnswerOption = (answer) => {
+    console.log(bgcolor);
     setSelectedOptions([
       (selectedOptions[currentQuestion] = { answerByUser: answer }),
     ]);
@@ -53,27 +56,23 @@ const TestExam = () => {
     setShowScore(true);
   };
 
-  if(questions.length === 0) {
-    return (
-      <div className="bg-black">
-        Loading...
-      </div>
-    )
+  if (questions.length === 0) {
+    return <div className="bg-black">Loading...</div>;
   }
 
   return (
-    <div className="bg-black">
+    <div className="bg-white">
       {showScore ? (
-        <h1 className="text-3xl font-semibold text-center text-white py-10">
+        <h1 className="text-3xl font-semibold text-center text-green-300 py-10">
           You scored {score} out of {questions.length}
         </h1>
       ) : (
         <div className="container  py-12">
           <div className="flex  flex-col items-start w-full">
-            <h4 className="mt-6 text-xl text-white/60">
+            <h4 className="mt-6 text-xl text-black">
               Question {currentQuestion + 1} of {questions.length}
             </h4>
-            <div className="mt-4 text-2xl text-white">
+            <div className="mt-4 text-2xl text-gray-800">
               {questions[currentQuestion].question}
             </div>
           </div>
@@ -81,7 +80,7 @@ const TestExam = () => {
             {questions[currentQuestion].answerOptions.map((answer, index) => (
               <div
                 key={index}
-                className="flex items-center w-full py-4 pl-5 m-2 ml-0 space-x-2 border-2 cursor-pointer border-white/10 rounded-xl bg-white/5"
+                className="flex items-center w-full py-4 pl-5 m-2 ml-0 space-x-2 border-2 cursor-pointer border-gray-200 rounded-xl "
                 onClick={(e) => handleAnswerOption(answer.answer)}
               >
                 <input
@@ -95,7 +94,7 @@ const TestExam = () => {
                   onChange={(e) => handleAnswerOption(answer.answer)}
                   className="w-6 h-6 bg-black"
                 />
-                <p className="ml-6 text-white">{answer.answer}</p>
+                <p className="ml-6 text-gray-600">{answer.answer}</p>
               </div>
             ))}
           </div>
@@ -118,8 +117,7 @@ const TestExam = () => {
             </button>
           </div>
         </div>
-      )} 
-     
+      )}
     </div>
   );
 };

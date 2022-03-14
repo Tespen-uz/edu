@@ -74,7 +74,7 @@ export default function Navbar() {
                 <div className="">
                   <Popover.Button className="bg-gray-100 rounded-md relative left-3  p-2 inline-flex items-center justify-center text-gray-600 hover:text-gray-600 hover:bg-gray-100  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                     <span className="sr-only">Close menu</span>
-                    <XIcon className="h-6 w-6" aria-hidden="true" />
+                    <XIcon className="h-6 w-6" ariaHidden="true" />
                   </Popover.Button>
                 </div>
               </div>
