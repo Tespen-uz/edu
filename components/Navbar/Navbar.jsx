@@ -22,7 +22,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
             <Popover.Group
               as="nav"
-              className="hidden md:flex space-x-10 md:items-center"
+              className="hidden md:flex space-x-6 md:items-center"
             >
               <Link href="/about">
                 <a className="text-base font-medium text-gray-600 hover:text-gray-900">
@@ -37,6 +37,11 @@ export default function Navbar() {
               <Link href="/courses">
                 <a className="text-base font-medium text-gray-600 hover:text-gray-900">
                   Courses
+                </a>
+              </Link>
+              <Link href="/exam">
+                <a className="text-base font-medium text-gray-600 hover:text-gray-900">
+                  Exam
                 </a>
               </Link>
 
@@ -79,7 +84,7 @@ export default function Navbar() {
                 </div>
               </div>
             </div>
-            <div className="py-5 px-5 ">
+            <div className="py-5 px-3 ">
               <div className="mx-auto grid grid-cols-1 text-center">
                 <Link href="/about">
                   <a className="my-3 text-base font-medium text-gray-600 hover:text-gray-900">
@@ -94,6 +99,11 @@ export default function Navbar() {
                 <Link href="/courses">
                   <a className="my-3 text-base font-medium text-gray-600 hover:text-gray-900">
                     Courses
+                  </a>
+                </Link>
+                <Link href="/exam">
+                  <a className="my-3 text-base font-medium text-gray-600 hover:text-gray-900">
+                    Exam
                   </a>
                 </Link>
                 <Link href="/contact">
