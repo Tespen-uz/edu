@@ -16,7 +16,7 @@ function ExamCardIteam({ item }) {
         <div className="flex justify-end">
           <p className="text-gray-500">{item.creator}</p>
         </div>
-        <Link href={`/exam/${item.id}`}>
+        <Link href='/exam/[id]' as={`/exam/${item.id}`}>
           <a className="text-lg text-center font-bold p-2  text-white block mt-4 bg-emerald-300 rounded-md transition-all hover:scale-[0.97]">
             {" "}
             Start Now

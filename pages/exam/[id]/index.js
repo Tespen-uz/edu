@@ -1,17 +1,13 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 
-function index({ data }) {
+const ExamTest=({ questions })=> {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedOptions, setSelectedOptions] = useState([]);
-  const [questions, setQuestions] = useState(data);
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
 
-  const router = useRouter();
-
   const handleAnswerOption = (answer) => {
-    console.log(bgcolor);
     setSelectedOptions([
       (selectedOptions[currentQuestion] = { answerByUser: answer }),
     ]);
@@ -110,11 +106,11 @@ function index({ data }) {
 
 export async function getServerSideProps(context) {
   const res = await fetch(
-    `https://cp.stanfordschool.uz/api/test/${context.query.examId}`
+    `https://cp.stanfordschool.uz/api/test/${context.query.id}`
   );
-  const data = await res.json();
+  const questions = await res.json();
   return {
-    props: { data },
+    props: { questions },
   };
 }
-export default index;
+export default ExamTest;

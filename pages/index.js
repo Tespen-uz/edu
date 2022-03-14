@@ -110,7 +110,7 @@ export default function Home(props) {
                           <p className=" text-gray-300">
                             Lorem ipsum dolor sit amet, consectetur adipisicing
                             elit. Veniam tempora quidem vel sint.
-                          </p>  
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -167,7 +167,7 @@ export default function Home(props) {
                 </div>
               </div>
               <div className="w-full lg:w-1/2">
-                <div className="mx-3 lg:mr-0 lg:ml-3 flex justify-end">
+                <div className="mx-3 relative lg:mr-0 lg:ml-3 flex justify-end">
                   <Image src={H1} width={550} height={550} alt="stanford" />
                 </div>
               </div>
