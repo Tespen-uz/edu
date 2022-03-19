@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import H1 from "../img/h-1.png";
 import InfoList from "../components/InfoBox/InfoList";
 import TechSliderList from "../components/Tech/TechSliderList";
@@ -18,6 +19,8 @@ export default function Home(props) {
   const { startFirework, startSchoolPride } = useConfetti();
 
   const [open, setOpen] = useState(false);
+  
+  const t = useTranslations('home');
 
   const toggleModal = () => {
     setOpen((state) => !state);
@@ -31,8 +34,7 @@ export default function Home(props) {
     <React.Fragment>
       <Head>
         <meta name="description" content="Built by TESPEN" />
-        <link rel="icon" href="/favicon.ico" />
-        <title>StanfordSchool</title>
+        <title>{t('title')}</title>
       </Head>
 
       <main className="relative overflow-hidden">
@@ -218,7 +220,8 @@ export default function Home(props) {
   );
 }
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps({locale}) {
+  console.log(locale);
   const res = await Promise.allSettled([
     requests.get("/api/statistics"),
     requests.get("/api/courses"),
@@ -232,6 +235,7 @@ export async function getServerSideProps(context) {
       statistics: data[0],
       courses: data[1],
       teachers: data[2],
+      messages: (await import(`../messages/${locale}.json`)).default,
     },
   };
 }

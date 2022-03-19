@@ -1,16 +1,22 @@
 import { Fragment } from "react";
+import { useTranslations } from "next-intl";
 import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import Link from "next/link";
+import LocaleSwitcher from "../LocaleSwitcher/LocaleSwitcher";
+
+const links = ["about", "teachers", "courses", "news", "contact"];
 
 export default function Navbar() {
+  const t = useTranslations("global.nav");
+
   return (
     <Popover className="sticky top-0 z-[1000] bg-gray-100 ">
-      <div className="px-5 lg:px-4 container mx-auto   w-full ">
+      <div className="px-5 lg:px-4 container mx-auto w-full ">
         <div className="flex justify-between items-center py-4 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link href="/">
-              <a className="text-3xl text-gray-600 font-bold">StanfordSchool</a>
+              <a className="text-3xl text-gray-600 font-bold">Stanford<span className="text-red-400" >School</span></a>
             </Link>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
@@ -24,32 +30,14 @@ export default function Navbar() {
               as="nav"
               className="hidden md:flex space-x-10 md:items-center"
             >
-              <Link href="/about">
-                <a className="text-base font-medium text-gray-600 hover:text-gray-900">
-                  About
-                </a>
-              </Link>
-              <Link href="/teachers">
-                <a className="text-base font-medium text-gray-600 hover:text-gray-900">
-                  Teacher
-                </a>
-              </Link>
-              <Link href="/courses">
-                <a className="text-base font-medium text-gray-600 hover:text-gray-900">
-                  Courses
-                </a>
-              </Link>
-
-              <Link href="/contact">
-                <a className="text-base font-medium text-gray-600 hover:text-gray-900">
-                  Contact
-                </a>
-              </Link>
-              <Link href="/news">
-                <a className="text-base font-medium text-gray-600 hover:text-gray-900">
-                  News
-                </a>
-              </Link>
+              {links.map((item, index) => (
+                <Link href={`/${item}`} key={index}>
+                  <a className="text-base font-medium text-gray-600 hover:text-gray-900">
+                    {t(item)}
+                  </a>
+                </Link>
+              ))}
+              <LocaleSwitcher />
             </Popover.Group>
           </div>
         </div>
@@ -65,11 +53,11 @@ export default function Navbar() {
         leaveTo="opacity-0 scale-95"
       >
         <Popover.Panel className="absolute  z-10  top-0 right-0 inset-x-0 md:hidden">
-          <div className="bg-gray-100 z-10 mx-auto rounded-lg shadow-lg ">
+          <div className="bg-gray-100 z-10 mx-auto rounded-lg shadow-lg">
             <div className="pt-3 pb-1 px-5">
               <div className="flex items-center justify-between">
-                <p className="text-gray-600 text-3xl font-bold ">
-                  StanfordSchool
+                <p className="text-gray-600 text-2xl font-bold ">
+                  Stanford<span className="text-red-400" >School</span>
                 </p>
                 <div className="">
                   <Popover.Button className="bg-gray-100 rounded-md relative left-3  p-2 inline-flex items-center justify-center text-gray-600 hover:text-gray-600 hover:bg-gray-100  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -81,31 +69,16 @@ export default function Navbar() {
             </div>
             <div className="py-5 px-5 ">
               <div className="mx-auto grid grid-cols-1 text-center">
-                <Link href="/about">
-                  <a className="my-3 text-base font-medium text-gray-600 hover:text-gray-900">
-                    About
+                {links.map((link, index) => (
+                  <Link href={`/${link}`} key={link} >
+                  <a className="my-3 text-base font-medium text-gray-600 hover:text-gray-900 whitespace-nowrap">
+                    {t(link)}
                   </a>
                 </Link>
-                <Link href="/teachers">
-                  <a className="my-3 text-base font-medium text-gray-600 hover:text-gray-900">
-                    Teacher
-                  </a>
-                </Link>
-                <Link href="/courses">
-                  <a className="my-3 text-base font-medium text-gray-600 hover:text-gray-900">
-                    Courses
-                  </a>
-                </Link>
-                <Link href="/contact">
-                  <a className="my-3 text-base font-medium text-gray-600 hover:text-gray-900">
-                    Contact
-                  </a>
-                </Link>
-                <Link href="/news">
-                  <a className="my-3 text-base font-medium text-gray-600 hover:text-gray-900">
-                    News
-                  </a>
-                </Link>
+                ))}
+                <span className="mx-auto">
+                  <LocaleSwitcher />
+                </span>
               </div>
             </div>
           </div>

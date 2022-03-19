@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import requests from "../../../../utils/requests";
 
 const TestExam = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -10,6 +11,13 @@ const TestExam = () => {
   const [showScore, setShowScore] = useState(false);
 
   const router = useRouter();
+
+  const reset = () => {
+    setCurrentQuestion(0);
+    setSelectedOptions([]);
+    setScore(0);
+    setShowScore(false);
+  };
 
   React.useEffect(() => {
     if (router.query.assessmentId) {
@@ -67,9 +75,16 @@ const TestExam = () => {
             You scored {score} out of {questions.length}
           </h1>
           <br />
-          <Link href={"/"}>
-            <a className="text-center text-xl text-white block mb-4 cursor-pointer underline">Go back to home page</a>
-          </Link>
+          <p className="text-xl text-center text-green-300">
+            <button className="bg-green-400 py-2 px-6 font-bold text-white rounded">Apply</button> to the course with this score.
+          </p>
+          <br />
+          <div className="flex justify-center">
+            <span className="text-gray-200  py-2 mx-4" >OR</span>
+            <button className="bg-blue-500 text-white font-bold py-2 px-4 rounded" onClick={reset} >
+              Retake
+            </button>
+          </div>
         </div>
       ) : (
         <div className="container  py-12">
@@ -129,3 +144,24 @@ const TestExam = () => {
 };
 
 export default TestExam;
+
+export async function getStaticPaths() {
+  const res = await requests.get("/api/test");
+  const paths = res.data.map((test) => ({
+    params: {
+      assessmentId: test.id.toString(),
+    },
+  }));
+  return {
+    paths,
+    fallback: "blocking",
+  };
+}
+
+export const getStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      messages: (await import(`../../../../messages/${locale}.json`)).default,
+    },
+  };
+};

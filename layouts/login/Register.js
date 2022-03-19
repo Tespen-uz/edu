@@ -20,8 +20,6 @@ const Register = () => {
     router.push(`/courses/assessment/${router.query.registerCourseId}`);
   };
 
-  console.log(errors);
-
   return (
     <div className="h-screen md:flex">
       <div className="relative overflow-hidden md:flex w-1/2 bg-gradient-to-tr from-blue-800 to-purple-700 justify-around items-center hidden">

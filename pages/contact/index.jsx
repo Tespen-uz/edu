@@ -54,13 +54,10 @@ export default function ContactPage() {
   );
 }
 
-// export async function getStaticProps() {
-//   const response = await fetch("thsp");
-//   const data = await response.json();
-
-//   return {
-//     props: {
-//       teachers: data.teachers,
-//     },
-//   };
-// }
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      messages: (await import(`../../messages/${locale}.json`)).default,
+    },
+  };
+}

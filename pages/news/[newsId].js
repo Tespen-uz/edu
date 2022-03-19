@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import NewEvents from "../../layouts/News";
 import NewsIndex from "../../public/newsImage.png";
 
 export default function NewsPage({ news }) {
@@ -57,6 +56,7 @@ export async function getServerSideProps(context) {
   return {
     props: {
       news: data[0],
+      messages: (await import(`../../messages/${context.locale}.json`)).default,
     },
   };
 }

@@ -10,12 +10,10 @@ export const ConfettiContext = React.createContext(null);
 
 const AppContainer = ({ children }) => {
   const [user, setUser] = React.useState({
-    user: {
-      name: "",
-      tel: "",
-      age: "",
-      score: "",
-    },
+    name: "",
+    tel: "",
+    age: "",
+    score: "",
   });
   const fireworkRef = useRef(null);
   const schoolPrideRef = useRef(null);

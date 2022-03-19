@@ -1,0 +1,52 @@
+{
+  "home": {
+    "title": "Home",
+    "description": "Home page"
+  },
+  "about": {
+    "title": "StanfordSchool | About",
+    "heading": "About us"
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Contact page"
+  },
+  "courses": {
+    "title": "Courses",
+    "description": "Courses page"
+  },
+  "course": {
+    "title": "Course",
+    "description": "Course page"
+  },
+  "teachers": {
+    "title": "Teachers",
+    "description": "Teachers page"
+  },
+  "teacher": {
+    "title": "Teacher",
+    "description": "Teacher page"
+  },
+  "news": {
+    "title": "News",
+    "description": "News page"
+  },
+  "tests": {
+    "title": "Tests",
+    "description": "Tests page"
+  },
+  "register": {
+    "title": "Register",
+    "description": "Register page"
+  },
+  "global": {
+    "nav": {
+      "about": "About",
+      "teachers": "Teachers",
+      "courses": "Courses",
+      "news": "News",
+      "contact": "Contact"
+    },
+    "register": "Register"
+  }
+}

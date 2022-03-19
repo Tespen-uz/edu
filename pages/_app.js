@@ -1,8 +1,8 @@
-import "../styles/globals.css";
 import Head from "next/head";
+import { NextIntlProvider } from "next-intl";
+import NextNProgress from "nextjs-progressbar";
 import AppContainer from "../containers/AppContainer";
-import { Provider } from "react-redux";
-import store from "../app/store";
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -13,13 +13,18 @@ function MyApp({ Component, pageProps }) {
           content="Standford education centre web application Built by TESPEN organization"
         />
         <title>StandFord education center</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Provider store={store}>
+      <NextIntlProvider messages={pageProps.messages}>
         <AppContainer>
+          <NextNProgress
+            color="#00d1b2"
+            startPosition={0.3}
+            stopDelayMs={200}
+            height={3}
+          />
           <Component {...pageProps} />
         </AppContainer>
-      </Provider>
+      </NextIntlProvider>
     </>
   );
 }
