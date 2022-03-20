@@ -3,10 +3,8 @@ import { useRouter } from "next/router";
 import { PhoneIcon } from "@heroicons/react/solid";
 import Input from "../ui/Input";
 import { useForm } from "react-hook-form";
-import useConfetti from "../../utils/hooks/useConfetti";
 
 const Register = () => {
-  const { startFirework, startSchoolPride } = useConfetti();
   const router = useRouter();
 
   const {
@@ -16,11 +14,8 @@ const Register = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    startSchoolPride();
     router.push(`/courses/assessment/${router.query.registerCourseId}`);
   };
-
-  console.log(errors);
 
   return (
     <div className="h-screen md:flex">
@@ -35,7 +30,6 @@ const Register = () => {
           <button
             type="submit"
             className="block w-28 bg-white text-indigo-800 mt-4 py-2 rounded-2xl font-bold mb-2"
-            onClick={startFirework}
           >
             Read More
           </button>

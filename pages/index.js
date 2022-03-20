@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import H1 from "../img/h-1.png";
 import InfoList from "../components/InfoBox/InfoList";
 import TechSliderList from "../components/Tech/TechSliderList";
 import CourseList from "../components/CourseBox/CourseList";
-import useConfetti from "../utils/hooks/useConfetti";
 import Faq from "../components/Faq/Faq";
 import Contact from "../layouts/Contact";
 import Heading from "../layouts/ui/Heading";
@@ -15,24 +15,26 @@ import TechBg from "../img/techBg.jpg";
 import Link from "next/link";
 
 export default function Home(props) {
-  const { startFirework, startSchoolPride } = useConfetti();
-
   const [open, setOpen] = useState(false);
+  
+  const t = useTranslations('home');
 
   const toggleModal = () => {
     setOpen((state) => !state);
   };
 
+<<<<<<< HEAD
   React.useEffect(() => {
     startSchoolPride();
   }, [startSchoolPride]);
 
+=======
+>>>>>>> 2435ffc59642163f83d7a8f0cd642a6a90c2e25b
   return (
     <React.Fragment>
       <Head>
         <meta name="description" content="Built by TESPEN" />
-        <link rel="icon" href="/favicon.ico" />
-        <title>StanfordSchool</title>
+        <title>{t('title')}</title>
       </Head>
 
       <main className="relative overflow-hidden">
@@ -64,7 +66,6 @@ export default function Home(props) {
                 <Link href="#">
                   <a
                     className=" capitalize text-xl font-bold text-white rounded-full block bg-gradient-to-tr from-sky-400 to-green-400 transition-all hover:from-green-400 hover:to-sky-400 hover:scale-95  px-10 py-2"
-                    onClick={startFirework}
                   >
                     Start now
                   </a>
@@ -167,7 +168,7 @@ export default function Home(props) {
                 </div>
               </div>
               <div className="w-full lg:w-1/2">
-                <div className="mx-3 lg:mr-0 lg:ml-3 flex justify-end">
+                <div className="mx-3 relative lg:mr-0 lg:ml-3 flex justify-end">
                   <Image src={H1} width={550} height={550} alt="stanford" />
                 </div>
               </div>
@@ -218,7 +219,8 @@ export default function Home(props) {
   );
 }
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps({locale}) {
+  console.log(locale);
   const res = await Promise.allSettled([
     requests.get("/api/statistics"),
     requests.get("/api/courses"),
@@ -232,6 +234,7 @@ export async function getServerSideProps(context) {
       statistics: data[0],
       courses: data[1],
       teachers: data[2],
+      messages: (await import(`../messages/${locale}.json`)).default,
     },
   };
 }

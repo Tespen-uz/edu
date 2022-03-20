@@ -68,7 +68,7 @@ function TechId({ teacher }) {
       </div>
       {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pb-12">
-          {certifications.length > 0 &&
+          {certifications?.length > 0 &&
             certifications.map((sertificate, index) => (
               <div
                 className="col-span-1 relative w-full h-[500px] lg:h-[600px] rounded-sm"

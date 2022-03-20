@@ -48,13 +48,14 @@ function CertificatePage({ certificates }) {
 
 export default CertificatePage;
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps({ locale }) {
   const res = await fetch("https://cp.stanfordschool.uz/api/sertificates");
   const data = await res.json();
 
   return {
     props: {
       certificates: data,
+      messages: (await import(`../../messages/${locale}.json`)).default,
     },
   };
 }

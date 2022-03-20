@@ -1,0 +1,53 @@
+{
+  "home": {
+    "title": "StanfordSchool | Asosiy",
+    "heading": "Asosiy sahifa"
+  },
+  "about": {
+    "title": "StanfordSchool | Biz haqimizda",
+    "heading": "Biz haqimizda"
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Contact page"
+  },
+  "courses": {
+    "title": "Courses",
+    "description": "Courses page"
+  },
+  "course": {
+    "title": "Course",
+    "description": "Course page"
+  },
+  "teachers": {
+    "title": "Teachers",
+    "description": "Teachers page"
+  },
+  "teacher": {
+    "title": "Teacher",
+    "description": "Teacher page"
+  },
+  "news": {
+    "title": "News",
+    "description": "News page"
+  },
+  "tests": {
+    "title": "Tests",
+    "description": "Tests page"
+  },
+  "register": {
+    "title": "Register",
+    "description": "Register page"
+  },
+  "global": {
+    "nav": {
+      "about": "Biz haqimizda",
+      "teachers": "O'qituvchilar",
+      "courses": "Kurslar",
+      "news": "Yangiliklar",
+      "contact": "Bog'lanish",
+      "exam": "Testlar"
+    },
+    "register": "Ro'yxatdan o'tish"
+  }
+}

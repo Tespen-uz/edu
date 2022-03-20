@@ -8,4 +8,8 @@ module.exports = {
       "cdn.tailgrids.com",
     ],
   },
+  i18n: {
+    locales: ['en', 'uz'],
+    defaultLocale: 'uz'
+  }    
 };

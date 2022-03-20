@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
+import requests from "../../../../utils/requests";
 
 const TestExam = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -9,7 +10,13 @@ const TestExam = () => {
   const [showScore, setShowScore] = useState(false);
 
   const router = useRouter();
-  console.log(questions);
+
+  const reset = () => {
+    setCurrentQuestion(0);
+    setSelectedOptions([]);
+    setScore(0);
+    setShowScore(false);
+  };
 
   React.useEffect(() => {
     if (router.query.assessmentId) {
@@ -25,7 +32,6 @@ const TestExam = () => {
   }, [router.query.assessmentId]);
 
   const handleAnswerOption = (answer) => {
-    console.log(bgcolor);
     setSelectedOptions([
       (selectedOptions[currentQuestion] = { answerByUser: answer }),
     ]);
@@ -63,9 +69,22 @@ const TestExam = () => {
   return (
     <div className="bg-white">
       {showScore ? (
-        <h1 className="text-3xl font-semibold text-center text-green-300 py-10">
-          You scored {score} out of {questions.length}
-        </h1>
+        <div className="py-8">
+          <h1 className="text-3xl font-semibold text-center text-green-300 my-4">
+            You scored {score} out of {questions.length}
+          </h1>
+          <br />
+          <p className="text-xl text-center text-green-300">
+            <button className="bg-green-400 py-2 px-6 font-bold text-white rounded">Apply</button> to the course with this score.
+          </p>
+          <br />
+          <div className="flex justify-center">
+            <span className="text-gray-200  py-2 mx-4" >OR</span>
+            <button className="bg-blue-500 text-white font-bold py-2 px-4 rounded" onClick={reset} >
+              Retake
+            </button>
+          </div>
+        </div>
       ) : (
         <div className="container  py-12">
           <div className="flex  flex-col items-start w-full">
@@ -123,3 +142,24 @@ const TestExam = () => {
 };
 
 export default TestExam;
+
+export async function getStaticPaths() {
+  const res = await requests.get("/api/test");
+  const paths = res.data.map((test) => ({
+    params: {
+      assessmentId: test.id.toString(),
+    },
+  }));
+  return {
+    paths,
+    fallback: "blocking",
+  };
+}
+
+export const getStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      messages: (await import(`../../../../messages/${locale}.json`)).default,
+    },
+  };
+};

@@ -6,7 +6,7 @@ function Modal({ toggleModal, open }) {
       className={
         !open
           ? "hidden"
-          : "flex fixed top-0 left-0 bottom-0 right-0 z-[200] bg-black items-center min-h-screen"
+          : "flex fixed top-0 left-0 bottom-0 right-0 z-[9999] bg-black items-center min-h-screen"
       }
     >
       <div className="container mx-auto px-2 md:px-0 flex items-center flex-col justify-center h-full">

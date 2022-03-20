@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslations } from "next-intl";
 import Busy from "../../public/busy.png";
 import School from "../../public/school.png";
 import School2 from "../../public/cyborg.png";
@@ -9,7 +10,10 @@ import Testimonials from "../../layouts/ui/Testimonials";
 import requests from "../../utils/requests";
 import Link from "next/link";
 
+
 const AboutPage = ({ statistics }) => {
+  const t = useTranslations('about');
+  
   return (
     <div className="w-full overflow-x-hidden">
       <div className=" container mx-auto py-12 flex flex-col items-center md:flex-row">
@@ -18,7 +22,7 @@ const AboutPage = ({ statistics }) => {
         </div>
         <div className=" z-10 mt-10 md:mt-0 ">
           <p className="  text-gray-700  text-2xl md:text-4xl  text-center font-bold  mb-4">
-            About us
+            {t("heading")}
           </p>
           <p className="text-gray-600 text-center sm:text-xl  mx-6">
             <span className="text-blue-700 font-bold   drop-shadow-2xl  ">
@@ -114,11 +118,12 @@ const AboutPage = ({ statistics }) => {
 
 export default AboutPage;
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps({locale}) {
   const res = await requests.get("/api/statistics");
   return {
     props: {
       statistics: res.data,
+      messages: (await import(`../../messages/${locale}.json`)).default
     },
   };
 }

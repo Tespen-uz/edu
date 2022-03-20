@@ -2,7 +2,7 @@ import React from "react";
 import ExamCardList from "../../layouts/ExamPage/ExamCard/ExamCardList";
 import ExamHeader from "../../layouts/ExamPage/ExamHeader/ExamHeader";
 
-function index({ data }) {
+function ExamsPage({ data }) {
   return (
     <>
       <ExamHeader />
@@ -11,13 +11,16 @@ function index({ data }) {
   );
 }
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps({ locale }) {
   const res = await fetch(`https://cp.stanfordschool.uz/api/test`);
   const data = await res.json();
 
   return {
-    props: { data },
+    props: {
+      data,
+      messages: (await import(`../../messages/${locale}.json`)).default,
+    },
   };
 }
 
-export default index;
+export default ExamsPage;

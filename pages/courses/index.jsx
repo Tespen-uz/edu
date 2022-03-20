@@ -57,11 +57,12 @@ const CoursePage = (props) => {
 
 export default CoursePage;
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps({locale}) {
   const res = await requests.get("/api/courses");
   return {
     props: {
       courses: res.data,
+      messages: (await import(`../../messages/${locale}.json`)).default,
     },
   };
 }
