@@ -10,10 +10,9 @@ import Testimonials from "../../layouts/ui/Testimonials";
 import requests from "../../utils/requests";
 import Link from "next/link";
 
-
 const AboutPage = ({ statistics }) => {
-  const t = useTranslations('about');
-  
+  const t = useTranslations("about");
+
   return (
     <div className="w-full overflow-x-hidden">
       <div className=" container mx-auto py-12 flex flex-col items-center md:flex-row">
@@ -35,7 +34,9 @@ const AboutPage = ({ statistics }) => {
 
           <div className="flex justify-center mt-8">
             <Link href="/certificate">
-              <a className=" px-8 py-2 animate-bounce bg-green-300 rounded text-xl font-bold text-white">Certificate</a>
+              <a className=" px-8 py-2 animate-bounce bg-green-300 rounded text-xl font-bold text-white">
+                Certificate
+              </a>
             </Link>
           </div>
         </div>
@@ -118,12 +119,12 @@ const AboutPage = ({ statistics }) => {
 
 export default AboutPage;
 
-export async function getServerSideProps({locale}) {
+export async function getServerSideProps({ locale }) {
   const res = await requests.get("/api/statistics");
   return {
     props: {
       statistics: res.data,
-      messages: (await import(`../../messages/${locale}.json`)).default
+      messages: (await import(`../../messages/${locale}.json`)).default,
     },
   };
 }

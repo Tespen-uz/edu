@@ -16,8 +16,7 @@ import Link from "next/link";
 
 export default function Home(props) {
   const [open, setOpen] = useState(false);
-  
-  const t = useTranslations('home');
+  const t = useTranslations("home");
 
   const toggleModal = () => {
     setOpen((state) => !state);
@@ -27,7 +26,7 @@ export default function Home(props) {
     <React.Fragment>
       <Head>
         <meta name="description" content="Built by TESPEN" />
-        <title>{t('title')}</title>
+        <title>{t("title")}</title>
       </Head>
 
       <main className="relative overflow-hidden">
@@ -57,9 +56,7 @@ export default function Home(props) {
               </p>
               <div className="flex flex-col items-center  sm:flex-row mt-6 border-b-2 py-4 ">
                 <Link href="#">
-                  <a
-                    className=" capitalize text-xl font-bold text-white rounded-full block bg-gradient-to-tr from-sky-400 to-green-400 transition-all hover:from-green-400 hover:to-sky-400 hover:scale-95  px-10 py-2"
-                  >
+                  <a className=" capitalize text-xl font-bold text-white rounded-full block bg-gradient-to-tr from-sky-400 to-green-400 transition-all hover:from-green-400 hover:to-sky-400 hover:scale-95  px-10 py-2">
                     Start now
                   </a>
                 </Link>
@@ -212,7 +209,7 @@ export default function Home(props) {
   );
 }
 
-export async function getServerSideProps({locale}) {
+export async function getServerSideProps({ locale }) {
   console.log(locale);
   const res = await Promise.allSettled([
     requests.get("/api/statistics"),
@@ -225,8 +222,8 @@ export async function getServerSideProps({locale}) {
   return {
     props: {
       statistics: data[0],
-      courses: data[1],
-      teachers: data[2],
+      courses: data[1][locale],
+      teachers: data[2][locale],
       messages: (await import(`../messages/${locale}.json`)).default,
     },
   };

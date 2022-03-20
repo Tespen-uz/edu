@@ -16,9 +16,10 @@ export async function getServerSideProps(context) {
     `https://cp.stanfordschool.uz/api/teacher/${context.query.teacherID}`
   );
   const data = await res.json();
+  console.log(data);
   return {
     props: {
-      teacher: data[0],
+      teacher: data[context.locale][0],
       messages: (await import(`../../../messages/${context.locale}.json`)).default,
     },
   };

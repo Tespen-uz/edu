@@ -640,9 +640,10 @@ export async function getServerSideProps(context) {
 
   return {
     props: {
-      course: data[0][0],
-      courses: data[1],
-      messages: (await import(`../../../messages/${context.locale}.json`)).default,
+      course: data[0][context.locale][0],
+      courses: data[1][context.locale],
+      messages: (await import(`../../../messages/${context.locale}.json`))
+        .default,
     },
   };
 }
