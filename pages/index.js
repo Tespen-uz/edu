@@ -7,7 +7,7 @@ import InfoList from "../components/InfoBox/InfoList";
 import TechSliderList from "../components/Tech/TechSliderList";
 import CourseList from "../components/CourseBox/CourseList";
 import Faq from "../components/Faq/Faq";
-import Contact from "../layouts/Contact";
+import Contact from "../layouts/contact";
 import Heading from "../layouts/ui/Heading";
 import requests from "../utils/requests";
 import Modal from "../components/Modal/Modal";
@@ -22,10 +22,6 @@ export default function Home(props) {
   const toggleModal = () => {
     setOpen((state) => !state);
   };
-
-  React.useEffect(() => {
-    startSchoolPride();
-  }, [startSchoolPride]);
 
   return (
     <React.Fragment>
