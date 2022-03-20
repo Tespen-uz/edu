@@ -198,16 +198,6 @@ const Footer = () => {
               <h4 className="text-dark text-lg font-semibold mb-9">
                 Follow Us On
               </h4>
-<<<<<<< HEAD
-              <a href="" className="p-2">
-                <Image src={Telegram} alt="stanfordschool icon" />
-              </a>
-              <a href="" className="p-2">
-                <Image src={Instagram} alt="stanfordschool icon" />
-              </a>
-              <a href="" className="p-2">
-                <Image src={Facebook} alt="stanfordschool icon" />
-=======
               <a href="" className="p-2 relative">
                 <Image src={Telegram} alt="stanfordschool telegram" />
               </a>
@@ -216,7 +206,6 @@ const Footer = () => {
               </a>
               <a href="" className="p-2 relative">
                 <Image src={Facebook} alt="stanfordschool facebook" />
->>>>>>> 2435ffc59642163f83d7a8f0cd642a6a90c2e25b
               </a>
             </div>
           </div>
