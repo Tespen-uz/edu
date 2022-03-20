@@ -5,7 +5,7 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import Link from "next/link";
 import LocaleSwitcher from "../LocaleSwitcher/LocaleSwitcher";
 
-const links = ["about", "teachers", "courses", "news", "contact"];
+const links = ["about", "teachers", "courses", "news", "contact", 'exam'];
 
 export default function Navbar() {
   const t = useTranslations("global.nav");
@@ -28,11 +28,11 @@ export default function Navbar() {
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
             <Popover.Group
               as="nav"
-              className="hidden md:flex space-x-10 md:items-center"
+              className="hidden md:flex space-x-6 md:items-center"
             >
               {links.map((item, index) => (
                 <Link href={`/${item}`} key={index}>
-                  <a className="text-base font-medium text-gray-600 hover:text-gray-900">
+                  <a className="text-base font-medium text-gray-600 hover:text-gray-900 whitespace-nowrap">
                     {t(item)}
                   </a>
                 </Link>
@@ -67,7 +67,7 @@ export default function Navbar() {
                 </div>
               </div>
             </div>
-            <div className="py-5 px-5 ">
+            <div className="py-5 px-3 ">
               <div className="mx-auto grid grid-cols-1 text-center">
                 {links.map((link, index) => (
                   <Link href={`/${link}`} key={link} >

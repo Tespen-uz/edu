@@ -6,7 +6,6 @@ import H1 from "../img/h-1.png";
 import InfoList from "../components/InfoBox/InfoList";
 import TechSliderList from "../components/Tech/TechSliderList";
 import CourseList from "../components/CourseBox/CourseList";
-import useConfetti from "../utils/hooks/useConfetti";
 import Faq from "../components/Faq/Faq";
 import Contact from "../layouts/contact";
 import Heading from "../layouts/ui/Heading";
@@ -16,8 +15,6 @@ import TechBg from "../img/techBg.jpg";
 import Link from "next/link";
 
 export default function Home(props) {
-  const { startFirework, startSchoolPride } = useConfetti();
-
   const [open, setOpen] = useState(false);
   
   const t = useTranslations('home');
@@ -25,10 +22,6 @@ export default function Home(props) {
   const toggleModal = () => {
     setOpen((state) => !state);
   };
-
-  React.useEffect(() => {
-    startSchoolPride();
-  }, []);
 
   return (
     <React.Fragment>
@@ -66,7 +59,6 @@ export default function Home(props) {
                 <Link href="#">
                   <a
                     className=" capitalize text-xl font-bold text-white rounded-full block bg-gradient-to-tr from-sky-400 to-green-400 transition-all hover:from-green-400 hover:to-sky-400 hover:scale-95  px-10 py-2"
-                    onClick={startFirework}
                   >
                     Start now
                   </a>
@@ -112,7 +104,7 @@ export default function Home(props) {
                           <p className=" text-gray-300">
                             Lorem ipsum dolor sit amet, consectetur adipisicing
                             elit. Veniam tempora quidem vel sint.
-                          </p>  
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -169,7 +161,7 @@ export default function Home(props) {
                 </div>
               </div>
               <div className="w-full lg:w-1/2">
-                <div className="mx-3 lg:mr-0 lg:ml-3 flex justify-end">
+                <div className="mx-3 relative lg:mr-0 lg:ml-3 flex justify-end">
                   <Image src={H1} width={550} height={550} alt="stanford" />
                 </div>
               </div>

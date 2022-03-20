@@ -234,11 +234,11 @@ input[type="radio"]:after {
   border-radius: 24px;
   cursor: pointer;
   position: relative;
-  background-color: #535353;
+  background-color: #fff;
   content: "";
-  display: inline-block;
-  visibility: visible;
-  border: 2px solid white;
+  /* display: inline-block;
+  visibility: visible; */
+  /* border: 2px solid #242424; */
 }
 
 input[type="radio"]:checked:after {
@@ -247,9 +247,9 @@ input[type="radio"]:checked:after {
   border-radius: 24px;
   cursor: pointer;
   position: relative;
-  background-color: #77ebff;
+  background-color: #242424;
   content: "";
-  display: inline-block;
-  visibility: visible;
-  border: 2px solid #77ebff;
+  /* display: inline-block;
+  visibility: visible; */
+  /* border: 2px solid #242424; */
 }
