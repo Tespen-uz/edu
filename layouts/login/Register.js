@@ -1,11 +1,13 @@
 import React from "react";
 import { useRouter } from "next/router";
-import { PhoneIcon } from "@heroicons/react/solid";
-import Input from "../ui/Input";
+import { PhoneIcon, UserCircleIcon } from "@heroicons/react/solid";
 import { useForm } from "react-hook-form";
+import Input from "../ui/Input";
+import userContext from "../../containers/userContext";
 
 const Register = () => {
   const router = useRouter();
+  const { user, setUser } = React.useContext(userContext);
 
   const {
     register,
@@ -14,6 +16,12 @@ const Register = () => {
   } = useForm();
 
   const onSubmit = (data) => {
+    setUser({
+      ...user,
+      ...data,
+      name: data.fullname,
+      phone: data.tel,
+    });
     router.push(`/courses/assessment/${router.query.registerCourseId}`);
   };
 
@@ -96,12 +104,11 @@ const Register = () => {
               type="tel"
               placeholder="Phone number"
               register={{
-                ...register("phoneNumber", {
+                ...register("tel", {
                   required: {
                     value: true,
                     message: "Phone number is required",
                   },
-                  message: "Phone number is required",
                   minLength: {
                     value: 9,
                     message: "Phone number must be at least 9 characters",
@@ -114,57 +121,38 @@ const Register = () => {
               }}
             />
           </div>
-          {errors.phoneNumber && (
+          {errors.tel && (
             <div className="text-red-500 text-xs italic ">
-              {errors.phoneNumber.message}
+              {errors.tel.message}
             </div>
           )}
+
           <div className="flex items-center border-2 py-2 px-3 rounded-lg mt-4">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 text-gray-400"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
-              />
-            </svg>
+            <UserCircleIcon className="h-5 w-5 text-gray-400" />
             <Input
-              type="email"
-              id="email"
-              placeholder="Email"
+              type="tel"
+              placeholder="Age"
               register={{
-                ...register("email", {
+                ...register("age", {
                   required: {
                     value: true,
-                    message: "Email is required",
+                    message: "Age is required",
                   },
                   minLength: {
-                    value: 6,
-                    message: "Email must be at least 6 characters",
+                    value: 1,
+                    message: "Age must be at least 1 characters",
                   },
                   maxLength: {
-                    value: 40,
-                    message: "Email must be at most 40 characters",
+                    value: 2,
+                    message: "Age must be at most 2 characters",
                   },
                 }),
               }}
             />
           </div>
-          {errors.email && (
+          {errors.age && (
             <div className="text-red-500 text-xs italic ">
-              {errors.email.message}
-            </div>
-          )}
-
-          {errors.password && (
-            <div className="text-red-500 text-xs italic ">
-              {errors.password.message}
+              {errors.age.message}
             </div>
           )}
           <button
@@ -175,9 +163,6 @@ const Register = () => {
           >
             Register
           </button>
-          {/* <span className="text-sm ml-2 hover:text-blue-500 cursor-pointer">
-            Forgot Password ?
-          </span> */}
         </form>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
+import userContext from "../../../../containers/userContext";
 import requests from "../../../../utils/requests";
 
 const TestExam = () => {
@@ -11,12 +12,7 @@ const TestExam = () => {
 
   const router = useRouter();
 
-  const reset = () => {
-    setCurrentQuestion(0);
-    setSelectedOptions([]);
-    setScore(0);
-    setShowScore(false);
-  };
+  const { user, setUser } = React.useContext(userContext);
 
   React.useEffect(() => {
     if (router.query.assessmentId) {
@@ -30,6 +26,38 @@ const TestExam = () => {
         .catch((err) => console.log(err));
     }
   }, [router.query.assessmentId]);
+
+  const reset = () => {
+    setCurrentQuestion(0);
+    setSelectedOptions([]);
+    setScore(0);
+    setShowScore(false);
+  };
+
+  const handleRegisterUser = () => {
+    const data = {
+      ...user,
+      result: `${score}/${questions.length}`,
+      course_id: router.query.assessmentId,
+    };
+
+    fetch(`https://cp.stanfordschool.uz/api/new/comers`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        if(data){
+          router.push('/');
+        }
+      })
+      .catch((err) => console.log(err));
+  };
 
   const handleAnswerOption = (answer) => {
     setSelectedOptions([
@@ -75,12 +103,21 @@ const TestExam = () => {
           </h1>
           <br />
           <p className="text-xl text-center text-green-300">
-            <button className="bg-green-400 py-2 px-6 font-bold text-white rounded">Apply</button> to the course with this score.
+            <button
+              className="bg-green-400 py-2 px-6 font-bold text-white rounded"
+              onClick={handleRegisterUser}
+            >
+              Apply
+            </button>{" "}
+            to the course with this score.
           </p>
           <br />
           <div className="flex justify-center">
-            <span className="text-gray-200  py-2 mx-4" >OR</span>
-            <button className="bg-blue-500 text-white font-bold py-2 px-4 rounded" onClick={reset} >
+            <span className="text-gray-200  py-2 mx-4">OR</span>
+            <button
+              className="bg-blue-500 text-white font-bold py-2 px-4 rounded"
+              onClick={reset}
+            >
               Retake
             </button>
           </div>

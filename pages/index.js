@@ -210,7 +210,6 @@ export default function Home(props) {
 }
 
 export async function getServerSideProps({ locale }) {
-  console.log(locale);
   const res = await Promise.allSettled([
     requests.get("/api/statistics"),
     requests.get("/api/courses"),
