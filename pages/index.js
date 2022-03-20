@@ -7,7 +7,7 @@ import InfoList from "../components/InfoBox/InfoList";
 import TechSliderList from "../components/Tech/TechSliderList";
 import CourseList from "../components/CourseBox/CourseList";
 import Faq from "../components/Faq/Faq";
-import Contact from "../layouts/contact";
+import Contact from "../layouts/Contact";
 import Heading from "../layouts/ui/Heading";
 import requests from "../utils/requests";
 import Modal from "../components/Modal/Modal";
