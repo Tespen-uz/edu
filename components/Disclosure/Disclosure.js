@@ -1,7 +1,9 @@
 import { Disclosure } from "@headlessui/react";
-import { ChevronUpIcon } from "@heroicons/react/solid";
+import { useTranslations } from "next-intl";
 
 export default function DisclosureC({ question, answer }) {
+  const t = useTranslations("disclosure");
+
   return (
     <div className="w-full bg-white border border-[#F3F4FE] rounded-lg p-5 sm:p-8 fadeInUp h-min">
       <div className="w-full  p-2 mx-auto bg-white rounded-2xl">
@@ -11,7 +13,7 @@ export default function DisclosureC({ question, answer }) {
               <Disclosure.Button className="flex items-center w-full text-left">
                 <div className="w-full">
                   <h4 className="text-base sm:text-lg font-semibold text-black">
-                    {question}
+                    {t(question)}
                   </h4>
                 </div>
                 <div className="w-full max-w-[40px] h-10 flex items-center justify-center rounded-lg bg-primary text-primary bg-opacity-5 mr-5">
@@ -31,7 +33,7 @@ export default function DisclosureC({ question, answer }) {
               </Disclosure.Button>
               <Disclosure.Panel className="">
                 <p className="text-base text-body-color leading-relaxed py-3">
-                  {answer}
+                  {t(answer)}
                 </p>
               </Disclosure.Panel>
             </>

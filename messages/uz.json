@@ -1,19 +1,51 @@
 {
   "home": {
     "title": "StanfordSchool | Asosiy",
-    "heading": "Asosiy sahifa"
+    "heading": "Asosiy sahifa",
+    "subtitle": "Ilm ustalaridan o'rganing. Biz bilan boshlang va maqsadlaringizga erishing ",
+    "subdescription": "Markazimiz o'z faoliyatini 2019 yilda Chortoqda boshlaydi. O'shandan beri har yili 300 ga yaqin abituriyentlar qabul qilinadi U universitet talabasi. Yillik natija 90% shakllardir.",
+    "learn": "Biz haqimizda ko'proq o'rganing",
+    "learn1title": "Bizda siz hohlagan barcha sharoitlar mavjud.",
+    "learn1titledescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam tempora quidem vel sint.",
+    "learn2title": "Bizda siz hohlagan barcha sharoitlar mavjud.",
+    "learn2titledescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam tempora quidem vel sint.",
+    "learn3title": "Bizda siz hohlagan barcha sharoitlar mavjud.",
+    "learn3titledescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam tempora quidem vel sint.",
+    "learn4title": "Bizda siz hohlagan barcha sharoitlar mavjud.",
+    "learn4titledescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam tempora quidem vel sint.",
+    "statstudent": "O'quvchilar",
+    "statcourse": "Kurslar",
+    "statteachers": "O'qituvchilar",
+    "statresults": "Natijalar"
   },
   "about": {
     "title": "StanfordSchool | Biz haqimizda",
-    "heading": "Biz haqimizda"
+    "heading": "Biz haqimizda",
+    "description": "StanfordSchool Markazimiz o'z faoliyatini 2019 yilda Chortoqda boshlaydi. O'shandan beri bizda har yili 300 ga yaqin abituriyentlar keladi U universitet talabasi. Yillik natijalar 90% .",
+    "certificate": "Sertifikat",
+    "description2": "Universitet talabalari hisoblanadi. Yillik natija 90% ni tashkil qiladi. Bizning StandFord Markazimiz 2019 yilda u o'z faoliyatini Chortoqda boshlagan. O‘shandan buyon har yili 1000 ga yaqin abituriyentlarimiz o‘qishni bitirib, talaba bo‘lmoqda. Yillik natija 90% shakllardir",
+    "description3": "Universitet talabalari hisoblanadi. Yillik natija 90% ni tashkil qiladi. Bizning StandFord Markazimiz 2019 yilda u o'z faoliyatini Chortoqda boshlagan. O‘shandan buyon har yili 1000 ga yaqin abituriyentlarimiz o‘qishni bitirib, talaba bo‘lmoqda. Yillik natija 90% shakllardir",
+    "name": "Guvohlar",
+    "title2": "Mijozlarimiz biz haqimizda nima deyishadi",
+    "description4": "Lorem Ipsum parchalarining ko'plab variantlari mavjud, ammo ularning aksariyati qandaydir o'zgarishlarga uchragan."
   },
   "contact": {
-    "title": "Contact",
-    "description": "Contact page"
+    "title": "BIZ BILAN BOG'LANISH",
+    "lets": "Biz bilan bog'laning",
+    "talk": "Siz tinglashdan mamnun bo'lamiz",
+    "location": "Bizning manzil",
+    "address": "Nam, Chartak, #2,",
+    "help": "Sizga qanday yordam beramiz?",
+    "message": "Bizga xabar yuborish",
+    "fullname": "Ism Familya*",
+    "message2": "Xabar*",
+    "send": "Xabar Yuborish",
+    "type": "Xabar..."
   },
   "courses": {
-    "title": "Courses",
-    "description": "Courses page"
+    "title": "Barcha fanlardan bizning kurslarimiz to'plami.",
+    "description": "-- O'qing va talaba bo'ling. Kelajak uchun imkoniyatlar yarating.",
+    "description2": "-- Hamma joyda qattiq o'qing. Bu yil talaba bo'ling"
   },
   "course": {
     "title": "Course",
@@ -24,16 +56,16 @@
     "description": "Teachers page"
   },
   "teacher": {
-    "title": "Teacher",
-    "description": "Teacher page"
+    "title": "TeacherBiz O'qituvchilar Jamoamiz",
+    "description": "Ilmga ergashuvchilar qatorida bo'l. Bizdan boshlang. Biz bilan ajoyib marralarni zaft eting"
   },
   "news": {
-    "title": "News",
-    "description": "News page"
+    "title": "Bizning yangiliklar va voqealarimizni kursimizda bilib oling",
+    "description": "Davlat va nodavlat tashkilotlari hamkasblar o‘rtasidagi muloqot uchun matnli xabar almashishdan foydalanadilar. 2010-yillarda qisqa norasmiy xabarlarni yuborish, avvalroq elektron pochta orqali bo'lgani kabi, ko'plab madaniyatlarning qabul qilingan qismiga aylandi."
   },
   "tests": {
-    "title": "Tests",
-    "description": "Tests page"
+    "title": "Bilimingizni sinab kuring",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione beatae temporibus iste eaque dicta! Repellendus ut distinctio hic eos commodi ex, id, perspiciatis atque ullam assumenda ad pariatur nesciunt numquam!"
   },
   "register": {
     "title": "Register",
@@ -48,6 +80,38 @@
       "contact": "Bog'lanish",
       "exam": "Testlar"
     },
+    "footer": {
+      "usefulLinks": "Foydali havolalar",
+      "ourServices": "Bizning xizmatlarimiz",
+      "followUs": "Bizni kuzating",
+      "text": "Biz o'quvchilarga o'z maqsadlariga erishishda yordam berish va o'qitishga ishtiyoqli, tajribali o'qituvchilar jamoasimiz.",
+      "english": "Ingliz tili",
+      "math": "Matematika",
+      "chemistry": "Kimyo",
+      "motherTongue": "Ona tili",
+      "copyright": "Barcha huqular himoyalangan"
+    },
     "register": "Ro'yxatdan o'tish"
+  },
+  "headings": {
+    "faq": "FAQ",
+    "anyQuestions": "Savollaringiz bormi?",
+    "faqExcerpt": "Ko'p beriladigan savollarga allaqachon javobimiz bor",
+    "courses": "Kurslar",
+    "courseTitle": "Biz taklif qilamiz",
+    "courseExcerpt": "Quyida keltirilgan kurslar, Bizning studentlarimiz yuqori natijalar ko'rsatganlari hisoblanadi va sizga ham yuqori sifatli ta'lim kafolatlaydi.",
+    "teachers": "Teachers",
+    "teachersTitle": "Meet our teachers",
+    "teachersExcerpt": "We are a team of experienced teachers who are passionate about teaching and helping students achieve their goals."
+  },
+  "disclosure": {
+    "question1": "Kursni tamomlab qanday natijalarga erishish mumkin?",
+    "answer1": "If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked. lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, quisquam. lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, quisquam.",
+    "question2": "DTM kurslari bormi?",
+    "answer2": "Bizda barcha uchun qulay bo'lgan, kurs turlari bor",
+    "question3": "Intensive IELTS gruhlari bormi?",
+    "answer3": "If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked. lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, quisquam. lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, quisquam.",
+    "question4": "Speaking rivojlantirish uchun Speaking club lar mavjudmi?",
+    "answer4": "No, we do not offer technical support."
   }
 }

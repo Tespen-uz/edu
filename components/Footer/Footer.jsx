@@ -1,24 +1,28 @@
 import React from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import Telegram from "../../public/telegram.png";
 import Instagram from "../../public/instagram.png";
 import Facebook from "../../public/facebook.png";
 import Link from "next/link";
 
 const Footer = () => {
+  const t = useTranslations("global");
+
   return (
     <footer className="bg-gray-100 pt-20 lg:pt-[120px]  relative z-10">
       <div className="container mx-auto">
         <div className="flex flex-wrap -mx-4">
           <div className="w-full sm:w-2/3 lg:w-3/12 px-4">
             <div className="w-full mb-10">
-              <p className="text-3xl text-dark font-bold mb-3 ">
-                StanfordSchool
-              </p>
+              <Link href="/">
+                <a className="block mb-3 text-3xl text-yellow-400 font-bold">
+                  Stanford<span className="text-red-400">School</span>
+                </a>
+              </Link>
               <br />
               <p className="text-base text-body-color mb-7">
-                Sed ut perspiciatis undmnis is iste natus error sit amet
-                voluptatem totam rem aperiam.
+                {t("footer.text")}
               </p>
               <p className="flex items-center text-sm text-dark font-medium">
                 <span className="text-primary mr-3">
@@ -42,24 +46,9 @@ const Footer = () => {
           <div className="w-full sm:w-1/2 lg:w-3/12 px-4">
             <div className="w-full mb-10">
               <h4 className="text-dark text-lg font-semibold mb-9">
-                Useful Links
+                {t("footer.usefulLinks")}
               </h4>
               <ul>
-                <li>
-                  <Link href="/">
-                    <a
-                      className="
-                        inline-block
-                        text-base text-body-color
-                        hover:text-primary
-                        leading-loose
-                        mb-2
-                        "
-                    >
-                      Home Page
-                    </a>
-                  </Link>
-                </li>
                 <li>
                   <Link href="/about">
                     <a
@@ -71,7 +60,7 @@ const Footer = () => {
                         mb-2
                         "
                     >
-                      About
+                      {t("nav.about")}
                     </a>
                   </Link>
                 </li>
@@ -86,7 +75,7 @@ const Footer = () => {
                         mb-2
                         "
                     >
-                      Teachers
+                      {t("nav.teachers")}
                     </a>
                   </Link>
                 </li>
@@ -94,14 +83,14 @@ const Footer = () => {
                   <Link href="/courses">
                     <a
                       className="
-                        inline-block
-                        text-base text-body-color
-                        hover:text-primary
+                      inline-block
+                      text-base text-body-color
+                      hover:text-primary
                         leading-loose
                         mb-2
                         "
                     >
-                      Courses
+                      {t("nav.courses")}
                     </a>
                   </Link>
                 </li>
@@ -109,14 +98,29 @@ const Footer = () => {
                   <Link href="/news">
                     <a
                       className="
-                        inline-block
-                        text-base text-body-color
-                        hover:text-primary
-                        leading-loose
-                        mb-2
-                        "
+                      inline-block
+                      text-base text-body-color
+                      hover:text-primary
+                      leading-loose
+                      mb-2
+                      "
                     >
-                      News
+                      {t("nav.news")}
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/news">
+                    <a
+                      className="
+                      inline-block
+                      text-base text-body-color
+                      hover:text-primary
+                      leading-loose
+                      mb-2
+                      "
+                    >
+                      {t("nav.exam")}
                     </a>
                   </Link>
                 </li>
@@ -126,7 +130,7 @@ const Footer = () => {
           <div className="w-full sm:w-1/2 lg:w-3/12 px-4">
             <div className="w-full mb-10">
               <h4 className="text-dark text-lg font-semibold mb-9">
-                Our Services
+                {t("footer.ourServices")}
               </h4>
               <ul>
                 <li>
@@ -140,7 +144,7 @@ const Footer = () => {
                         mb-2
                         "
                     >
-                      English
+                      {t("footer.english")}
                     </a>
                   </Link>
                 </li>
@@ -155,7 +159,7 @@ const Footer = () => {
                         mb-2
                         "
                     >
-                      Mathematics
+                      {t("footer.math")}
                     </a>
                   </Link>
                 </li>
@@ -170,7 +174,7 @@ const Footer = () => {
                         mb-2
                         "
                     >
-                      Chemistry
+                      {t("footer.chemistry")}
                     </a>
                   </Link>
                 </li>
@@ -185,7 +189,7 @@ const Footer = () => {
                         mb-2
                         "
                     >
-                      Mother Tounge
+                      {t("footer.motherTongue")}
                     </a>
                   </Link>
                 </li>
@@ -196,7 +200,7 @@ const Footer = () => {
           <div className="w-full sm:w-1/2 lg:w-3/12 px-4">
             <div className="w-full mb-10">
               <h4 className="text-dark text-lg font-semibold mb-9">
-                Follow Us On
+                {t("footer.followUs")}
               </h4>
               <a href="" className="p-2 relative">
                 <Image src={Telegram} alt="stanfordschool telegram" />
@@ -270,7 +274,7 @@ const Footer = () => {
       <div className="text-center">
         <p className="text-sm ">
           &copy;CopyRight <span className="font-bold">StanfordSchool </span>
-          Barcha huqular himoyalangan
+          {t('footer.copyright')}
         </p>
         <p className="text-sm ">
           Created by <span className="font-bold">Tespen </span> team 2022

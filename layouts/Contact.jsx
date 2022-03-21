@@ -1,6 +1,9 @@
 import React from "react";
+import { useTranslations } from "next-intl";
 
 const Contact = () => {
+  const t = useTranslations("contact");
+
   return (
     <React.Fragment>
       <div>
@@ -35,11 +38,11 @@ const Contact = () => {
                     mb-5
                   "
                     >
-                      CONTACT US
+                      {t("title")}
                     </span>
-                    <h2 className="text-[35px] font-semibold">
-                      Let&apos;s talk about <br />
-                      Love to hear from you!
+                    <h2 className="text-[26px] sm:text-[35px] font-semibold">
+                      {t("lets")} <br />
+                      {t("talk")}
                     </h2>
                   </div>
                   <div className="flex flex-wrap justify-between mb-12 lg:mb-0">
@@ -57,10 +60,10 @@ const Contact = () => {
                       </div>
                       <div>
                         <h5 className="text-lg font-semibold mb-6">
-                          Our Location
+                          {t("location")}
                         </h5>
                         <p className="text-base text-body-color">
-                          Nam, Chartak, 1st Floor, st #2,
+                          {t("address")}
                         </p>
                       </div>
                     </div>
@@ -77,13 +80,13 @@ const Contact = () => {
                       </div>
                       <div>
                         <h5 className="text-lg font-semibold mb-6">
-                          How Can We Help?
+                          {t("help")}
                         </h5>
                         <p className="text-base text-body-color">
-                          info@yourdomain.com
+                          info@stanfordschool.uz
                         </p>
                         <p className="text-base text-body-color">
-                          contact@yourdomain.com
+                          contact@stanfordschool.uz
                         </p>
                       </div>
                     </div>
@@ -109,7 +112,7 @@ const Contact = () => {
                   data-wow-delay=".2s"
                 >
                   <h3 className="font-semibold mb-8 text-2xl md:text-[26px]">
-                    Send us a Message
+                    {t("message")}
                   </h3>
                   <form>
                     <div className="mb-6">
@@ -117,7 +120,7 @@ const Contact = () => {
                         htmlFor="fullName"
                         className="block text-xs text-dark"
                       >
-                        Full Name*
+                        {t("fullname")}
                       </label>
                       <input
                         type="text"
@@ -155,7 +158,7 @@ const Contact = () => {
                         htmlFor="phone"
                         className="block text-xs text-dark"
                       >
-                        Phone*
+                        Tel*
                       </label>
                       <input
                         type="number"
@@ -174,12 +177,12 @@ const Contact = () => {
                         htmlFor="message"
                         className="block text-xs text-dark"
                       >
-                        Message*
+                        {t("message2")}
                       </label>
                       <textarea
                         name="message"
                         rows="1"
-                        placeholder="type your message here"
+                        placeholder={t("type")}
                         className="
                       w-full
                       border-0 border-b border-[#f1f1f1]
@@ -209,7 +212,7 @@ const Contact = () => {
                       ease-in-out
                     "
                       >
-                        Send Message
+                        {t("send")}
                       </button>
                     </div>
                   </form>

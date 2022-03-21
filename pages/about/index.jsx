@@ -10,10 +10,9 @@ import Testimonials from "../../layouts/ui/Testimonials";
 import requests from "../../utils/requests";
 import Link from "next/link";
 
-
 const AboutPage = ({ statistics }) => {
-  const t = useTranslations('about');
-  
+  const t = useTranslations("about");
+
   return (
     <div className="w-full overflow-x-hidden">
       <div className=" container mx-auto py-12 flex flex-col items-center md:flex-row">
@@ -28,14 +27,14 @@ const AboutPage = ({ statistics }) => {
             <span className="text-blue-700 font-bold   drop-shadow-2xl  ">
               StanfordSchool
             </span>{" "}
-            Our center will start its activities in 2019 in Chartak started
-            Since then, we have about 300 applicants each year He is a
-            university student. The annual result is 90% forms.
+           {t("description")}
           </p>
 
           <div className="flex justify-center mt-8">
             <Link href="/certificate">
-              <a className=" px-8 py-2 animate-bounce bg-green-300 rounded text-xl font-bold text-white">Certificate</a>
+              <a className=" px-8 py-2 animate-bounce bg-green-300 rounded text-xl font-bold text-white">
+                {t("certificate")}
+              </a>
             </Link>
           </div>
         </div>
@@ -76,12 +75,7 @@ const AboutPage = ({ statistics }) => {
                   StanfordSchool
                 </h1>
                 <p className="sm:text-xl z-10 text-gray-600 mt-4">
-                  Our center will open in 2019 in Chartak started his career.
-                  Since then, about 1,000 each year Our entrants are students of
-                  the University. The annual result is 90%. Our StandFord Center
-                  In 2019, he started his career in Chartak. Since then, about
-                  1,000 of our applicants graduate each year has been a student.
-                  The annual result is 90% forms
+                  {t("description2")}
                 </p>
               </div>
             </div>
@@ -94,12 +88,8 @@ const AboutPage = ({ statistics }) => {
                   StanfordSchool
                 </h1>
                 <p className="sm:text-xl text-gray-600 mt-4 z-10">
-                  Our center will open in 2019 in Chartak started his career.
-                  Since then, about 1,000 each year Our entrants are students of
-                  the University. The annual result is 90%. Our StandFord Center
-                  In 2019, he started his career in Chartak. Since then, about
-                  1,000 of our applicants graduate each year has been a student.
-                  The annual result is 90% forms
+                                  {t("description3")}
+
                 </p>
               </div>
               <div className="w-full md:w-6/12">
@@ -118,12 +108,12 @@ const AboutPage = ({ statistics }) => {
 
 export default AboutPage;
 
-export async function getServerSideProps({locale}) {
+export async function getServerSideProps({ locale }) {
   const res = await requests.get("/api/statistics");
   return {
     props: {
       statistics: res.data,
-      messages: (await import(`../../messages/${locale}.json`)).default
+      messages: (await import(`../../messages/${locale}.json`)).default,
     },
   };
 }

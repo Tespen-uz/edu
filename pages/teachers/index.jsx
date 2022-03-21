@@ -2,8 +2,12 @@ import React from "react";
 import TechCartList from "../../components/Tech/TechCartList";
 import TechBg from "../../img/techBg.jpg";
 import requests from "../../utils/requests";
+import { useTranslations } from "next-intl";
+
 
 const AboutPage = (props) => {
+  const t = useTranslations("teacher");
+
   return (
     <>
       <div
@@ -17,11 +21,10 @@ const AboutPage = (props) => {
       >
         <div className="text-center ">
           <h1 className="text-4xl capitalize font-bold text-white md:text-6xl">
-            We are a team of teachers
+            {t("title")}
           </h1>
           <p className=" w-10/12 mx-auto md:w-8/12 text-2xl mt-4 text-white">
-            Be among the people who follow science. Start with us. Zaftet great
-            milestones with us
+            {t("description")}
           </p>
         </div>
 
@@ -46,7 +49,7 @@ export async function getServerSideProps({locale}) {
   const res = await requests.get("/api/teachers");
   return {
     props: {
-      teachers: res.data,
+      teachers: res.data[locale],
       messages: (await import(`../../messages/${locale}.json`)).default,
     },
   };

@@ -18,7 +18,7 @@ export async function getServerSideProps(context) {
   const data = await res.json();
   return {
     props: {
-      teacher: data[0],
+      teacher: data[context.locale][0],
       messages: (await import(`../../../messages/${context.locale}.json`)).default,
     },
   };

@@ -3,8 +3,12 @@ import CourseBg from "../../img/courseBg.png";
 import Image from "next/image";
 import CourseList from "../../components/Courses/CourseList";
 import requests from "../../utils/requests";
+import { useTranslations } from "next-intl";
+
 
 const CoursePage = (props) => {
+  const t = useTranslations("courses");
+
   return (
     <React.Fragment>
       <div
@@ -24,13 +28,14 @@ const CoursePage = (props) => {
           </div>
           <div className="w-full my-10 z-10  md:w-6/12 md:my-0">
             <h1 className="text-white text-center font-bold text-3xl md:text-4xl md:text-left">
-              A collection of our courses from all disciplines.
+              {t("title")}
             </h1>
             <p className="text-xl text-center  mt-4 text-gray-700 md:text-left">
-              -- Read and be a student. Create opportunities for the future.
+              {t("description")}
             </p>
             <p className="text-xl text-center  mt-2 text-gray-700 md:text-left">
-              -- Study hard everywhere. Be a student this year
+              {t("description2")}
+
             </p>
           </div>
         </div>
@@ -57,11 +62,11 @@ const CoursePage = (props) => {
 
 export default CoursePage;
 
-export async function getServerSideProps({locale}) {
+export async function getServerSideProps({ locale }) {
   const res = await requests.get("/api/courses");
   return {
     props: {
-      courses: res.data,
+      courses: res.data[locale],
       messages: (await import(`../../messages/${locale}.json`)).default,
     },
   };

@@ -1,8 +1,12 @@
 import Image from "next/image";
 import React from "react";
 import ExamBanner from "../../../img/examBanner.png";
+import { useTranslations } from "next-intl";
+
 
 function ExamHeader() {
+  const t = useTranslations("tests");
+
   return (
     <div className="overflow-hidden relative">
       <div className="container py-8 flex flex-col items-center md:flex-row ">
@@ -11,13 +15,10 @@ function ExamHeader() {
         </div>
         <div className="w-full md:w-6/12 mt-6 md:mt-0">
           <h1 className="text-3xl text-center  lg:text-4xl text-emerald-300 font-bold">
-            Check your knowledge
+            {t("title")}
           </h1>
           <p className="text-base text-gray-600 mt-6 text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-            beatae temporibus iste eaque dicta! Repellendus ut distinctio hic
-            eos commodi ex, id, perspiciatis atque ullam assumenda ad pariatur
-            nesciunt numquam!
+            {t("description")}
           </p>
         </div>
       </div>

@@ -16,8 +16,7 @@ import Link from "next/link";
 
 export default function Home(props) {
   const [open, setOpen] = useState(false);
-
-  const t = useTranslations("home");
+  const t = useTranslations();
 
   const toggleModal = () => {
     setOpen((state) => !state);
@@ -27,7 +26,7 @@ export default function Home(props) {
     <React.Fragment>
       <Head>
         <meta name="description" content="Built by TESPEN" />
-        <title>{t("title")}</title>
+        <title>{t("home.title")}</title>
       </Head>
 
       <main className="relative overflow-hidden">
@@ -46,17 +45,13 @@ export default function Home(props) {
           <div className="container mx-auto py-8 min-h-[70vh] flex flex-col items-center justify-center  px-2 md:px-0 z-0">
             <div className="z-40 text-center flex flex-col items-center ">
               <h1 className="text-2xl w-full md:w-8/12  md:text-4xl font-extrabold text-white z-50">
-                Learn from the masters of science. Start with us and achieve
-                your goals
+                {t("home.subtitle")}
               </h1>
               <p className="text-gray-300 text-center mt-4 text-base md:text-xl md:w-8/12">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio
-                iste quibusdam, vero delectus nemo fugit facere blanditiis,
-                possimus mollitia molestiae quod error praesentium pariatur
-                omnis laboriosam officia magni.
+                {t("home.subdescription")}
               </p>
               <div className="flex flex-col items-center  sm:flex-row mt-6 border-b-2 py-4 ">
-                <Link href="#">
+                <Link href="/exam">
                   <a className=" capitalize text-xl font-bold text-white rounded-full block bg-gradient-to-tr from-sky-400 to-green-400 transition-all hover:from-green-400 hover:to-sky-400 hover:scale-95  px-10 py-2">
                     Start now
                   </a>
@@ -88,7 +83,7 @@ export default function Home(props) {
               <div className="w-full lg:w-1/2">
                 <div className="mb-5  lg:mb-0">
                   <h2 className="mb-12 text-3xl md:text-4xl text-center md:text-left font-bold text-gray-100">
-                    Learn More About Us
+                    {t("home.learn")}
                   </h2>
                   <div className="flex flex-wrap">
                     <div className="w-full sm:w-1/2 lg:w-1/2">
@@ -96,12 +91,11 @@ export default function Home(props) {
                         <div className=" text-4xl"></div>
                         <div>
                           <h4 className="text-xl mb-2 font-bold text-gray-200">
-                            We have all the conditions you want.
+                            {t("home.learn1title")}
                           </h4>
 
                           <p className=" text-gray-300">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Veniam tempora quidem vel sint.
+                            {t("home.learn1titledescription")}
                           </p>
                         </div>
                       </div>
@@ -113,12 +107,11 @@ export default function Home(props) {
                         </div>
                         <div>
                           <h4 className="text-xl mb-2 font-bold text-gray-200">
-                            We have all the conditions you want.
+                            {t("home.learn2title")}
                           </h4>
 
                           <p className=" text-gray-300">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Veniam tempora quidem vel sint.
+                            {t("home.learn2titledescription")}
                           </p>
                         </div>
                       </div>
@@ -130,12 +123,11 @@ export default function Home(props) {
                         </div>
                         <div>
                           <h4 className="text-xl mb-2 font-bold text-gray-200">
-                            We have all the conditions you want.
+                            {t("home.learn3title")}
                           </h4>
 
                           <p className=" text-gray-300">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Veniam tempora quidem vel sint.
+                            {t("home.learn3titledescription")}
                           </p>
                         </div>
                       </div>
@@ -145,12 +137,11 @@ export default function Home(props) {
                         <div className="icon text-4xl"></div>
                         <div>
                           <h4 className="text-xl mb-2 font-bold text-gray-200">
-                            We have all the conditions you want.
+                            {t("home.learn4title")}
                           </h4>
 
                           <p className=" text-gray-300">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Veniam tempora quidem vel sint.
+                            {t("home.learn4titledescription")}
                           </p>
                         </div>
                       </div>
@@ -181,23 +172,15 @@ export default function Home(props) {
           <InfoList stats={props.statistics} />
         </div>
         <div className="py-8">
-          <Heading
-            name="Courses"
-            title="The courses we offer"
-            excerpt={
-              "We will help you leverage our experince by breaking down the secret into small chunks that you can easily digest and apply to any digital strategy"
-            }
-          />
+          <Heading name="courses" title="courseTitle" excerpt="courseExcerpt" />
           <CourseList courses={props.courses} />
         </div>
 
         <div className="pb-6">
           <Heading
-            name="Our Teachers"
-            title="Meet our teachers"
-            excerpt={
-              "We are a team of experienced teachers who are passionate about teaching and helping students achieve their goals."
-            }
+            name="teachers"
+            title="teachersTitle"
+            excerpt="teachersExcerpt"
           />
           <div className="-mt-16">
             <TechSliderList teachers={props.teachers} />
@@ -211,7 +194,6 @@ export default function Home(props) {
 }
 
 export async function getServerSideProps({ locale }) {
-  console.log(locale);
   const res = await Promise.allSettled([
     requests.get("/api/statistics"),
     requests.get("/api/courses"),
@@ -223,8 +205,8 @@ export async function getServerSideProps({ locale }) {
   return {
     props: {
       statistics: data[0],
-      courses: data[1],
-      teachers: data[2],
+      courses: data[1][locale],
+      teachers: data[2][locale],
       messages: (await import(`../messages/${locale}.json`)).default,
     },
   };

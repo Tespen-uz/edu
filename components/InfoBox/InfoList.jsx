@@ -1,6 +1,10 @@
 import React from "react";
+import { useTranslations } from "next-intl";
+
 
 function InfoList({ stats }) {
+  const t = useTranslations("home");
+
   return (
     <div className=" py-8">
       <div className="p-4 w-full container mx-auto">
@@ -20,7 +24,7 @@ function InfoList({ stats }) {
                 </svg>
               </div>
               <div className="flex flex-col flex-grow ml-4">
-                <div className="text-sm text-gray-500">Students</div>
+                <div className="text-sm text-gray-500">{t("statstudent")}</div>
                 <div className="font-bold text-lg">
                   {stats?.students ? stats.students : 4500}
                 </div>
@@ -41,7 +45,7 @@ function InfoList({ stats }) {
                 </svg>
               </div>
               <div className="flex flex-col flex-grow ml-4">
-                <div className="text-sm text-gray-500">Courses</div>
+                <div className="text-sm text-gray-500">{t("statcourse")}</div>
                 <div className="font-bold text-lg">
                   {stats?.courses ? stats.courses : 30}
                 </div>
@@ -62,7 +66,7 @@ function InfoList({ stats }) {
                 </svg>
               </div>
               <div className="flex flex-col flex-grow ml-4">
-                <div className="text-sm text-gray-500">Teachers</div>
+                <div className="text-sm text-gray-500">{t("statteachers")}</div>
                 <div className="font-bold text-lg">
                   {stats?.teachers ? stats.teachers : 2500}
                 </div>
@@ -87,7 +91,7 @@ function InfoList({ stats }) {
                 </svg>
               </div>
               <div className="flex flex-col flex-grow ml-4">
-                <div className="text-sm text-gray-500">Results</div>
+                <div className="text-sm text-gray-500">{t("statresults")}</div>
                 <div className="font-bold text-lg">
                   {" "}
                   {stats?.results ? stats.results : 96} %

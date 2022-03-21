@@ -1,10 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import Tech2 from "../../img/Tech2.jpg";
-import TelegramIcon from "../../assets/icons/TelegramIcon";
 
 function TechId({ teacher }) {
-  const certifications = JSON.parse(teacher.sertificates);
+  const certifications = JSON.parse(teacher?.sertificates);
 
   return (
     <div className=" relative overflow-hidden">

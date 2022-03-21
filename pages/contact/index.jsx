@@ -1,8 +1,12 @@
 import Image from "next/image";
 import ContactImage from "../../public/contactImage.png";
 import Contact from "../../layouts/Contact";
+import { useTranslations } from "next-intl";
+
 
 export default function ContactPage() {
+  const t = useTranslations("contact");
+
   return (
     <div className="w-full ">
       <div
@@ -14,14 +18,11 @@ export default function ContactPage() {
         <div className="container mx-auto flex flex-col items-center md:flex-row pt-4 pb-8 ">
           <div className="w-full md:w-6/12">
             <p className="text-3xl lg:text-4xl text-gray-700 text-center font-bold">
-              Contact with us
+              {t("title")}
             </p>
             <br />
             <p className="text-gray-500 z-10 sm:text-xl text-center sm:text-left ">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry&apos;s standard dummy
-              text ever since the 1500s. We provide you the web applications
-              according to your work
+   {t("description")}
             </p>
           </div>
           <div className="w-full z-10 md:w-6/12 bg-[url('/blobContact.svg')]  ">
