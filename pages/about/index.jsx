@@ -27,15 +27,13 @@ const AboutPage = ({ statistics }) => {
             <span className="text-blue-700 font-bold   drop-shadow-2xl  ">
               StanfordSchool
             </span>{" "}
-            Our center will start its activities in 2019 in Chartak started
-            Since then, we have about 300 applicants each year He is a
-            university student. The annual result is 90% forms.
+           {t("description")}
           </p>
 
           <div className="flex justify-center mt-8">
             <Link href="/certificate">
               <a className=" px-8 py-2 animate-bounce bg-green-300 rounded text-xl font-bold text-white">
-                Certificate
+                {t("certificate")}
               </a>
             </Link>
           </div>
@@ -77,12 +75,7 @@ const AboutPage = ({ statistics }) => {
                   StanfordSchool
                 </h1>
                 <p className="sm:text-xl z-10 text-gray-600 mt-4">
-                  Our center will open in 2019 in Chartak started his career.
-                  Since then, about 1,000 each year Our entrants are students of
-                  the University. The annual result is 90%. Our StandFord Center
-                  In 2019, he started his career in Chartak. Since then, about
-                  1,000 of our applicants graduate each year has been a student.
-                  The annual result is 90% forms
+                  {t("description2")}
                 </p>
               </div>
             </div>
@@ -95,12 +88,8 @@ const AboutPage = ({ statistics }) => {
                   StanfordSchool
                 </h1>
                 <p className="sm:text-xl text-gray-600 mt-4 z-10">
-                  Our center will open in 2019 in Chartak started his career.
-                  Since then, about 1,000 each year Our entrants are students of
-                  the University. The annual result is 90%. Our StandFord Center
-                  In 2019, he started his career in Chartak. Since then, about
-                  1,000 of our applicants graduate each year has been a student.
-                  The annual result is 90% forms
+                                  {t("description3")}
+
                 </p>
               </div>
               <div className="w-full md:w-6/12">

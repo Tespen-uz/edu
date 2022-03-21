@@ -45,14 +45,10 @@ export default function Home(props) {
           <div className="container mx-auto py-8 min-h-[70vh] flex flex-col items-center justify-center  px-2 md:px-0 z-0">
             <div className="z-40 text-center flex flex-col items-center ">
               <h1 className="text-2xl w-full md:w-8/12  md:text-4xl font-extrabold text-white z-50">
-                Learn from the masters of science. Start with us and achieve
-                your goals
+                {t("subtitle")}
               </h1>
               <p className="text-gray-300 text-center mt-4 text-base md:text-xl md:w-8/12">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio
-                iste quibusdam, vero delectus nemo fugit facere blanditiis,
-                possimus mollitia molestiae quod error praesentium pariatur
-                omnis laboriosam officia magni.
+                {t("subdescription")}
               </p>
               <div className="flex flex-col items-center  sm:flex-row mt-6 border-b-2 py-4 ">
                 <Link href="#">
@@ -87,7 +83,7 @@ export default function Home(props) {
               <div className="w-full lg:w-1/2">
                 <div className="mb-5  lg:mb-0">
                   <h2 className="mb-12 text-3xl md:text-4xl text-center md:text-left font-bold text-gray-100">
-                    Learn More About Us
+                    {t("learn")}
                   </h2>
                   <div className="flex flex-wrap">
                     <div className="w-full sm:w-1/2 lg:w-1/2">
@@ -95,12 +91,11 @@ export default function Home(props) {
                         <div className=" text-4xl"></div>
                         <div>
                           <h4 className="text-xl mb-2 font-bold text-gray-200">
-                            We have all the conditions you want.
+                            {t("learn1title")}
                           </h4>
-
+                          
                           <p className=" text-gray-300">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Veniam tempora quidem vel sint.
+                            {t("learn1titledescription")}
                           </p>
                         </div>
                       </div>
@@ -112,12 +107,13 @@ export default function Home(props) {
                         </div>
                         <div>
                           <h4 className="text-xl mb-2 font-bold text-gray-200">
-                            We have all the conditions you want.
+                            {t("learn2title")}
+
                           </h4>
 
                           <p className=" text-gray-300">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Veniam tempora quidem vel sint.
+                            {t("learn2titledescription")}
+                           
                           </p>
                         </div>
                       </div>
@@ -129,12 +125,13 @@ export default function Home(props) {
                         </div>
                         <div>
                           <h4 className="text-xl mb-2 font-bold text-gray-200">
-                            We have all the conditions you want.
+                            {t("learn3title")}
+
                           </h4>
 
                           <p className=" text-gray-300">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Veniam tempora quidem vel sint.
+                            {t("learn3titledescription")}
+
                           </p>
                         </div>
                       </div>
@@ -144,12 +141,13 @@ export default function Home(props) {
                         <div className="icon text-4xl"></div>
                         <div>
                           <h4 className="text-xl mb-2 font-bold text-gray-200">
-                            We have all the conditions you want.
+                            {t("learn4title")}
+
                           </h4>
 
                           <p className=" text-gray-300">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Veniam tempora quidem vel sint.
+                            {t("learn4titledescription")}
+
                           </p>
                         </div>
                       </div>
@@ -181,21 +179,18 @@ export default function Home(props) {
         </div>
         <div className="py-8">
           <Heading
-            name="Courses"
-            title="The courses we offer"
-            excerpt={
-              "We will help you leverage our experince by breaking down the secret into small chunks that you can easily digest and apply to any digital strategy"
-            }
+            name={t("courses")}
+            title={t("coursestitle")}
+            excerpt={t("coursedescription")}
           />
           <CourseList courses={props.courses} />
         </div>
 
         <div className="pb-6">
           <Heading
-            name="Our Teachers"
-            title="Meet our teachers"
-            excerpt={
-              "We are a team of experienced teachers who are passionate about teaching and helping students achieve their goals."
+            name={t("teachers")}
+            title={t("teacherstitle")}
+            excerpt={t("teachersdescription")
             }
           />
           <div className="-mt-16">

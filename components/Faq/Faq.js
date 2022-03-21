@@ -15,7 +15,7 @@ const Faq = ({ faqs }) => {
         z-20
         overflow-hidden
       "
-    >
+    > 
       <div className="container">
         <Heading
           name="FAQ"

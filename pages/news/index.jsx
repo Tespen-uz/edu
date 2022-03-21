@@ -2,21 +2,22 @@ import React from "react";
 import NewEvents from "../../layouts/News";
 import Image from "next/image";
 import NewsImage from "../../public/news.png";
+import { useTranslations } from "next-intl";
+
 
 export default function NewsPage({ news }) {
+  const t = useTranslations("news");
+
   return (
     <React.Fragment>
       <div className="relative pb-32 bg-gradient-to-r from-cyan-500 to-blue-500">
         <div className="container mx-auto lg:flex">
           <div className=" flex flex-col items-center justify-center lg:px-16">
             <h2 className="text-center text-white text-4xl font-bold my-6">
-              Find out our news and events in our course
+              {t("title")}
             </h2>
             <p className="text-center text-white text-sm">
-              Governmental and non-governmental organizations use text messaging
-              for communication between colleagues. In the 2010s, the sending of
-              short informal messages became an accepted part of many cultures,
-              as happened earlier with emailing.
+              {t("description")}
             </p>
           </div>
           <div className="relative">
