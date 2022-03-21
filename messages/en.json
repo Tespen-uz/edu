@@ -1,6 +1,6 @@
 {
   "home": {
-    "title": "Home",
+    "title": "StanfordSchool | Home",
     "description": "Home page",
     "subtitle": " Learn from the masters of science. Start with us and achieve your goals",
     "subdescription": "Our center will start its activities in 2019 in Chartak started Since then, we have about 300 applicants each year He is a university student. The annual result is 90% forms.",
@@ -13,42 +13,34 @@
     "learn3titledescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam tempora quidem vel sint.",
     "learn4title": "We have all the conditions you want.",
     "learn4titledescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam tempora quidem vel sint.",
-    "statstudent":"Students",
-    "statcourse":"Courses",
-    "statteachers":"Teachers",
-  "statresults":"Results",
-  "courses":"Courses",
-  "coursestitle":"The courses we offer",
-  "coursedescription":"We will help you leverage our experince by breaking down the secret into small chunks that you can easily digest and apply to any digital strategy",
-  "teachers":"Teachers",
-  "teacherstitle":"Meet our teachers",
-  "teachersdescription":"We are a team of experienced teachers who are passionate about teaching and helping students achieve their goals.",
-  "faq":"FAQ",
-  "faqtitle":"Any Questions? Answered",
-  "faqdescription":"There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.",
-  "question1":"What is your refund policy?",
-  "answer1":"If you&aposre unhappy with your purchase for any reason, email us within 90 days and we&apos;ll refund you in full, no questions asked. lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, quisquam. lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, quisquam.",
-  "question3":"What is your refund policy?",
-  "answer3":"If you&aposre unhappy with your purchase for any reason, email us within 90 days and we&apos;ll refund you in full, no questions asked. lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, quisquam. lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, quisquam.",
-  "question2":"Do you offer technical support?",
-  "answer2":"No, we do not offer technical support.",
-  "question4":"Do you offer technical support?",
-  "answer4":"No, we do not offer technical support."
+    "statstudent": "Students",
+    "statcourse": "Courses",
+    "statteachers": "Teachers",
+    "statresults": "Results"
   },
   "about": {
     "title": "StanfordSchool | About",
     "heading": "About us",
     "description": "Our center will start its activities in 2019 in Chartak started Since then, we have about 300 applicants each year He is a university student. The annual result is 90% forms.",
-    "certificate":"Certificate",
-    "description2":"Our center will open in 2019 in Chartak started his career. Since then, about 1,000 each year Our entrants are students of the University. The annual result is 90%. Our StandFord Center In 2019, he started his career in Chartak. Since then, about 1,000 of our applicants graduate each year has been a student. The annual result is 90% forms",
-    "description3":"Our center will open in 2019 in Chartak started his career. Since then, about 1,000 each year Our entrants are students of the University. The annual result is 90%. Our StandFord Center In 2019, he started his career in Chartak. Since then, about 1,000 of our applicants graduate each year has been a student. The annual result is 90% forms",
-    "name":" Testimonials",
-    "title2":"What our clients say about us",
-    "description4":"There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+    "certificate": "Certificate",
+    "description2": "Our center will open in 2019 in Chartak started his career. Since then, about 1,000 each year Our entrants are students of the University. The annual result is 90%. Our StandFord Center In 2019, he started his career in Chartak. Since then, about 1,000 of our applicants graduate each year has been a student. The annual result is 90% forms",
+    "description3": "Our center will open in 2019 in Chartak started his career. Since then, about 1,000 each year Our entrants are students of the University. The annual result is 90%. Our StandFord Center In 2019, he started his career in Chartak. Since then, about 1,000 of our applicants graduate each year has been a student. The annual result is 90% forms",
+    "name": " Testimonials",
+    "title2": "What our clients say about us",
+    "description4": "There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
   },
   "contact": {
-    "title": "Contact with us",
-    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. We provide you the web applications according to your work"
+    "title": "CONTACT US",
+    "lets": "Let's talk",
+    "talk": "Love to hear from you",
+    "location": "Our Location",
+    "address": "Nam, Chartak, 1st Floor, st #2,",
+    "help": "How Can We Help you?",
+    "message": "Send us a Message",
+    "fullname": "Full Name*",
+    "message2": "Message*",
+    "send": "Send Message",
+    "type": "type your message here"
   },
   "courses": {
     "title": "A collection of our courses from all disciplines.",
@@ -88,6 +80,38 @@
       "contact": "Contact",
       "exam": "Assesments"
     },
+    "footer": {
+      "usefulLinks": "Useful Links",
+      "ourServices": "Our Services",
+      "followUs": "Follow Us On",
+      "text": "We are a team of experienced teachers who are passionate about teaching and helping students achieve their goals.",
+      "english": "English",
+      "math": "Math",
+      "chemistry": "Chemistry",
+      "motherTongue": "Mother Tongue",
+      "copyright": "All Rights Reserved"
+    },
     "register": "Register"
+  },
+  "headings": {
+    "faq": "FAQ",
+    "anyQuestions": "Any Questions? Answered",
+    "faqExcerpt": "There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.",
+    "courses": "Courses",
+    "courseTitle": "The courses we offer",
+    "courseExcerpt": "We will help you leverage our experince by breaking down the secret into small chunks that you can easily digest and apply to any digital strategy",
+    "teachers": "Teachers",
+    "teachersTitle": "Meet our teachers",
+    "teachersExcerpt": "We are a team of experienced teachers who are passionate about teaching and helping students achieve their goals."
+  },
+  "disclosure": {
+    "question1": "What is your refund policy?",
+    "answer1": "If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked. lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, quisquam. lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, quisquam.",
+    "question2": "Do you offer technical support?",
+    "answer2": "No, we do not offer technical support.",
+    "question3": "What is your refund policy?",
+    "answer3": "If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked. lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, quisquam. lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, quisquam.",
+    "question4": "Do you offer technical support?",
+    "answer4": "No, we do not offer technical support."
   }
 }

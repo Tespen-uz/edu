@@ -15,15 +15,9 @@ const Faq = ({ faqs }) => {
         z-20
         overflow-hidden
       "
-    > 
+    >
       <div className="container">
-        <Heading
-          name="FAQ"
-          title="Any Questions? Answered"
-          excerpt={
-            "There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
-          }
-        />
+        <Heading name="faq" title="anyQuestions" excerpt="faqExcerpt" />
 
         <div className="flex flex-wrap -mx-4">
           <div className="w-full px-4 grid lg:grid-cols-2 gap-4 lg:gap-10 md:gap-8 sm:gap-6 ">
@@ -76,28 +70,20 @@ export default Faq;
 Faq.defaultProps = {
   faqs: [
     {
-      question: "What is your refund policy?",
-      answer: ` If you&apos;re unhappy with your purchase for any reason, email
-                us within 90 days and we&apos;ll refund you in full, no
-                questions asked. lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Voluptate, quisquam. lorem ipsum dolor sit
-                amet consectetur adipisicing elit. Voluptate, quisquam.`,
+      question: "question1",
+      answer: "answer1",
     },
     {
-      question: "Do you offer technical support?",
-      answer: "No, we do not offer technical support.",
+      question: "question2",
+      answer: "answer2",
     },
     {
-      question: "What is your refund policy?",
-      answer: ` If you&apos;re unhappy with your purchase for any reason, email
-                us within 90 days and we&apos;ll refund you in full, no
-                questions asked. lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Voluptate, quisquam. lorem ipsum dolor sit
-                amet consectetur adipisicing elit. Voluptate, quisquam.`,
+      question: "question3",
+      answer: "answer3",
     },
     {
-      question: "Do you offer technical support?",
-      answer: "No, we do not offer technical support.",
+      question: "question4",
+      answer: "answer4",
     },
   ],
 };

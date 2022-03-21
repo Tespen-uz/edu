@@ -16,7 +16,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center py-4 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link href="/">
-              <a className="text-3xl text-gray-600 font-bold">Stanford<span className="text-red-400" >School</span></a>
+              <a className="text-3xl text-yellow-400 font-bold">Stanford<span className="text-red-400" >School</span></a>
             </Link>
           </div>
           <div className="-mr-2 -my-2 md:hidden">

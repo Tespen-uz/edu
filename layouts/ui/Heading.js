@@ -1,15 +1,14 @@
 import React from "react";
 import { useTranslations } from "next-intl";
 
-
 const Heading = ({ name, title, excerpt }) => {
-  const t = useTranslations("about");
+  const t = useTranslations("headings");
   return (
     <div className="flex flex-wrap -mx-4">
       <div className="w-full px-4">
         <div className="text-center mx-auto mb-[60px] lg:mb-20 max-w-[620px]">
           <span className="font-semibold text-lg text-primary mb-2 block">
-            {t("name")}
+            {t(name)}
           </span>
           <h2
             className="
@@ -21,7 +20,7 @@ const Heading = ({ name, title, excerpt }) => {
                   mb-4
                 "
           >
-            {t("title2")}
+            {t(title)}
           </h2>
           <p
             className="
@@ -32,7 +31,7 @@ const Heading = ({ name, title, excerpt }) => {
                   text-body-color
                 "
           >
-            {t("description4")}
+            {t(excerpt)}
           </p>
         </div>
       </div>
