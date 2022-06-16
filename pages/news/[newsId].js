@@ -49,10 +49,16 @@ export default function NewsPage({ news }) {
 }
 
 export async function getServerSideProps(context) {
-  const res = await fetch(
-    `https://cp.stanfordschool.uz/api/news/${context.query.newsId}`
-  );
-  const data = await res.json();
+  let data = [];
+  try {
+    const res = await fetch(
+      `https://cp.stanfordschool.uz/api/news/${context.query.newsID}`
+    );
+    data = await res.json();
+  } catch (error) {
+    console.log(error);
+  }
+
   return {
     props: {
       news: data[0],

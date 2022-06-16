@@ -194,13 +194,28 @@ export default function Home(props) {
 }
 
 export async function getServerSideProps({ locale }) {
+<<<<<<< HEAD
   const res = await Promise.allSettled([
     requests.get("/api/statistics"),
     requests.get("/api/courses"),
     requests.get("/api/teachers"),
   ]);
+=======
+  let data;
+  try {
+>>>>>>> 6adaa62db4b4109349c56cc82fc4640393534cc0
 
-  let data = res.map((res) => res.value?.data);
+    const res = await Promise.allSettled([
+      requests.get("/statistics"),
+      requests.get("/courses"),
+      requests.get("/teachers"),
+    ]);
+    
+   data = res.map((res) => res.value?.data);
+  } catch (error) {
+    console.log(error);
+  }
+  
 
   return {
     props: {
