@@ -54,16 +54,14 @@ function TechId({ teacher }) {
       <div className="container flex flex-col items-center md:flex-row py-12">
         <div className="w-full z-10 md:w-6/12 overflow-hidden object-cover">
           <p className="text-2xl font-bold py-4 text-gray-700 uppercase">
-            Serseficat
+            Interests
           </p>
-          <p className=" text-gray-600">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex porro
-            atque, earum fugiat consequatur adipisci molestiae libero? Corporis
-            labore harum adipisci, dignissimos eos et tempore aperiam amet animi
-            minima iure?
-          </p>
+          <p className=" text-gray-600">{teacher.interests}</p>
         </div>
       </div>
+      <p className="text-2xl font-bold py-4 text-gray-700 uppercase">
+        Sertificates
+      </p>
       {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pb-12">
           {certifications?.length > 0 &&

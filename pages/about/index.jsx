@@ -27,7 +27,7 @@ const AboutPage = ({ statistics }) => {
             <span className="text-blue-700 font-bold   drop-shadow-2xl  ">
               StanfordSchool
             </span>{" "}
-           {t("description")}
+            {t("description")}
           </p>
 
           <div className="flex justify-center mt-8">
@@ -88,8 +88,7 @@ const AboutPage = ({ statistics }) => {
                   StanfordSchool
                 </h1>
                 <p className="sm:text-xl text-gray-600 mt-4 z-10">
-                                  {t("description3")}
-
+                  {t("description3")}
                 </p>
               </div>
               <div className="w-full md:w-6/12">
@@ -109,7 +108,7 @@ const AboutPage = ({ statistics }) => {
 export default AboutPage;
 
 export async function getServerSideProps({ locale }) {
-  const res = await requests.get("/api/statistics");
+  const res = await requests.get("/statistics");
   return {
     props: {
       statistics: res.data,

@@ -5,7 +5,6 @@ import CourseList from "../../components/Courses/CourseList";
 import requests from "../../utils/requests";
 import { useTranslations } from "next-intl";
 
-
 const CoursePage = (props) => {
   const t = useTranslations("courses");
 
@@ -35,7 +34,6 @@ const CoursePage = (props) => {
             </p>
             <p className="text-xl text-center  mt-2 text-gray-700 md:text-left">
               {t("description2")}
-
             </p>
           </div>
         </div>
@@ -63,7 +61,7 @@ const CoursePage = (props) => {
 export default CoursePage;
 
 export async function getServerSideProps({ locale }) {
-  const res = await requests.get("/api/courses");
+  const res = await requests.get("/courses");
   return {
     props: {
       courses: res.data[locale],

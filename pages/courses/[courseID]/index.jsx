@@ -632,8 +632,8 @@ export default CoursePage;
 
 export async function getServerSideProps(context) {
   const res = await Promise.allSettled([
-    requests.get(`/api/course/${context.query.courseID}`),
-    requests.get("/api/courses"),
+    requests.get(`/course/${context.query.courseID}`),
+    requests.get("/courses"),
   ]);
 
   let data = res.map((res) => res.value?.data);
