@@ -63,7 +63,7 @@ function CourseList({ courses }) {
   return (
     <div className="container  p-2 mx-auto flex flex-wrap justify-around">
       <div ref={sliderRef} className="keen-slider py-10 z-10">
-        {courses.map((item) => {
+        {courses?.map((item) => {
           return (
             <div
               key={item.id}
