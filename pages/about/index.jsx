@@ -109,7 +109,7 @@ const AboutPage = ({ statistics }) => {
 export default AboutPage;
 
 export async function getServerSideProps({ locale }) {
-  const res = await requests.get("/api/statistics");
+  const res = await requests.get("/statistics");
   return {
     props: {
       statistics: res.data,
