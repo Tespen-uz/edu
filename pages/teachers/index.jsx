@@ -4,7 +4,6 @@ import TechBg from "../../img/techBg.jpg";
 import requests from "../../utils/requests";
 import { useTranslations } from "next-intl";
 
-
 const AboutPage = (props) => {
   const t = useTranslations("teacher");
 
@@ -45,17 +44,13 @@ const AboutPage = (props) => {
 
 export default AboutPage;
 
-export async function getServerSideProps({locale}) {
-<<<<<<< HEAD
-  const res = await requests.get("/api/teachers");
-=======
+export async function getServerSideProps({ locale }) {
   let res;
   try {
     res = await requests.get("/teachers");
   } catch (error) {
     console.log(error);
   }
->>>>>>> 6adaa62db4b4109349c56cc82fc4640393534cc0
   return {
     props: {
       teachers: res.data[locale],
