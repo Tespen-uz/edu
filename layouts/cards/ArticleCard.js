@@ -56,7 +56,7 @@ const ArticleCard = ({ course }) => {
               </span>
             </h3>
             <p className="text-base text-body-color">
-              {course.description?.substring(0, 100)}
+              {course.description.substring(0, 100)}
             </p>
           </div>
         </div>

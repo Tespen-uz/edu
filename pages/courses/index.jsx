@@ -63,7 +63,7 @@ const CoursePage = (props) => {
 export default CoursePage;
 
 export async function getServerSideProps({ locale }) {
-  const res = await requests.get("/courses");
+  const res = await requests.get("/api/courses");
   return {
     props: {
       courses: res.data[locale],

@@ -51,7 +51,7 @@ function TechSliderList({ teachers }) {
   return (
     <div className="container mx-auto p-2 relative">
       <div ref={sliderRef} className="keen-slider py-4 z-5">
-        {teachers?.map((teacher) => {
+        {teachers.map((teacher) => {
           return (
             <div
               key={teacher.id}

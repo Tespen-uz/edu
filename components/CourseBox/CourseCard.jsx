@@ -30,7 +30,7 @@ function CourseCard({ name, img, description, id }) {
                 {name}
               </p>
               <h4 className="mt-2 text-gray-900 group-hover:text-gray-700 transition-all duration-300 text-left font-medium text-lg overflow-ellipsis overflow-hidden mb-4">
-                {description?.substring(0, 32)}...
+                {description.substring(0, 32)}...
               </h4>
             </span>
 
