@@ -12,10 +12,16 @@ const TeacherPage = ({ teacher }) => {
 export default TeacherPage;
 
 export async function getServerSideProps(context) {
-  const res = await fetch(
-    `https://cp.stanfordschool.uz/api/teacher/${context.query.teacherID}`
-  );
-  const data = await res.json();
+  let data = [];
+  try {
+    const res = await fetch(
+      `https://cp.stanfordschool.uz/api/teacher/${context.query.teacherID}`
+      );
+       data = await res.json();
+    } catch (error) {
+      console.log(error);
+    }
+    
   return {
     props: {
       teacher: data[0],

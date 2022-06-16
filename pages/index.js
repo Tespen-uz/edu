@@ -18,10 +18,6 @@ export default function Home(props) {
   const [open, setOpen] = useState(false);
   const t = useTranslations();
 
-  console.log(props.statistics);
-  console.log(props.courses);
-  console.log(props.teachers);
-
   const toggleModal = () => {
     setOpen((state) => !state);
   };
@@ -198,13 +194,20 @@ export default function Home(props) {
 }
 
 export async function getServerSideProps({ locale }) {
-  const res = await Promise.allSettled([
-    requests.get("/statistics"),
-    requests.get("/courses"),
-    requests.get("/teachers"),
-  ]);
+  let data;
+  try {
 
-  let data = res.map((res) => res.value?.data);
+    const res = await Promise.allSettled([
+      requests.get("/statistics"),
+      requests.get("/courses"),
+      requests.get("/teachers"),
+    ]);
+    
+   data = res.map((res) => res.value?.data);
+  } catch (error) {
+    console.log(error);
+  }
+  
 
   return {
     props: {

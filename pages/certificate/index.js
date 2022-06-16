@@ -49,8 +49,13 @@ function CertificatePage({ certificates }) {
 export default CertificatePage;
 
 export async function getServerSideProps({ locale }) {
-  const res = await fetch("https://cp.stanfordschool.uz/api/sertificates");
-  const data = await res.json();
+  let data;
+  try {
+    const res = await fetch("https://cp.stanfordschool.uz/api/sertificates");
+    data = await res.json();
+  } catch (error) {
+    console.log(error);
+  }
 
   return {
     props: {

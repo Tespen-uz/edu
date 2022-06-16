@@ -44,8 +44,14 @@ export default function NewsPage({ news }) {
 }
 
 export async function getServerSideProps({ locale }) {
-  const res = await fetch(`https://cp.stanfordschool.uz/api/news`);
-  const data = await res.json();
+  let data;
+  try { 
+    const res = await fetch(`https://cp.stanfordschool.uz/api/news`);
+    data = await res.json();
+  } catch (error) {
+    console.log(error);
+  }
+
   return {
     props: {
       news: data,
