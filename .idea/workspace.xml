@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cf0c568b-88f1-4e0a-b04b-19d1357b2e31" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/components/ImageGallery/ImageGallery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/CourseBox/CourseList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CourseBox/CourseList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Courses/CourseList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Courses/CourseList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Tech/TechCartList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Tech/TechCartList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Tech/TechSliderList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Tech/TechSliderList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/courses/[courseID]/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses/[courseID]/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2ARS3oqnkr6e4uXApvzWhTRAhbZ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jakhongir_Abdukhamid/projects/tespen/edu&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cf0c568b-88f1-4e0a-b04b-19d1357b2e31" name="Changes" comment="" />
+      <created>1654970707703</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1654970707703</updated>
+      <workItem from="1654970708952" duration="283000" />
+      <workItem from="1656163483404" duration="499000" />
+      <workItem from="1656163996604" duration="73000" />
+      <workItem from="1656164082654" duration="1914000" />
+      <workItem from="1656224496326" duration="5000" />
+      <workItem from="1656385225838" duration="784000" />
+      <workItem from="1656386749723" duration="2487000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

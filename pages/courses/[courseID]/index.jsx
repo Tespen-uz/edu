@@ -273,11 +273,11 @@ const CoursePage = ({ course, courses }) => {
                           w-full
                           flex
                           items-center
-                          justify-center 
+                          justify-center
                           h-[50px]
                           text-md
                           font-medium
-                        bg-white 
+                        bg-white
                           bg-opacity-20
                           text-white
                           rounded
@@ -618,7 +618,7 @@ const CoursePage = ({ course, courses }) => {
               </h2>
               <span className="h-[2px] bg-primary w-20 mb-10 inline-block"></span>
             </div>
-            {courses.map((course) => (
+            {courses?.map((course) => (
               <ArticleCard course={course} key={course.id} />
             ))}
           </div>
