@@ -75,8 +75,6 @@ const ImageGallery = ({gallery}) =>  {
         [ThumbnailPlugin(instanceRef)]
     );
 
-    console.log(gallery);
-
     return (
         <>
             <div ref={sliderRef} className="keen-slider ">

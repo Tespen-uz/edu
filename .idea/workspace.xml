@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf0c568b-88f1-4e0a-b04b-19d1357b2e31" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/ImageGallery/ImageGallery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/CourseBox/CourseList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CourseBox/CourseList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Courses/CourseList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Courses/CourseList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Tech/TechCartList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Tech/TechCartList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Tech/TechSliderList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Tech/TechSliderList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/courses/[courseID]/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses/[courseID]/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/courses/assessment/[assessmentId]/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/exam/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ImageGallery/ImageGallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ImageGallery/ImageGallery.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +38,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Jakhongir_Abdukhamid\projects\tespen\edu\pages\courses\assessment\[assessmentId]" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -56,7 +57,7 @@
       <workItem from="1656164082654" duration="1914000" />
       <workItem from="1656224496326" duration="5000" />
       <workItem from="1656385225838" duration="784000" />
-      <workItem from="1656386749723" duration="2487000" />
+      <workItem from="1656386749723" duration="5139000" />
     </task>
     <servers />
   </component>
